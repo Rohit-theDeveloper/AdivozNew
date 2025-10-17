@@ -84,9 +84,9 @@ export default function Slider() {
         }}
         pagination={{ clickable: true }} // Pagination bullets
         navigation={true} // Arrows
-        modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
         className="relative h-[180px] md:h-[500px] sm:h-[150px]  rounded-xl transition-transform duration-300 ease-in-out
-             bg-gray-100" // Container height & background
+            " // Container height & background
         //  Slider container height is controlled here (change h-[...] values)
         // Individual slide width is controlled by slidesPerView prop and SwiperSlide width classes
       >
