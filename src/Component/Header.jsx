@@ -80,6 +80,9 @@ export default function Header() {
           className="flex items-center gap-2 bg-blue-600 text-white px-4 sm:px-5 sm:py-5 py-3  w-auto md:w-auto lg:w-40"
           style={{
             background: "linear-gradient(135deg, #0b19e43d, #1609caff)",
+            clipPath: "ellipse(90% 100% at 15% 50%)",
+            minWidth: "120px",
+            overflow: "hidden",
           }}
         >
           <img
@@ -100,7 +103,6 @@ export default function Header() {
           {isMenuOpen ? <FiX size={22} /> : <FiMenu size={22} />}
         </button>
 
-        {/* Desktop Navigation */}
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
           <ul className="flex items-center gap-6 md:gap-1 lg:gap-6 font-medium text-gray-700 relative">
@@ -126,7 +128,6 @@ export default function Header() {
                 {/* Dropdown Menu */}
                 {item.submenu.length > 0 && (
                   <ul className="absolute left-0 top-10 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 min-w-[160px] md:min-w-[180px] py-2 z-50 text-sm">
-                    {/* ✅ Corrected mapping */}
                     {item.submenu.map((subItem, subIndex) => (
                       <li
                         key={subIndex}
@@ -164,7 +165,7 @@ export default function Header() {
               }`}
             />
 
-            {/* 🔹 Cross Icon */}
+            {/*  Cross Icon */}
             {isSearchOpen && (
               <button
                 className="p-2 text-gray-500 hover:text-gray-700 transition"
@@ -192,7 +193,8 @@ export default function Header() {
         <div className="md:hidden bg-white border-t shadow-sm">
           <ul className="flex flex-col gap-3 py-4 px-6 font-medium text-gray-700">
             {navItems.map((item, index) => (
-              <li key={index} className="cursor-pointer">
+              <li key={index} className="cursor-pointer"
+               onClick={()=>setIsMenuOpen(false)}>
                 <details>
                   <summary className="flex justify-between items-center cursor-pointer hover:text-blue-600">
                     <Link to={item.path}>{item.title}</Link>
@@ -204,6 +206,7 @@ export default function Header() {
                     <ul className="ml-4 mt-2 border-l border-gray-200 pl-3 space-y-1">
                       {item.submenu.map((submenu, subIndex) => (
                         <li
+                        onClick={()=>setIsMenuOpen(false)}
                           key={subIndex}
                           className="hover:text-blue-600 text-gray-600 transition"
                         >
