@@ -44,19 +44,25 @@ export default function Header() {
       <div className="max-w-8xl mx-auto flex items-center justify-between px-0">
         {/* Left Logo Section */}
 
-        <div className="flex items-center gap-2 bg-blue-600 text-white px-4 sm:px-5 sm:py-5 py-3  w-auto md:w-auto lg:w-40">
+        <div className="flex items-center gap-2 bg-blue-600 text-white px-4 sm:px-5 sm:py-5 py-3  w-auto md:w-auto lg:w-40"
+         style={{
+            background: "linear-gradient(135deg, #0b19e43d, #1609caff)",
+           
+          }}
+          >
           <img
             src={logo}
             alt="Adivoz Logo"
-            className="h-6 sm:h:8 md:h-8 w-auto transition-all duration-300"
+            className="h-6 sm:h:8 md:h-8 w-auto transition-all duration-300 "
+            style={{
+            background: "linear-gradient(135deg, #00ff953d, #4800ceff)",
+            clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0 100%)",
+          }}
           />
         </div>
         {/* <div
           className="flex items-center gap-2 bg-blue-600 text-white px-5 py-3 w-auto md:w-auto"
-          style={{
-            background: "linear-gradient(135deg, #007bff, #004bce)",
-            clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0 100%)",
-          }}
+          
         >
           <img src={logo} alt="Adivoz Logo" className="h-8 w-40 " />
           <div className="flex flex-col leading-tight">

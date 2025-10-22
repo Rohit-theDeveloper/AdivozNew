@@ -8,6 +8,7 @@ import OurProcess from './Component/OurProcess'
 import Testimonial from './Component/Testimonial'
 import NewsArticles from './Component/NewsArticles'
 import SubscribeSection from './Component/SubscribeSection'
+import ScrollTopButton from './Component/ScrollTopButton'
 import Footer from './Component/Footer'
 import './App.css'
 
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <>
+   
      <Header/>
      <Hero/>
      <AboutUs/>
@@ -27,6 +29,8 @@ function App() {
      <NewsArticles />
      <SubscribeSection />
      <Footer />
+     <ScrollTopButton />
+  
     </>
   )
 }

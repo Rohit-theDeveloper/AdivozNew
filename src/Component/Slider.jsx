@@ -109,7 +109,7 @@ export default function Slider() {
         ].map((img, index) => (
           <SwiperSlide
             key={index}
-            className=" flex justify-center  items-center bg-green-600  rounded-lg"
+            className=" flex justify-center  items-center  rounded-lg"
           >
             <img
               src={img}
