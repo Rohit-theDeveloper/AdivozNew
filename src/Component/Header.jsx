@@ -4,10 +4,12 @@ import { FiChevronDown } from "react-icons/fi";
 import { MdArrowOutward } from "react-icons/md";
 import logo from "../assets/ADIVOZ.png";
 import { Link } from "react-router-dom";
+import SearchModal from "./Modal/SearchModal";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isSearchModalOpen , setSearchModalOpen] = useState(false);
 
   const navItems = [
     {
@@ -147,7 +149,7 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-4 pr-6">
           <button
             className="p-2 border border-gray-300 rounded-full hover:bg-gray-100 transition"
-            onClick={() => setIsSearchOpen(!isSearchOpen)}
+            onClick={() => setSearchModalOpen(!isSearchModalOpen)}
           >
             <FiSearch size={18} />
           </button>
@@ -234,6 +236,10 @@ export default function Header() {
           </ul>
         </div>
       )}
+
+      <SearchModal
+      isOpen =  {isSearchModalOpen}
+      onClose = {()=>setSearchModalOpen(false)} />
     </header>
   );
 }
