@@ -3,6 +3,7 @@ import { FiSearch, FiMenu, FiX } from "react-icons/fi";
 import { FiChevronDown } from "react-icons/fi";
 import { MdArrowOutward } from "react-icons/md";
 import logo from "../assets/ADIVOZ.png";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,31 +12,62 @@ export default function Header() {
   const navItems = [
     {
       title: "Home",
+      path: "/",
       submenu: [],
     },
     {
       title: "About Us",
-      submenu: ["Our Story", "Team", "Careers"],
+      path: "/about-us",
+      submenu: [
+        { name: "Our Story", path: "/about-us/story" },
+        { name: "Team", path: "/about-us/team" },
+        { name: "Careers", path: "/about-us/careers" },
+      ],
     },
     {
       title: "Pages",
-      submenu: ["FAQ", "Pricing", "Testimonials"],
+      path: "/pages",
+      submenu: [
+        { name: "FAQ", path: "/faq" },
+        { name: "Pricing", path: "/pricing" },
+        { name: "Testimonials", path: "/testimonials" },
+      ],
     },
     {
       title: "Our Services",
-      submenu: ["SEO Optimization", "Web Development", "Graphic Design"],
+      path: "/services",
+      submenu: [
+        { name: "SEO Optimization", path: "/services/seo" },
+        { name: "Web Development", path: "/services/web-dev" },
+        { name: "Graphic Design", path: "/services/design" },
+      ],
     },
     {
       title: "Projects",
-      submenu: ["Case Studies", "Portfolio Grid", "Client Results"],
+      path: "/projects",
+      submenu: [
+        { name: "Case Studies", path: "/projects/case-studies" },
+        { name: "Portfolio Grid", path: "/projects/portfolio" },
+        { name: "Client Results", path: "/projects/results" },
+      ],
     },
     {
       title: "Blog",
-      submenu: ["Latest Posts", "Categories", "Tags"],
+      path: "/blog",
+      submenu: [
+        { name: "Latest Posts", path: "/blog/latest" },
+        { name: "Categories", path: "/blog/categories" },
+        { name: "Tags", path: "/blog/tags" },
+      ],
     },
     {
       title: "Contact Us",
-      submenu: ["Contact Info", "Support", "Location Map"],
+      path: "/contact-us",
+      submenu: [
+        { name: "Contact Info", path: "/contact/info" },
+        { name: "Support", path: "/contact/support" },
+        { name: "Location Map", path: "/contact/location" },
+      ],
     },
   ];
 
@@ -44,35 +76,22 @@ export default function Header() {
       <div className="max-w-8xl mx-auto flex items-center justify-between px-0">
         {/* Left Logo Section */}
 
-        <div className="flex items-center gap-2 bg-blue-600 text-white px-4 sm:px-5 sm:py-5 py-3  w-auto md:w-auto lg:w-40"
-         style={{
+        <div
+          className="flex items-center gap-2 bg-blue-600 text-white px-4 sm:px-5 sm:py-5 py-3  w-auto md:w-auto lg:w-40"
+          style={{
             background: "linear-gradient(135deg, #0b19e43d, #1609caff)",
-           
           }}
-          >
+        >
           <img
             src={logo}
             alt="Adivoz Logo"
             className="h-6 sm:h:8 md:h-8 w-auto transition-all duration-300 "
             style={{
-            background: "linear-gradient(135deg, #00ff953d, #4800ceff)",
-            clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0 100%)",
-          }}
+              background: "linear-gradient(135deg, #00ff953d, #4800ceff)",
+              clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0 100%)",
+            }}
           />
         </div>
-        {/* <div
-          className="flex items-center gap-2 bg-blue-600 text-white px-5 py-3 w-auto md:w-auto"
-          
-        >
-          <img src={logo} alt="Adivoz Logo" className="h-8 w-40 " />
-          <div className="flex flex-col leading-tight">
-            <h2 className="font-bold text-lg text-white">Adivoz</h2>
-            <span className="text-xs text-white/90">
-              Digital Marketing Agency
-            </span>
-          </div>
-        </div> */}
-
         {/* Hamburger for mobile */}
         <button
           className="md:hidden  p-3 text-gray-700"
@@ -82,16 +101,18 @@ export default function Header() {
         </button>
 
         {/* Desktop Navigation */}
+        {/* Desktop Navigation */}
         <nav className="hidden md:block">
-          <ul className="flex items-center gap-6 md:gap-1 lg:gap-6 font-medium text-gray-700 relative ">
+          <ul className="flex items-center gap-6 md:gap-1 lg:gap-6 font-medium text-gray-700 relative">
             {navItems.map((item, index) => (
               <li
                 key={index}
                 className="relative group cursor-pointer flex items-center gap-1 md:text-[10px]  lg:text-[18px]"
               >
-                <span>{item.title}</span>
+                {/* Main Link */}
+                <Link to={item.path}>{item.title}</Link>
 
-                {/* Dropdown Icon — visible only if submenu exists */}
+                {/* Dropdown Icon */}
                 {item.submenu.length > 0 && (
                   <FiChevronDown
                     size={16}
@@ -104,13 +125,14 @@ export default function Header() {
 
                 {/* Dropdown Menu */}
                 {item.submenu.length > 0 && (
-                   <ul className="absolute left-0 top-10 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 min-w-[160px] md:min-w-[180px] py-2 z-50 text-sm">
+                  <ul className="absolute left-0 top-10 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 min-w-[160px] md:min-w-[180px] py-2 z-50 text-sm">
+                    {/* ✅ Corrected mapping */}
                     {item.submenu.map((subItem, subIndex) => (
                       <li
                         key={subIndex}
                         className="px-4 py-2 hover:bg-blue-50 hover:text-blue-600 transition"
                       >
-                        {subItem}
+                        <Link to={subItem.path}>{subItem.name}</Link>
                       </li>
                     ))}
                   </ul>
@@ -152,15 +174,16 @@ export default function Header() {
               </button>
             )}
           </div>
-          <button className="relative overflow-hidden bg-blue-500 text-white px-4 py-2 rounded-xl flex justify-center gap-1 font-medium cursor-pointer transition-all duration-500
+          <button
+            className="relative overflow-hidden bg-blue-500 text-white px-4 py-2 rounded-xl flex justify-center gap-1 font-medium cursor-pointer transition-all duration-500
           before:absolute before:inset-0 before:bg-blue-700 before:-translate-x-full before:transition-transform before:duration-500 
-          hover:before:translate-x-0 z-20 group">
-  <span className="relative z-10 flex items-center gap-1">
-    Get In Touch
-    <MdArrowOutward className="transition-transform duration-300 group-hover:rotate-45 group-hover:translate-x-1" />
-  </span>
-</button>
-
+          hover:before:translate-x-0 z-20 group"
+          >
+            <span className="relative z-10 flex items-center gap-1">
+              Get In Touch
+              <MdArrowOutward className="transition-transform duration-300 group-hover:rotate-45 group-hover:translate-x-1" />
+            </span>
+          </button>
         </div>
       </div>
 
@@ -172,19 +195,19 @@ export default function Header() {
               <li key={index} className="cursor-pointer">
                 <details>
                   <summary className="flex justify-between items-center cursor-pointer hover:text-blue-600">
-                    {item.title}
+                    <Link to={item.path}>{item.title}</Link>
                     {item.submenu.length > 0 && (
                       <span className="text-gray-500 text-sm">▾</span>
                     )}
                   </summary>
                   {item.submenu.length > 0 && (
                     <ul className="ml-4 mt-2 border-l border-gray-200 pl-3 space-y-1">
-                      {item.submenu.map((subItem, subIndex) => (
+                      {item.submenu.map((submenu, subIndex) => (
                         <li
                           key={subIndex}
                           className="hover:text-blue-600 text-gray-600 transition"
                         >
-                          {subItem}
+                          <Link to={submenu.path}>{submenu.name}</Link>
                         </li>
                       ))}
                     </ul>
@@ -199,7 +222,10 @@ export default function Header() {
                 <FiSearch size={18} />
               </button>
               <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 flex items-center gap-1 font-medium">
-                Get In Touch <span><MdArrowOutward className="rotate-45"/></span>
+                Get In Touch{" "}
+                <span>
+                  <MdArrowOutward className="rotate-45" />
+                </span>
               </button>
             </div>
           </ul>
