@@ -10,14 +10,14 @@ import img5 from "../assets/img5.jpg";
 export default function AboutUs() {
   return (
     <>
-
-      <div className="flex gap-4 mx-15 py-30">
+      <div></div>
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 md:gap-6 sm:gap-3 gap-2 md:mx-15 py-12  mx-2">
         {/* Column 1 */}
-        <div className="flex-1">
+        <div className="flex justify-center ">
           <img
             src={img3}
             alt="Image 1"
-            className="w-full h-full object-cover rounded-full"
+            className="sm:w-auto sm:h-full  h-[350px] w-[300px] object-cover rounded-full aligns-cenetr"
           />
         </div>
 
@@ -26,12 +26,12 @@ export default function AboutUs() {
           <img
             src={img1}
             alt="Image 2"
-            className="w-full h-[50%] object-cover rounded-tl-[150px] rounded-tr-[150px] rounded-br-[200px] "
+            className="w-full h-[50%] object-cover sm:rounded-tl-[150px] sm:rounded-tr-[150px] sm:rounded-br-[200px] rounded-tl-[150px] rounded-tr-[150px] rounded-br-[200px] "
           />
           <img
             src={img2}
             alt="Image 3"
-            className="w-full h-[50%] object-cover rounded-tl-[150px] rounded-tr-[150px] rounded-br-[200px]"
+            className="w-full h-[50%] object-cover sm:rounded-tl-[150px] sm:rounded-tr-[150px] sm:rounded-br-[200px] rounded-tl-[150px] rounded-tr-[150px] rounded-br-[150px] "
           />
         </div>
 
@@ -87,7 +87,7 @@ export default function AboutUs() {
           <img
             src={img5}
             alt="Image 4"
-            className="w-full h-70 object-cover rounded-4xl my-[50%]"
+            className="w-full h-70 object-cover rounded-4xl md:my-[50%]"
           />
         </div>
       </div>

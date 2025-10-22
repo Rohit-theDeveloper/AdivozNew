@@ -56,14 +56,23 @@ export default function Slider() {
 
         {/* right section */}
         <div className="flex flex-wrap justify-center gap-2">
-          {Buttons.map((btn, id) => (
-             <button key = {id} className="border-gray-1 bg-gray-500 font-sm  rounded-2xl text-sm  text-white px-4 py-2 bg-gradient-to-t from-blue-300 to-gray-400 cursor-pointer hover:from-blue-500 hover:to-blue-700
-             transition-all duration-800 ease-in-out"> 
-                 {btn.name}
-           </button>
-          )  
-          )}
-        </div>
+  {Buttons.map((btn, id) => (
+    <button
+      key={id}
+      className="relative overflow-hidden rounded-2xl text-sm text-white px-4 py-2
+        bg-gradient-to-t from-blue-500 to-gray-500
+        cursor-pointer transition-all duration-500 ease-in-out
+        before:absolute before:inset-0 before:bg-blue-700 before:-translate-x-full
+        before:transition-transform before:duration-500 hover:before:translate-x-0
+        hover:text-white hover:scale-105 z-10"
+    >
+      {/* Text stays above pseudo-element */}
+      <span className="relative z-20 transition-colors duration-500">
+        {btn.name}
+      </span>
+    </button>
+  ))}
+</div>
       </div>
       <Swiper
         effect={"coverflow"} // Coverflow effect

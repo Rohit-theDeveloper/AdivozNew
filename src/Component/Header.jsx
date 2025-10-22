@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FiSearch, FiMenu, FiX } from "react-icons/fi";
 import { FiChevronDown } from "react-icons/fi";
 import { MdArrowOutward } from "react-icons/md";
-import logo from "../assets/avidozlogo.png";
+import logo from "../assets/ADIVOZ.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,25 +43,33 @@ export default function Header() {
     <header className="w-full bg-white shadow-sm relative sticky top-0 z-50">
       <div className="max-w-8xl mx-auto flex items-center justify-between px-0">
         {/* Left Logo Section */}
-        <div
-          className="flex items-center gap-2 bg-blue-600 text-white px-5 py-3 w-full md:w-auto"
-        //   style={{
-        //     background: "linear-gradient(135deg, #007bff, #004bce)",
-        //     clipPath: "polygon(0 0, 100% 15%, 100% 100%, 0 100%)",  
-        //   }}
+
+        <div className="flex items-center gap-2 bg-blue-600 text-white px-4 sm:px-5 sm:py-5 py-3  w-auto md:w-auto lg:w-40">
+          <img
+            src={logo}
+            alt="Adivoz Logo"
+            className="h-6 sm:h:8 md:h-8 w-auto transition-all duration-300"
+          />
+        </div>
+        {/* <div
+          className="flex items-center gap-2 bg-blue-600 text-white px-5 py-3 w-auto md:w-auto"
+          style={{
+            background: "linear-gradient(135deg, #007bff, #004bce)",
+            clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0 100%)",
+          }}
         >
-          <img src={logo} alt="Adivoz Logo" className="h-8 w-auto" />
+          <img src={logo} alt="Adivoz Logo" className="h-8 w-40 " />
           <div className="flex flex-col leading-tight">
             <h2 className="font-bold text-lg text-white">Adivoz</h2>
             <span className="text-xs text-white/90">
               Digital Marketing Agency
             </span>
           </div>
-        </div>
+        </div> */}
 
         {/* Hamburger for mobile */}
         <button
-          className="md:hidden p-3 text-gray-700"
+          className="md:hidden  p-3 text-gray-700"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <FiX size={22} /> : <FiMenu size={22} />}
@@ -69,11 +77,11 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
-          <ul className="flex items-center gap-6 font-medium text-gray-700 relative">
+          <ul className="flex items-center gap-6 md:gap-1 lg:gap-6 font-medium text-gray-700 relative ">
             {navItems.map((item, index) => (
               <li
                 key={index}
-                className="relative group cursor-pointer flex items-center gap-1"
+                className="relative group cursor-pointer flex items-center gap-1 md:text-[10px]  lg:text-[18px]"
               >
                 <span>{item.title}</span>
 
@@ -90,7 +98,7 @@ export default function Header() {
 
                 {/* Dropdown Menu */}
                 {item.submenu.length > 0 && (
-                  <ul className="absolute left-0 top-10 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 min-w-[180px] py-2 z-50">
+                   <ul className="absolute left-0 top-10 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 min-w-[160px] md:min-w-[180px] py-2 z-50 text-sm">
                     {item.submenu.map((subItem, subIndex) => (
                       <li
                         key={subIndex}
@@ -138,12 +146,15 @@ export default function Header() {
               </button>
             )}
           </div>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700 flex items-center gap-1 font-medium">
-            Get In Touch{" "}
-            <span className="text-2xl ">
-              <MdArrowOutward />
-            </span>
-          </button>
+          <button className="relative overflow-hidden bg-blue-500 text-white px-4 py-2 rounded-xl flex justify-center gap-1 font-medium cursor-pointer transition-all duration-500
+          before:absolute before:inset-0 before:bg-blue-700 before:-translate-x-full before:transition-transform before:duration-500 
+          hover:before:translate-x-0 z-20 group">
+  <span className="relative z-10 flex items-center gap-1">
+    Get In Touch
+    <MdArrowOutward className="transition-transform duration-300 group-hover:rotate-45 group-hover:translate-x-1" />
+  </span>
+</button>
+
         </div>
       </div>
 
@@ -182,7 +193,7 @@ export default function Header() {
                 <FiSearch size={18} />
               </button>
               <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 flex items-center gap-1 font-medium">
-                Get In Touch <span>↗</span>
+                Get In Touch <span><MdArrowOutward className="rotate-45"/></span>
               </button>
             </div>
           </ul>
