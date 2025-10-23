@@ -3,6 +3,7 @@ import Hero from '../Component/Hero'
 import AboutUs from '../Component/AboutUs'
 import FeaturesSection from '../Component/Featuresection'
 import WorkProcess from '../Component/WorkProcess'
+import WorkProcesss from '../Component/WorkProcesss'
 import Slider from '../Component/Slider'
 import OurProcess from '../Component/OurProcess'
 import Testimonial from '../Component/Testimonial'
@@ -17,6 +18,7 @@ export default function Home() {
      <AboutUs/>
      <FeaturesSection />
      <WorkProcess />
+     {/* <WorkProcesss/> */}
      <Slider/>
      <OurProcess/>
      <Testimonial />

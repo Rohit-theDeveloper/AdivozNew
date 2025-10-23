@@ -9,7 +9,7 @@ import SearchModal from "./Modal/SearchModal";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isSearchModalOpen , setSearchModalOpen] = useState(false);
+  const [isSearchModalOpen, setSearchModalOpen] = useState(false);
 
   const navItems = [
     {
@@ -195,8 +195,11 @@ export default function Header() {
         <div className="md:hidden bg-white border-t shadow-sm">
           <ul className="flex flex-col gap-3 py-4 px-6 font-medium text-gray-700">
             {navItems.map((item, index) => (
-              <li key={index} className="cursor-pointer"
-               onClick={()=>setIsMenuOpen(false)}>
+              <li
+                key={index}
+                className="cursor-pointer"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 <details>
                   <summary className="flex justify-between items-center cursor-pointer hover:text-blue-600">
                     <Link to={item.path}>{item.title}</Link>
@@ -208,7 +211,7 @@ export default function Header() {
                     <ul className="ml-4 mt-2 border-l border-gray-200 pl-3 space-y-1">
                       {item.submenu.map((submenu, subIndex) => (
                         <li
-                        onClick={()=>setIsMenuOpen(false)}
+                          onClick={() => setIsMenuOpen(false)}
                           key={subIndex}
                           className="hover:text-blue-600 text-gray-600 transition"
                         >
@@ -223,9 +226,13 @@ export default function Header() {
 
             {/* Mobile Right Section */}
             <div className="flex items-center gap-4 pt-3">
-              <button className="p-2 border border-gray-300 rounded-full hover:bg-gray-100 transition">
+              <button
+                className="p-2 border border-gray-300 rounded-full hover:bg-gray-100 transition"
+                onClick={() => setSearchModalOpen(true)}
+              >
                 <FiSearch size={18} />
               </button>
+
               <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 flex items-center gap-1 font-medium">
                 Get In Touch{" "}
                 <span>
@@ -238,8 +245,9 @@ export default function Header() {
       )}
 
       <SearchModal
-      isOpen =  {isSearchModalOpen}
-      onClose = {()=>setSearchModalOpen(false)} />
+        isOpen={isSearchModalOpen}
+        onClose={() => setSearchModalOpen(false)}
+      />
     </header>
   );
 }

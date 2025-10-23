@@ -27,9 +27,9 @@ const WorkProcess = () => {
 
           {/* Image Stack */}
           <div className="relative w-72 h-80 ">
-            <div className="absolute top-[-4] left-[10] w-full h-full bg-[url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg')] bg-cover bg-center rounded-2xl shadow-lg md:rotate-[-30deg]" />
-            <div className="absolute top-2 left-[-7] w-full h-full bg-[url('https://images.pexels.com/photos/3184646/pexels-photo-3184646.jpeg')] bg-cover bg-center rounded-2xl shadow-lg md:rotate-[-30deg]" />
-            <div className="absolute top-6 left-8 w-full h-full bg-[url('https://images.pexels.com/photos/3182833/pexels-photo-3182833.jpeg')] bg-cover bg-center rounded-2xl shadow-lg md:rotate-[-30deg]" />
+            <div className="absolute top-[-5px] left-[-30px] w-full h-full bg-[url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg')] bg-cover bg-center rounded-2xl shadow-lg md:rotate-[-12deg]" />
+            <div className="absolute top-3 left-[-4px] w-full h-full bg-[url('https://images.pexels.com/photos/3184646/pexels-photo-3184646.jpeg')] bg-cover bg-center rounded-2xl shadow-lg md:rotate-[-8deg]" />
+            <div className="absolute top-6 left-6 w-full h-full bg-[url('https://images.pexels.com/photos/3182833/pexels-photo-3182833.jpeg')] bg-cover bg-center rounded-2xl shadow-lg md:rotate-[-5deg]" />
           </div>
         </div>
 

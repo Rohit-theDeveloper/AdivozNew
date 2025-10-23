@@ -49,12 +49,12 @@ const OurProcess = () => {
         </h2>
 
         {/* Process Steps */}
-       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6 md:px-5 lg:px-5 place-items-center">
+       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6  lg:mx-2">
 
           {steps.map((step) => (
             <div
               key={step.id}
-              className="bg-white w-60 h-100 rounded-full shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-2 p-6 flex flex-col items-center text-center border border-gray-100"
+              className="bg-white w-60 h-100  rounded-full shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-2 p-6 flex flex-col items-center text-center border border-gray-100"
             >
               {/* Image */}
               <div className="w-50 h-50 rounded-full overflow-hidden mb-6">

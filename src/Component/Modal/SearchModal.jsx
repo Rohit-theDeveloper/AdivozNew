@@ -23,7 +23,7 @@ export default function SearchModal({ isOpen, onClose }) {
         >
           {/* Close Button */}
           <button
-            className="absolute top-[-250px] right-[-250px] w-15 h-15 flex items-center justify-center rounded-full bg-black/7 transition-all hover:rotate-360 hover:border-white hover:bg-white hover:text-gray-700 text-blue-500 text-2xl font-bold border border-blue-500 cursor-pointer"
+            className="absolute top-[-350px] right-[20px] sm:right-10 sm:top-[-100px] lg:top-[-250px] lg:right-[-200px] w-15 h-15 flex items-center justify-center rounded-full bg-black/7 transition-all sm:hover:rotate-360 sm:hover:border-white hover:bg-white hover:text-gray-700 text-blue-500 text-2xl font-bold border border-blue-500 cursor-pointer"
             onClick={onClose} // Your function to close modal
           >
             &times;
@@ -33,11 +33,11 @@ export default function SearchModal({ isOpen, onClose }) {
           <div className="flex items-center  rounded-full px-4 py-3 w-full cursor-pointer border border-blue-800 bg-black">
             
             <input
-              type="search"
+              type="text"
               placeholder="What Are You Looking For ?"
               className="flex-1 outline-none text-white text-lg "
             />
-            <CiSearch className="text-gray-700 text-2xl mr-3 font-bold hover:scale-110"  />
+            <CiSearch className="text-gray-100 text-2xl mr-3 font-bold hover:scale-110"  />
           </div>
         </div>
       </div>

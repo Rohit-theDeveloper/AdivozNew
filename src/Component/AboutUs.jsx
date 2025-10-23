@@ -17,7 +17,7 @@ export default function AboutUs() {
           <img
             src={img3}
             alt="Image 1"
-            className="sm:w-auto sm:h-full  h-[350px] w-[300px] object-cover rounded-full aligns-cenetr"
+            className="sm:w-auto sm:h-full  h-[350px] w-[200px] object-cover rounded-full aligns-cenetr"
           />
         </div>
 

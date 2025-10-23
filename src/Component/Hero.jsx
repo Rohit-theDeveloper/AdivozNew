@@ -78,7 +78,7 @@ export default function Hero() {
       </section>
       <div className=" bg-gray-200">
         <div className="lg:mx-20 flex  flex-col sm:flex-row gap-3 justify-between mx-3   ">
-          <div className="flex gap-2 items-center justify-center px-3 hover:bg-blue-600 cursor-pointer py-4 transition-all duration-500">
+          <div className="flex gap-2 items-center justify-center px-3 hover:scale-110 cursor-pointer py-4 transition-all duration-500">
             <RiTeamFill
               size={"40px"}
               className="text-blue-500 p-1 rounded-full shadow-lg bg-white "
@@ -90,7 +90,7 @@ export default function Hero() {
               </p>
             </span>
           </div>
-          <div className="flex gap-2 items-center justify-center px-3 cursor-pointer hover:bg-blue-600 cursor-pointer py-4 transition-all duration-500">
+          <div className="flex gap-2 items-center justify-center px-3 cursor-pointer hover:scale-110 cursor-pointer py-4 transition-all duration-500">
             <FaHeadset
               size={"40px"}
               className="text-blue-500 border  p-1 rounded-full shadow-lg bg-white"
@@ -103,7 +103,7 @@ export default function Hero() {
               </p>
             </span>
           </div>
-          <div className="flex gap-2 items-center justify-center px-3 hover:bg-blue-600 cursor-pointer py-4 transition-all duration-500">
+          <div className="flex gap-2 items-center justify-center px-3 hover:scale-110 cursor-pointer py-4 transition-all duration-500">
             <RiPriceTag2Line
               size={"45px"}
               className="text-blue-500  p-1 rounded-full shadow-lg bg-white"
