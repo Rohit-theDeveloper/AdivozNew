@@ -49,15 +49,15 @@ const OurProcess = () => {
         </h2>
 
         {/* Process Steps */}
-       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6  lg:mx-2">
+       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-2 lg:mx-35 place-items-center">
 
           {steps.map((step) => (
             <div
               key={step.id}
-              className="bg-white w-60 h-100  rounded-full shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-2 p-6 flex flex-col items-center text-center border border-gray-100"
+              className="bg-white w-50 h-100  rounded-full shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-2 p-6 flex flex-col items-center text-center border border-gray-100"
             >
               {/* Image */}
-              <div className="w-50 h-50 rounded-full overflow-hidden mb-6">
+              <div className="w-40 h-50 rounded-full overflow-hidden mb-6">
                 <img
                   src={step.image}
                   alt={step.title}
@@ -74,8 +74,8 @@ const OurProcess = () => {
               <p className="text-sm text-gray-600 mb-4">{step.description}</p>
 
               {/* Step Number */}
-              <span className="text-sm font-semibold text-gray-500">
-                STEP-{step.id}
+              <span className="text-sm font-semibold text-black">
+                STEP {step.id}
               </span>
             </div>
           ))}

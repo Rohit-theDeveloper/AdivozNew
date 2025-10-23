@@ -48,38 +48,42 @@ export default function AboutUs() {
             to address specific business needs , streamlinr operations , and
             drive growth. These solutions encompass hardware.
           </p>
-          <div className="flex gap-1 items-center  mt-5 ">
-            <RiTeamFill
-              size={"60px"}
-              className="text-white p-2  rounded-lg  bg-blue-600 "
-            />
-            <span>
-              <h1 className="font-bold ">Manage Web Services</h1>
-              <p className="text-sm ">
-                There are many variations of passages of avilable but the
-                majority
-              </p>
-            </span>
-          </div>
-          <div className="flex gap-1 items-center  mt-5 ">
-            <RiTeamFill
-              size={"60px"}
-              className="text-white px-2 rounded-lg  bg-blue-600 "
-            />
-            <span>
-              <h1 className="font-bold ">Tailored Growth Strategies</h1>
-              <p className="text-sm ">
-                There are many variations of passages of avilable but the
-                majority
-              </p>
-            </span>
-          </div>
-          <button className="bg-blue-600  justify-center text-white px-4 py-2 rounded-xl hover:bg-blue-700 flex items-center gap-1 font-medium mt-5 cursor-pointer">
-            Learn More
-            <span className="text-2xl ">
-              <MdArrowOutward />
-            </span>
-          </button>
+         <div className="flex flex-col gap-5 mt-5">
+  {/* Section 1 */}
+  <div className="flex items-center gap-4">
+    <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white">
+      <RiTeamFill size={20} />
+    </div>
+    <div>
+      <h1 className="font-bold text-lg">Manage Web Services</h1>
+      <p className="text-sm text-gray-600">
+        There are many variations of passages available but the majority
+      </p>
+    </div>
+  </div>
+
+  {/* Section 2 */}
+  <div className="flex items-center gap-4">
+    <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white">
+      <RiTeamFill size={20} />
+    </div>
+    <div>
+      <h1 className="font-bold text-lg">Tailored Growth Strategies</h1>
+      <p className="text-sm text-gray-600">
+        There are many variations of passages available but the majority
+      </p>
+    </div>
+  </div>
+</div>
+          <button
+  className="relative overflow-hidden bg-blue-500 text-white px-5 py-2 rounded-xl flex items-center justify-center gap-2 font-medium cursor-pointer transition-all duration-500
+    before:absolute before:inset-0 before:bg-blue-700 before:-translate-x-full before:transition-transform before:duration-500 hover:before:translate-x-0 z-10 group mt-2"
+>
+  <span className="relative z-20 flex items-center justify-center gap-2 w-full text-center">
+    Learn More
+    <MdArrowOutward className="transition-transform duration-300 group-hover:rotate-45 group-hover:translate-x-1" />
+  </span>
+</button>
         </div>
 
         {/* Column 4: Single image (same size as column 2 images) */}
