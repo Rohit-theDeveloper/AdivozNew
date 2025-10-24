@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FiSearch, FiMenu, FiX } from "react-icons/fi";
 import { FiChevronDown } from "react-icons/fi";
 import { MdArrowOutward } from "react-icons/md";
-import logo from "../assets/ADIVOZ.png";
+import logo from "../assets/adivoz.jpg";
 import { Link } from "react-router-dom";
 import SearchModal from "./Modal/SearchModal";
 
@@ -79,22 +79,14 @@ export default function Header() {
         {/* Left Logo Section */}
 
         <div
-          className="flex items-center gap-2 bg-blue-600 text-white px-4 sm:px-5 sm:py-5 py-3  w-auto md:w-auto lg:w-40"
-          style={{
-            background: "linear-gradient(135deg, #0b19e43d, #1609caff)",
-            clipPath: "ellipse(90% 100% at 15% 50%)",
-            minWidth: "120px",
-            overflow: "hidden",
-          }}
+          className="flex items-center gap-2 bg-blue-600 text-white     w-auto md:w-auto lg:w-40"
+         
         >
           <img
             src={logo}
             alt="Adivoz Logo"
-            className="h-6 sm:h:8 md:h-8 w-auto transition-all duration-300 "
-            style={{
-              background: "linear-gradient(135deg, #00ff953d, #4800ceff)",
-              clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0 100%)",
-            }}
+            className="h-8 sm:h:full md:h-full w-auto transition-all duration-300 "
+           
           />
         </div>
         {/* Hamburger for mobile */}
