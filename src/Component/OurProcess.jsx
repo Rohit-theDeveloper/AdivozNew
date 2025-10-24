@@ -1,4 +1,8 @@
 import React from "react";
+import img1 from '../assets/ourprocess1.avif';
+import img2 from '../assets/ourprocess2.avif';
+import img3 from '../assets/ourprocess3.avif';
+import img4 from '../assets/ourprocess4.avif';
 
 const steps = [
   {
@@ -7,7 +11,7 @@ const steps = [
     description:
       "Understanding Business Needs To Define Precise, Actionable, And Effective Solutions.",
     image:
-      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg", // replace with your own
+      img1, // replace with your own
   },
   {
     id: "02",
@@ -15,7 +19,7 @@ const steps = [
     description:
       "Creating Visually Engaging Websites And Executing Seamless, User-Friendly Digital Experiences.",
     image:
-      "https://images.pexels.com/photos/3184460/pexels-photo-3184460.jpeg", // replace
+      img2, // replace
   },
   {
     id: "03",
@@ -23,7 +27,7 @@ const steps = [
     description:
       "Tracking Performance Continuously To Optimize Strategies And Ensure Measurable Results.",
     image:
-      "https://images.pexels.com/photos/3184461/pexels-photo-3184461.jpeg", // replace
+     img3, // replace
   },
   {
     id: "04",
@@ -31,7 +35,7 @@ const steps = [
     description:
       "Analyzing Data And Generating Insights To Drive Informed Business Decisions.",
     image:
-      "https://images.pexels.com/photos/3184300/pexels-photo-3184300.jpeg", // replace
+     img4, // replace
   },
 ];
 
@@ -57,7 +61,7 @@ const OurProcess = () => {
               className="bg-white w-50 h-100  rounded-full shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-2 p-6 flex flex-col items-center text-center border border-gray-100"
             >
               {/* Image */}
-              <div className="w-40 h-50 rounded-full overflow-hidden mb-6">
+              <div className="w-40 h-40 rounded-full overflow-hidden mb-6">
                 <img
                   src={step.image}
                   alt={step.title}

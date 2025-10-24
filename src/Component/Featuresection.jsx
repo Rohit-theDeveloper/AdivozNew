@@ -1,6 +1,11 @@
 import React from "react";
 import { useEffect, useRef } from "react";
- 
+ import img_1 from '../assets/featureimg1.jpg';
+ import img_2 from '../assets/featureimg2.jpg';
+import img_3 from '../assets/featureimg3.jpg';
+import img_4 from '../assets/featureimg4.jpg';
+
+
 
 
 export default function FeaturesSection() {
@@ -9,32 +14,32 @@ export default function FeaturesSection() {
   const services = [
   {
     title: "Search Engine Optimization",
-    img: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=500",
+    img: img_1,
     desc: "Covers all aspects of IT, from consulting and planning.",
   },
   {
     title: "Email Marketing",
-    img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500",
+    img: img_2,
     desc: "Reach your audience with targeted campaigns.",
   },
   {
     title: "Content Marketing",
-    img: "https://images.unsplash.com/photo-1556761175-129418cb2dfe?w=500",
+    img: img_3,
     desc: "Create valuable content that drives growth.",
   },
   {
     title: "Graphic Design & Branding",
-    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500",
+    img:img_4,
     desc: "Covers all aspects of IT, from consulting and planning.",
   },
   {
     title: "Web Design & Development",
-    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500",
+    img: img_2,
     desc: "Covers all aspects of IT, from consulting and planning.",
   },
   {
     title: "Web Design & Development",
-    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500",
+    img: img_1,
     desc: "Covers all aspects of IT, from consulting and planning.",
   },
   {

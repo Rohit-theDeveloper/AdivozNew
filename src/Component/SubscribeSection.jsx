@@ -1,4 +1,5 @@
 import React from "react";
+import img from '../assets/subscribe1.jpeg';
 
 const SubscribeSection = () => {
   return (
@@ -38,7 +39,7 @@ const SubscribeSection = () => {
         <div className="flex-1 flex justify-center  relative">
           <div className="w-60 h-60 md:w-72 md:h-72 bg-black rounded-full flex items-center justify-center relative">
             <img
-              src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" // Replace with your image
+              src={img} 
               alt="Newsletter"
               className="w-52 h-52 md:w-64 md:h-64 rounded-full object-cover"
             />

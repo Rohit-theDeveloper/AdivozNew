@@ -1,23 +1,26 @@
 import React from "react";
+import img1 from '../assets/blogs1.avif';
+import img2 from '../assets/blogs2.avif';
+import img3 from '../assets/blogs3.avif';
 
 const articles = [
   {
     id: 1,
-    image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg",
+    image: img1,
     title: "End-to-end marketing operations handled for the client",
     date: "June 10, 2025",
     readTime: "5 min read",
   },
   {
     id: 2,
-    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+    image: img2,
     title: "The impact of AI and Machine Learning in Digital Marketing",
     date: "Nov 12, 2025",
     readTime: "7 min read",
   },
   {
     id: 3,
-    image: "https://images.pexels.com/photos/3184301/pexels-photo-3184301.jpeg",
+    image: img3,
     title: "Top 7 Digital Marketing Solutions Every Business Needs",
     date: "July 05, 2025",
     readTime: "6 min read",

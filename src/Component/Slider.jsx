@@ -12,11 +12,11 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import slide_image_1 from "../assets/img1.jpg";
-import slide_image_2 from "../assets/img2.jpg";
-import slide_image_3 from "../assets/img3.jpg";
-import slide_image_4 from "../assets/img4.jpg";
-import slide_image_5 from "../assets/img5.jpg";
+import slide_image_1 from "../assets/slider1.avif";
+import slide_image_2 from "../assets/slider2.avif";
+import slide_image_3 from "../assets/slider3.avif";
+import slide_image_4 from "../assets/slider4.avif";
+import slide_image_5 from "../assets/slider5.avif";
 
 export default function Slider() {
   const slides = [
