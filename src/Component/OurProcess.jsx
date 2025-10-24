@@ -11,7 +11,7 @@ const steps = [
     description:
       "Understanding Business Needs To Define Precise, Actionable, And Effective Solutions.",
     image:
-      img1, // replace with your own
+      img1, 
   },
   {
     id: "02",
@@ -19,7 +19,7 @@ const steps = [
     description:
       "Creating Visually Engaging Websites And Executing Seamless, User-Friendly Digital Experiences.",
     image:
-      img2, // replace
+      img2, 
   },
   {
     id: "03",
@@ -27,7 +27,7 @@ const steps = [
     description:
       "Tracking Performance Continuously To Optimize Strategies And Ensure Measurable Results.",
     image:
-     img3, // replace
+     img3, 
   },
   {
     id: "04",
@@ -35,7 +35,7 @@ const steps = [
     description:
       "Analyzing Data And Generating Insights To Drive Informed Business Decisions.",
     image:
-     img4, // replace
+     img4, 
   },
 ];
 

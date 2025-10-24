@@ -34,21 +34,21 @@ const WorkProcesss = () => {
 
           {/* Stacked Images */}
           <div className="relative w-72 h-80 md:h-96">
-            {/* Image 1 */}
+           
             <div
               className={`absolute top-[-5px] left-[-30px] w-full h-full  bg-cover bg-center rounded-2xl shadow-xl md:rotate-[-12deg] transition-all duration-500 ease-in-out ${
                 activeStep === 0 ? "z-30 brightness-110" : "z-10 opacity-80"
               }`}  style={{ backgroundImage: `url(${img1})` }}
             ></div>
 
-            {/* Image 2 */}
+           
             <div
               className={`absolute top-3 left-[-4px] w-full h-full bg-cover bg-center rounded-2xl shadow-xl md:rotate-[-8deg] transition-all duration-500 ease-in-out ${
                 activeStep === 1 ? "z-30 brightness-110" : "z-20 opacity-80"
               }`} style={{ backgroundImage: `url(${img3})` }}
             ></div>
 
-            {/* Image 3 */}
+         
             <div
               className={`absolute top-6 left-6 w-full h-full  bg-cover bg-center rounded-2xl shadow-xl md:rotate-[-5deg] transition-all duration-500 ease-in-out ${
                 activeStep === 2 ? "z-30 brightness-110" : "z-0 opacity-80"

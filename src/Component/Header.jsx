@@ -79,7 +79,7 @@ export default function Header() {
         {/* Left Logo Section */}
 
         <div
-          className="flex items-center gap-2 bg-blue-600 text-white     w-auto md:w-auto lg:w-40"
+          className="flex items-center gap-2 bg-blue-600 text-white w-auto sm:w-auto md:w-40 lg:w-40 sm:mx-4 mx-10"
          
         >
           <img
@@ -89,7 +89,7 @@ export default function Header() {
            
           />
         </div>
-        {/* Hamburger for mobile */}
+        {/* icon for mobile */}
         <button
           className="md:hidden  p-3 text-gray-700"
           onClick={() => setIsMenuOpen(!isMenuOpen)}

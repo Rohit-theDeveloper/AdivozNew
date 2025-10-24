@@ -56,8 +56,7 @@ export default function FeaturesSection() {
 
     const scroll = () => {
       if (!scrollContainer) return;
-
-      // Random delay (2s–5s)
+      
       const delay = Math.random() * 1000 + 2000;
 
       // Random scroll distance (100–300px)
@@ -83,7 +82,7 @@ export default function FeaturesSection() {
       setTimeout(scroll, delay);
     };
 
-    // Start auto scroll after 2 seconds
+    
     const initialTimeout = setTimeout(scroll, 2000);
 
     return () => clearTimeout(initialTimeout);

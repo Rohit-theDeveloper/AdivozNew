@@ -3,7 +3,7 @@ import img from '../assets/subscribe1.jpeg';
 
 const SubscribeSection = () => {
   return (
-    <section className=" bg-blue-600 rounded-3xl py-12 px-6 md:px-16 text-white relative overflow-hidden m-5 sm:m-10 sm:mx-20">
+    <section className=" bg-blue-600 rounded-3xl py-12 px-6 md:px-16 text-white relative overflow-hidden m-5 sm:m-10 lg:mx-30">
       {/* Decorative Background */}
       <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/circles-and-lines.png')]"></div>
 

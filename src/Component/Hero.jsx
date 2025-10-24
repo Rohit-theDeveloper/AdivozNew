@@ -98,8 +98,7 @@ export default function Hero() {
             <span>
               <h1 className="font-bold text-xl">Competitive Pricing</h1>
               <p className="text-sm w-[70%]">
-                {" "}
-                We Provided the most responsive and functiuonal IT design{" "}
+               We Provided the most responsive and functiuonal IT design
               </p>
             </span>
           </div>
@@ -111,8 +110,7 @@ export default function Hero() {
             <span>
               <h1 className="font-bold text-xl">24 / 7 Customer Services</h1>
               <p className="text-sm w-[70%]">
-                {" "}
-                We Provided the most responsive and functiuonal IT design{" "}
+                We Provided the most responsive and functiuonal IT design
               </p>
             </span>
           </div>

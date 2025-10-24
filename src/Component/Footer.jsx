@@ -7,6 +7,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
+import logo from "../assets/adivoz.jpg";
 
 const Footer = () => {
   const [open, setOpen] = useState(false);
@@ -18,11 +19,11 @@ const Footer = () => {
         <div>
           <h2 className="text-2xl font-bold text-white mb-3 flex items-center gap-2">
             <img
-              src="https://cdn-icons-png.flaticon.com/512/5956/5956610.png"
+              src={logo}
               alt="logo"
-              className="w-8 h-8"
+              className="w-auto h-10 rounded-xl"
             />
-            Adivoz
+           
           </h2>
           <p className="text-sm text-gray-400 mb-4 leading-relaxed">
             Delivering smart, data-driven digital marketing solutions that grow

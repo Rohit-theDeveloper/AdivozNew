@@ -20,7 +20,7 @@ export default function AboutUs() {
           />
         </div>
 
-        {/* Column 2: 2 stacked images */}
+        {/* Column 2 */}
         <div className="flex-1 flex flex-col gap-4">
           <img
             src={img1}
@@ -34,7 +34,7 @@ export default function AboutUs() {
           />
         </div>
 
-        {/* Column 3: Text (bigger) */}
+        {/* Column 3:  */}
         <div className="flex-1 flex flex-col text-justify rounded-lg p-6">
           <h5 className="text-blue-900 text-sm font-medium">
             About Us Our Company
@@ -66,7 +66,7 @@ export default function AboutUs() {
     <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white">
       <RiTeamFill size={20} />
     </div>
-    <div>
+    <div className="text-start">
       <h1 className="font-bold text-lg">Tailored Growth Strategies</h1>
       <p className="text-sm text-gray-600">
         There are many variations of passages available but the majority
@@ -85,7 +85,7 @@ export default function AboutUs() {
 </button>
         </div>
 
-        {/* Column 4: Single image (same size as column 2 images) */}
+        {/* Column 4 */}
         <div className="flex-1">
           <img
             src={img5}
