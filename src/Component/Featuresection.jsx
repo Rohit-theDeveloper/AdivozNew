@@ -44,7 +44,7 @@ export default function FeaturesSection() {
   },
   {
     title: "Web Design & Development",
-    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500",
+    img: img_2,
     desc: "Covers all aspects of IT, from consulting and planning.",
   },
 ];
@@ -112,6 +112,9 @@ export default function FeaturesSection() {
             <img
               src={service.img}
               alt={service.title}
+              loading="lazy"
+              width = {300}
+              height = {400}
               className="w-auto h-48 object-cover"
             />
             <div className="p-4">

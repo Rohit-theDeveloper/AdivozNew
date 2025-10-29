@@ -21,9 +21,12 @@ const Footer = () => {
             <img
               src={logo}
               alt="logo"
+              loading="lazy"
+              decoding="async"
+              width={100}
+              height={40}
               className="w-auto h-10 rounded-xl"
             />
-           
           </h2>
           <p className="text-sm text-gray-400 mb-4 leading-relaxed">
             Delivering smart, data-driven digital marketing solutions that grow
@@ -31,17 +34,21 @@ const Footer = () => {
           </p>
           {/* Social Icons */}
           <div className="flex space-x-3 mt-4">
-            {[FaFacebookF, FaTwitter, FaLinkedinIn, FaWhatsapp, FaInstagram].map(
-              (Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-8 h-8 rounded-full bg-gray-800 hover:bg-blue-600 flex items-center justify-center transition"
-                >
-                  <Icon size={14} />
-                </a>
-              )
-            )}
+            {[
+              FaFacebookF,
+              FaTwitter,
+              FaLinkedinIn,
+              FaWhatsapp,
+              FaInstagram,
+            ].map((Icon, i) => (
+              <a
+                key={i}
+                href="#"
+                className="w-8 h-8 rounded-full bg-gray-800 hover:bg-blue-600 flex items-center justify-center transition"
+              >
+                <Icon size={14} />
+              </a>
+            ))}
           </div>
         </div>
 
@@ -54,36 +61,48 @@ const Footer = () => {
             <h3 className="text-white font-semibold text-lg mb-3">
               Useful Links
             </h3>
-            <span className="md:hidden text-xl">
-              {open ? "−" : "+"}
-            </span>
+            <span className="md:hidden text-xl">{open ? "−" : "+"}</span>
           </div>
           <ul
             className={`space-y-2 text-sm text-gray-400 transition-all duration-300 ${
-              open ? "max-h-60 opacity-100" : "max-h-0 opacity-0 md:opacity-100 md:max-h-none"
+              open
+                ? "max-h-60 opacity-100"
+                : "max-h-0 opacity-0 md:opacity-100 md:max-h-none"
             } overflow-hidden md:overflow-visible`}
           >
             <li>
-              <a href="#" className="hover:text-blue-500 transition">Home</a>
+              <a href="#" className="hover:text-blue-500 transition">
+                Home
+              </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-500 transition">About Us</a>
+              <a href="#" className="hover:text-blue-500 transition">
+                About Us
+              </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-500 transition">Our Services</a>
+              <a href="#" className="hover:text-blue-500 transition">
+                Our Services
+              </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-500 transition">Terms of Service</a>
+              <a href="#" className="hover:text-blue-500 transition">
+                Terms of Service
+              </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-500 transition">News & Media</a>
+              <a href="#" className="hover:text-blue-500 transition">
+                News & Media
+              </a>
             </li>
           </ul>
         </div>
 
         {/* Get In Touch */}
         <div>
-          <h3 className="text-white font-semibold text-lg mb-3">Get In Touch</h3>
+          <h3 className="text-white font-semibold text-lg mb-3">
+            Get In Touch
+          </h3>
           <ul className="space-y-3 text-sm text-gray-400">
             <li className="flex items-center gap-2">
               <FiPhone className="text-blue-500" /> +91 XXXXX XXXXX
@@ -138,9 +157,15 @@ const Footer = () => {
           . All Rights Reserved
         </p>
         <div className="flex gap-6 mt-3 md:mt-0">
-          <a href="#" className="hover:text-blue-500">Terms & Conditions</a>
-          <a href="#" className="hover:text-blue-500">Careers</a>
-          <a href="#" className="hover:text-blue-500">Privacy Policy</a>
+          <a href="#" className="hover:text-blue-500">
+            Terms & Conditions
+          </a>
+          <a href="#" className="hover:text-blue-500">
+            Careers
+          </a>
+          <a href="#" className="hover:text-blue-500">
+            Privacy Policy
+          </a>
         </div>
       </div>
     </footer>

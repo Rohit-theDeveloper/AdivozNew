@@ -1,10 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  EffectCoverflow,
-  Pagination,
-  Autoplay,
-} from "swiper/modules";
+import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -137,13 +133,18 @@ export default function Slider() {
             <img
               src={slide.img}
               alt={`slide-${index}`}
+              loading="lazy"
+              width={600}
+              height={400}
               className="w-full h-full rounded-2xl object-cover"
             />
             <div className="absolute bottom-5 left-5 text-white z-10 text-overlay transition-opacity duration-700">
               <h2 className=" text-[10px] sm:text-xl font-semibold drop-shadow-md">
                 {slide.title}
               </h2>
-              <p className=" text-[8px] sm:text-sm opacity-80">{slide.subtitle}</p>
+              <p className=" text-[8px] sm:text-sm opacity-80">
+                {slide.subtitle}
+              </p>
             </div>
             <div className="absolute inset-0 bg-black/20 rounded-2xl"></div>
           </SwiperSlide>

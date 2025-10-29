@@ -64,11 +64,12 @@ const Testimonial = () => {
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-          className="pb-20 "
+         className="pb-20 overflow-hidden"
+
         >
           {testimonials.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="bg-gray-100 shadow-md border border-gray-100 rounded-2xl p-6 mx-2 flex flex-col items-start text-left relative hover:shadow-lg transition">
+              <div className="bg-gray-100 shadow-md border border-gray-100 rounded-2xl overflow-visible p-6 mx-2 flex flex-col items-start text-left relative hover:shadow-lg transition">
                 {/* Profile */}
                 <div className="flex items-center mb-10 ">
                   <img
@@ -93,7 +94,7 @@ const Testimonial = () => {
                 <p className="text-sm text-gray-600 mb-10">{item.text}</p>
 
                 {/* Bottom Circular Icon */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-semibold shadow-md">
+                <div className="absolute bottom-2 z-10 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-semibold shadow-md">
                   99
                 </div>
               </div>

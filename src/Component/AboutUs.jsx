@@ -15,7 +15,10 @@ export default function AboutUs() {
         <div className="flex justify-center ">
           <img
             src={img3}
-            alt="Image 1"
+            alt="Team working together"
+            loading="lazy"
+            width = {200}
+            height = {350}
             className="sm:w-auto sm:h-full  h-[350px] w-[200px] object-cover rounded-full aligns-cenetr"
           />
         </div>
@@ -24,12 +27,18 @@ export default function AboutUs() {
         <div className="flex-1 flex flex-col gap-4">
           <img
             src={img1}
-            alt="Image 2"
+            alt="Office collaboration"
+            loading="lazy"
+            width = {200}
+            height ={ 350}
             className="w-full h-[50%] object-cover sm:rounded-tl-[150px] sm:rounded-tr-[150px] sm:rounded-br-[200px] rounded-tl-[150px] rounded-tr-[150px] rounded-br-[200px] "
           />
           <img
             src={img2}
-            alt="Image 3"
+            alt="Developers at work"
+            loading="lazy"
+            width = {200}
+            height ={ 350}
             className="w-full h-[50%] object-cover sm:rounded-tl-[150px] sm:rounded-tr-[150px] sm:rounded-br-[200px] rounded-tl-[150px] rounded-tr-[150px] rounded-br-[150px] "
           />
         </div>
@@ -89,7 +98,10 @@ export default function AboutUs() {
         <div className="flex-1">
           <img
             src={img5}
-            alt="Image 4"
+            loading="lazy"
+            width = {300}
+            height = {400}
+            alt="Office meeting"
             className="w-full h-70 object-cover rounded-4xl md:my-[50%]"
           />
         </div>

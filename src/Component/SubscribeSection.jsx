@@ -41,6 +41,10 @@ const SubscribeSection = () => {
             <img
               src={img} 
               alt="Newsletter"
+              width={240}
+              height = {240}
+              loading="lazy"
+              decoding="async"
               className="w-52 h-52 md:w-64 md:h-64 rounded-full object-cover"
             />
           </div>

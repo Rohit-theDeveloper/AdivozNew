@@ -65,6 +65,10 @@ const OurProcess = () => {
                 <img
                   src={step.image}
                   alt={step.title}
+                  loading="lazy"
+                  decoding="async"
+                  width = {160}
+                  height = {160}
                   className="w-full h-full object-cover"
                 />
               </div>

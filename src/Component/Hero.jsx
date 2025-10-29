@@ -36,7 +36,7 @@ export default function Hero() {
           <h1 className="text-3xl md:text-5xl font-bold leading-none mb-3">
             Smart Digital Marketing Solutions for Modern Businesses
           </h1>
-          <p className="text-ehite text-sm md:text-base mb-5 leading-relaxed">
+          <p className="text-white text-sm md:text-base mb-5 leading-relaxed">
             Adivoz delivers digital marketing solutions tailored to your
             business. We adapt strategies to drive growth, boost engagement, and
             evolve with your goals in today’s dynamic online landscape.
