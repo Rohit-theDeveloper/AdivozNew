@@ -23,7 +23,7 @@ export default function SearchModal({ isOpen, onClose }) {
         >
           {/* Close Button */}
           <button
-            className="absolute top-[-350px] right-[20px] sm:right-10 sm:top-[-100px] lg:top-[-250px] lg:right-[-200px] w-15 h-15 flex items-center justify-center rounded-full bg-black/7 transition-all sm:hover:rotate-360 sm:hover:border-white hover:bg-white hover:text-gray-700 text-blue-500 text-2xl font-bold border border-blue-500 cursor-pointer"
+            className="absolute top-[-320px] right-[20px] sm:right-5 sm:top-[-400px] lg:top-[-250px] lg:right-[-200px] w-15 h-15 flex items-center justify-center rounded-full bg-black/7 transition-all sm:hover:rotate-360 sm:hover:border-white hover:bg-white hover:text-gray-700 text-blue-500 text-2xl font-bold border border-blue-500 cursor-pointer"
             onClick={onClose} 
           >
             &times;

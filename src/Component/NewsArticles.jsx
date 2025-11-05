@@ -47,7 +47,7 @@ const NewsArticles = () => {
           <button
             className="relative overflow-hidden border border-gray-300 text-gray-700 px-5 py-2 rounded-lg flex items-center gap-2 transition-all duration-500
                         before:absolute before:inset-0 before:bg-blue-600 before:translate-x-[-100%] before:transition-transform before:duration-300 hover:before:translate-x-0
-                        hover:text-white hover:border-blue-600 z-10"
+                        hover:text-white hover:border-blue-600 z-10 cursor-pointer"
                     >
             <span className="relative z-20">See More Articles →</span>
           </button>
@@ -58,10 +58,10 @@ const NewsArticles = () => {
           {articles.map((item) => (
             <div
               key={item.id}
-              className="bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden"
+              className="bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden cursor-pointer"
             >
               {/* Image */}
-              <div className="w-full h-60 overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -69,7 +69,7 @@ const NewsArticles = () => {
                   decoding="async"
                   width={400}
                   height ={240}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full sm:object-cover object-contain hover:scale-105 transition-transform duration-300 "
                 />
               </div>
 
@@ -82,7 +82,7 @@ const NewsArticles = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
                   {item.title}
                 </h3>
-                <button className="text-sm font-medium text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white transition px-4 py-2 rounded-lg">
+                <button className="text-sm font-medium text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white transition px-4 py-2 rounded-lg cursor-pointer">
                   Read More →
                 </button>
               </div>
