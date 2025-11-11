@@ -96,7 +96,7 @@ export default function FeaturesSection() {
       {/* Section Header */}
       <div className="text-center mb-8">
         <h5 className="text-blue-600 font-medium mb-2">Our Features</h5>
-        <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-10">
+        <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-15">
           Professional Digital Marketing Services For Unstoppable Growth
         </h2>
       </div>

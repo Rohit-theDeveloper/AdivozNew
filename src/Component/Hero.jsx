@@ -101,7 +101,7 @@ export default function Hero() {
             </span>
           </div>
           <div className=" flex-1 flex gap-3 items-center justify-center px-3 cursor-pointer hover:scale-110 cursor-pointer py-4 transition-all duration-500">
-            <FaHeadset
+            <RiPriceTag2Line 
               size={"40px"}
               className="text-blue-500 border  p-1 rounded-full shadow-lg bg-white"
             />
@@ -113,7 +113,7 @@ export default function Hero() {
             </span>
           </div>
           <div className=" flex-1 flex gap-3 items-center justify-center px-3 hover:scale-110 cursor-pointer py-4 transition-all duration-500">
-            <RiPriceTag2Line
+            <FaHeadset
               size={"45px"}
               className="text-blue-500  p-1 rounded-full shadow-lg bg-white"
             />

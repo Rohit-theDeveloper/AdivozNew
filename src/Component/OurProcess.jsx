@@ -9,7 +9,7 @@ const steps = [
     id: "01",
     title: "Requirement analysis",
     description:
-      "We listen to your brand story, we understand your goals, and we launch a powerful digital strategy.",
+      "We listen to your brand story, we understand your goals, and we launch a powerful digital strategy. Plus, we conduct competitor analysis to identify insights, gaps, and opportunities.",
     image:
       img1, 
   },

@@ -17,4 +17,9 @@
 .swiper-slide-active {
   transform: scale(0); /* Shrinks center slide */
 }
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  height: auto !important;
+}
 

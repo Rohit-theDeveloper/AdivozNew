@@ -71,7 +71,7 @@ const Testimonial = () => {
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-         className="pb-20 "
+         className="pb-20  !h-auto"
 
         >
           {testimonials.map((item) => (
@@ -98,11 +98,11 @@ const Testimonial = () => {
                 </div>
 
                 {/* Text */}
-                <p className="text-sm text-gray-600 mb-10 text-left">{item.text}</p>
+                <p className="text-sm text-gray-600 mb-10 text-left line-clamp-4">{item.text}</p>
 
                 {/* Bottom Circular Icon */}
                 <div className="absolute bottom-2 z-10 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-semibold shadow-md">
-                  99
+               99
                 </div>
               </div>
             </SwiperSlide>

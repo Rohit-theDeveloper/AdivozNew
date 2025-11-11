@@ -52,18 +52,14 @@ export default function AboutUs() {
           </h1>
           <p className="text-sm text-gray-600 mt-2 text-left md:text-start hyphens-auto ">
             Ever wondered why some brands stick with you while others fade? They
-            probably have undertaken strong digital strategies. At Adivoz, we
+            probably have undertaken strong digital strategies. <br></br> <br></br>At Adivoz, we
             create complete solutions that encourage engagement, build loyalty,
             and spur real growth. Our creative thinkers, data-driven
             strategists, and tech addicts are strongly tied to one goal:<span className="font-bold "> “Making
             Your Brand Impossible to Ignore”.</span> 
-            <p className="mt-4">Every business is unique! Knowing
-            that, we dig right into your goals, your audience, and your market,
-            then come up with strategies that evolve as you grow. With Adivoz
-            ride-or-die digital partners, ensure your brand is always on point
-            and never left behind.</p>
+            
           </p>
-          <div className="flex flex-col gap-5 mt-8">
+          <div className="flex flex-col gap-5 mt-8 ">
             {/* Section 1 */}
             <div className="flex items-center gap-4">
               <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white">
