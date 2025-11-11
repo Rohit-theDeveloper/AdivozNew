@@ -51,7 +51,7 @@ const testimonials = [
 
 const Testimonial = () => {
   return (
-    <section className="bg-white py-20 relative ">
+    <section className="bg-white py-10 relative ">
       <div className="container mx-auto px-6 md:px-16 text-center">
         {/* Heading */}
         <h4 className="text-blue-500 font-medium mb-2">Testimonial</h4>
@@ -71,12 +71,12 @@ const Testimonial = () => {
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-         className="pb-20 overflow-hidden"
+         className="pb-20 "
 
         >
           {testimonials.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div className="bg-gray-100 shadow-md border border-gray-100 rounded-2xl overflow-visible p-6 mx-2 flex flex-col items-start text-left relative hover:shadow-lg transition h-[350px] ">
+            <SwiperSlide key={item.id} >
+              <div className="bg-gray-100 shadow-md border border-gray-100 rounded-2xl overflow-visible p-6 mx-2 flex flex-col items-start text-left relative hover:shadow-lg transition  h-auto ">
                 {/* Profile */}
                 <div className="flex items-center mb-10 ">
                   <img
@@ -91,7 +91,7 @@ const Testimonial = () => {
                 </div>
 
                 {/* Stars */}
-                <div className="flex text-yellow-400 mb-3">
+                <div className="flex text-yellow-400 mb-2">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <span key={i}>★</span>
                   ))}
