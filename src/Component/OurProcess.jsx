@@ -1,8 +1,8 @@
 import React from "react";
-import img1 from '../assets/ourprocess1.avif';
-import img2 from '../assets/ourprocess2.avif';
-import img3 from '../assets/ourprocess3.avif';
-import img4 from '../assets/ourprocess4.avif';
+import img1 from '../assets/ourprocess1.jpg';
+import img2 from '../assets/ourprocess2.jpg';
+import img3 from '../assets/ourprocess3.jpg';
+import img4 from '../assets/ourprocess4.jpg';
 
 const steps = [
   {
@@ -53,15 +53,15 @@ const OurProcess = () => {
         </h2>
 
         {/* Process Steps */}
-       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-2 lg:mx-35 place-items-center">
+       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  lg:gap-5 lg:mx-10 place-items-center md:mx-4 gap-3">
 
           {steps.map((step) => (
             <div
               key={step.id}
-              className="bg-white w-50 h-100  rounded-full shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-2 p-6 flex flex-col items-center text-center border border-gray-100"
+              className="bg-white w-60 sm:w-auto h-100 rounded-full shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-2 p-6 flex flex-col items-center text-center border border-gray-100"
             >
               {/* Image */}
-              <div className="w-40 h-40 rounded-full overflow-hidden mb-6">
+              <div className="w-45 h-45 rounded-full overflow-hidden mb-6">
                 <img
                   src={step.image}
                   alt={step.title}

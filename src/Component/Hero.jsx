@@ -19,29 +19,29 @@ export default function Hero() {
         }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/45 z-10"></div>
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
 
         {/* Content */}
-        <div className="relative z-20 max-w-[600px]  px-6 mx-4  md:mx-40 md:my-10   ">
-          <h4 className="text-sm md:text-base font-medium text-white mb-3">
+        <div className="relative z-20 max-w-[600px]  px-6 mx-4  md:mx-40 md:my-5">
+          <h4 className="text-sm md:text-base font-medium text-white mb-5">
             <span className="flex gap-1 items-center">
-              {" "}
+             
               <GrLocationPin
                 className="rotate-92  align-middle"
-                size={"25px"}
+                size={"30px"}
               />
               Smart Digital Marketing Solutions for Modern Businesses
             </span>
           </h4>
-          <h1 className="text-3xl md:text-5xl font-bold leading-none mb-3">
+          <h2 className="text-3xl md:text-5xl font-bold  mb-5">
             Smart Digital Marketing Solutions for Modern Businesses
-          </h1>
-          <p className="text-white text-sm md:text-base mb-5 leading-relaxed">
+          </h2>
+          <p className="text-white text-sm md:text-base mb-10 leading-relaxed ">
             Adivoz delivers digital marketing solutions tailored to your
             business. We adapt strategies to drive growth, boost engagement, and
             evolve with your goals in today’s dynamic online landscape.
           </p>
-          <div className="flex flex-col md:flex-row gap-3 md:gap-2">
+          <div className="flex flex-col md:flex-row gap-3 md:gap-2 ">
             {/* Button 1 */}
             <a
               href="#"
@@ -75,9 +75,10 @@ export default function Hero() {
             </a>
           </div>
         </div>
+
       </section>
       <div className=" bg-gray-200">
-        <div className="lg:mx-20 flex  flex-col sm:flex-row gap-3 justify-between mx-3   ">
+        <div className="lg:mx-20 flex  flex-col sm:flex-row gap-3 justify-between mx-3 py-4">
           <div className="flex gap-2 items-center justify-center px-3 hover:scale-110 cursor-pointer py-4 transition-all duration-500">
             <RiTeamFill
               size={"40px"}

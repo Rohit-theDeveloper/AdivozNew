@@ -25,7 +25,7 @@ export default function FeaturesSection() {
   {
     title: "Content Marketing",
     img: img_3,
-    desc: "Create valuable content that drives growth.",
+    desc: "Create valuable content that drives growth.Create valuable content that drives growth.",
   },
   {
     title: "Graphic Design & Branding",
@@ -60,7 +60,7 @@ export default function FeaturesSection() {
       const delay = Math.random() * 1000 + 2000;
 
       // Random scroll distance (100–300px)
-      const distance = Math.random() * 200 + 100;
+      const distance = Math.random() * 200 + 50;
 
       // Smooth scroll to next position
       scrollContainer.scrollBy({
@@ -107,7 +107,7 @@ export default function FeaturesSection() {
         return ( 
           <div
             key={index}
-            className={`max-w-[200px] md:max-w-[250px] bg-white shadow-md rounded-2xl overflow-hidden flex-shrink-0 transform transition-all duration-500 ease-in-out ${rotation} hover:rotate-0 hover:scale-105 hover:shadow-xl`}
+            className={`max-w-[300px] md:max-w-[300px] bg-white shadow-md rounded-2xl overflow-hidden flex-shrink-0 transform transition-all duration-500 ease-in-out ${rotation} hover:rotate-0 hover:scale-105 hover:shadow-xl`}
           >
             <img
               src={service.img}
@@ -115,9 +115,9 @@ export default function FeaturesSection() {
               loading="lazy"
               width = {300}
               height = {400}
-              className="w-auto h-48 object-cover"
+              className="w-auto h-50 object-cover"
             />
-            <div className="p-4">
+            <div className="p-4 cursor-pointer my-4">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {service.title}
               </h3>

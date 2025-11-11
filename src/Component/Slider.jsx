@@ -7,11 +7,11 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import slide_image_1 from "../assets/slider1.avif";
-import slide_image_2 from "../assets/slider2.avif";
-import slide_image_3 from "../assets/slider3.avif";
-import slide_image_4 from "../assets/slider4.avif";
-import slide_image_5 from "../assets/slider5.avif";
+import slide_image_1 from "../assets/slider1.jpg";
+import slide_image_2 from "../assets/slider2.jpg";
+import slide_image_3 from "../assets/slider3.jpg";
+import slide_image_4 from "../assets/slider4.jpg";
+import slide_image_5 from "../assets/slider5.jpg";
 
 export default function Slider() {
   const slides = [
@@ -65,7 +65,7 @@ export default function Slider() {
     },
   ];
   return (
-    <div className="md:mx-35 mx-5 my-5">
+    <div className="md:mx-35 mx-5 mt-5 mb-15">
       {/* Outer margin for container */}
       <div
         className="
@@ -119,7 +119,7 @@ export default function Slider() {
         pagination={{ clickable: true }} // Pagination bullets
         navigation={true} // Arrows
         modules={[EffectCoverflow, Pagination, Autoplay]}
-        className="relative h-[180px] md:h-[500px] sm:h-[150px]  rounded-xl transition-transform duration-300 ease-in-out
+        className="relative  h-[180px] sm:h-[280px]  lg:h-[500px]   rounded-xl transition-transform duration-300 ease-in-out
             " // Container height & background
         //  Slider container height is controlled here (change h-[...] values)
         // Individual slide width is controlled by slidesPerView prop and SwiperSlide width classes
@@ -136,7 +136,7 @@ export default function Slider() {
               loading="lazy"
               width={600}
               height={400}
-              className="w-full h-full rounded-2xl object-cover"
+              className="w-full h-full  rounded-2xl object-cover"
             />
             <div className="absolute bottom-5 left-5 text-white z-10 text-overlay transition-opacity duration-700">
               <h2 className=" text-[10px] sm:text-xl font-semibold drop-shadow-md">
@@ -154,7 +154,7 @@ export default function Slider() {
         <div className="swiper-pagination !w-[15rem] bottom-1 relative"></div>
 
         {/* Navigation arrows */}
-        <div className="slider-controler flex justify-center items-center relative bottom-8">
+        {/* <div className="slider-controler flex justify-center items-center relative bottom-8">
           <div className="swiper-button-prev w-14 h-14 rounded-full bg-white flex justify-center items-center drop-shadow-lg -translate-x-[42%]">
             <ion-icon
               name="arrow-back-outline"
@@ -167,7 +167,7 @@ export default function Slider() {
               class="text-2xl text-gray-900"
             ></ion-icon>
           </div>
-        </div>
+        </div> */}
 
         <style>
           {`

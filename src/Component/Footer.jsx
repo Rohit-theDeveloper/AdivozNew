@@ -132,7 +132,7 @@ const Footer = () => {
             />
             <button
               type="submit"
-              className="bg-blue-600 hover:bg-blue-700 transition px-4 py-3 rounded-full ml-[-15px]"
+              className="bg-blue-600 hover:bg-blue-700 transition px-4 py-3 rounded-full ml-[-15px] cursor-pointer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

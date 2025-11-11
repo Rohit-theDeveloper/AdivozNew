@@ -1,7 +1,7 @@
 import React from "react";
-import img1 from '../assets/blogs1.avif';
-import img2 from '../assets/blogs2.avif';
-import img3 from '../assets/blogs3.avif';
+import img1 from '../assets/blogs1.jpg';
+import img2 from '../assets/blogs2.jpg';
+import img3 from '../assets/blogs3.jpg';
 
 const articles = [
   {
