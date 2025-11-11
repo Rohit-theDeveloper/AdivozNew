@@ -9,7 +9,7 @@ const steps = [
     id: "01",
     title: "Requirement analysis",
     description:
-      "Understanding Business Needs To Define Precise, Actionable, And Effective Solutions.",
+      "We listen to your brand story, we understand your goals, and we launch a powerful digital strategy.",
     image:
       img1, 
   },
@@ -17,7 +17,7 @@ const steps = [
     id: "02",
     title: "Design and Execution",
     description:
-      "Creating Visually Engaging Websites And Executing Seamless, User-Friendly Digital Experiences.",
+      "Our creative masterminds and tech experts design visual outlooks to captivate and convert. In essence, we merge creativity with technology to let a brand stand out. ",
     image:
       img2, 
   },
@@ -25,7 +25,7 @@ const steps = [
     id: "03",
     title: "Monitoring",
     description:
-      "Tracking Performance Continuously To Optimize Strategies And Ensure Measurable Results.",
+      "Once your campaigns go live, we double down! Our team monitors real-time data, audience engagement, and performance metrics to yield the greatest ROI.",
     image:
      img3, 
   },
@@ -33,7 +33,7 @@ const steps = [
     id: "04",
     title: "Reporting",
     description:
-      "Analyzing Data And Generating Insights To Drive Informed Business Decisions.",
+      "Enjoy complete control with data-driven reports to know how our strategies perform, because the stats don’t lie. So, make informed decisions and track your brand’s measurable success.",
     image:
      img4, 
   },
@@ -41,7 +41,7 @@ const steps = [
 
 const OurProcess = () => {
   return (
-<section className="relative bg-gradient-to-b from-gray-400 to-white py-20">
+<section className="relative bg-gradient-to-b from-gray-200 to-white py-10">
       {/* background subtle tech pattern */}
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/circles-and-lines.png')] opacity-5"></div>
 
@@ -49,16 +49,16 @@ const OurProcess = () => {
         {/* Heading */}
         <h4 className="text-blue-500 font-medium mb-2">Our Process</h4>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-          How It Work Process!
+         How It Works!
         </h2>
 
         {/* Process Steps */}
-       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  lg:gap-5 lg:mx-10 place-items-center md:mx-4 gap-3">
+       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  lg:gap-5 lg:mx-35 place-items-center md:mx-3 gap-5">
 
           {steps.map((step) => (
             <div
               key={step.id}
-              className="bg-white w-60 sm:w-auto h-100 rounded-full shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-2 p-6 flex flex-col items-center text-center border border-gray-100"
+              className="bg-white w-60 sm:w-60 h-115 rounded-tr-full rounded-tl-full rounded-br-full rounded-bl-2xl shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-2 p-5 flex flex-col items-center text-center border border-gray-100"
             >
               {/* Image */}
               <div className="w-45 h-45 rounded-full overflow-hidden mb-6">
@@ -79,7 +79,7 @@ const OurProcess = () => {
               </h3>
 
               {/* Description */}
-              <p className="text-sm text-gray-600 mb-4">{step.description}</p>
+              <p className="text-sm text-gray-600 mb-4 text-left">{step.description}</p>
 
               {/* Step Number */}
               <span className="text-sm font-semibold text-black">

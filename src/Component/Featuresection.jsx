@@ -1,9 +1,12 @@
 import React from "react";
 import { useEffect, useRef } from "react";
- import img_1 from '../assets/featureimg1.jpg';
- import img_2 from '../assets/featureimg2.jpg';
-import img_3 from '../assets/featureimg3.jpg';
-import img_4 from '../assets/featureimg4.jpg';
+ import img_1 from '../assets/SEO.jpg';
+ import img_2 from '../assets/socialmedia-marketing.jpg';
+ import img_3 from '../assets/Content-marketing.jpg';
+ import img_4 from '../assets/graphic-design.jpg';
+ import img_5 from '../assets/web design.jpg';
+ import img_6 from '../assets/reputation.jpg';
+ import img_7 from '../assets/socialmedia-marketing.jpg';
 
 
 
@@ -15,37 +18,37 @@ export default function FeaturesSection() {
   {
     title: "Search Engine Optimization",
     img: img_1,
-    desc: "Covers all aspects of IT, from consulting and planning.",
+    desc: "Strategic SEO for greater visibility with organic traffic. ",
   },
   {
     title: "Email Marketing",
     img: img_2,
-    desc: "Reach your audience with targeted campaigns.",
+    desc: "Raise brand awareness with targeted campaigns",
   },
   {
     title: "Content Marketing",
     img: img_3,
-    desc: "Create valuable content that drives growth.Create valuable content that drives growth.",
+    desc: "valuable and relevant content for SEO success. ",
   },
   {
     title: "Graphic Design & Branding",
     img:img_4,
-    desc: "Covers all aspects of IT, from consulting and planning.",
+    desc: "Visual creation of a brand's identity with cohesive visual elements.",
   },
   {
     title: "Web Design & Development",
-    img: img_2,
-    desc: "Covers all aspects of IT, from consulting and planning.",
+    img: img_5,
+    desc: "Designs that align well with contemporary trends",
   },
   {
-    title: "Web Design & Development",
-    img: img_1,
-    desc: "Covers all aspects of IT, from consulting and planning.",
+    title: "Online Reputation Management",
+    img: img_6,
+    desc: "Maintain credibility and shape a positive online image.",
   },
   {
-    title: "Web Design & Development",
-    img: img_2,
-    desc: "Covers all aspects of IT, from consulting and planning.",
+    title: "Social Media Marketing",
+    img: img_7,
+    desc: "Convert subscribers with powerful engagement posts.",
   },
 ];
 
@@ -60,7 +63,7 @@ export default function FeaturesSection() {
       const delay = Math.random() * 1000 + 2000;
 
       // Random scroll distance (100–300px)
-      const distance = Math.random() * 200 + 50;
+      const distance = Math.random() * 200 + 200;
 
       // Smooth scroll to next position
       scrollContainer.scrollBy({
@@ -93,8 +96,8 @@ export default function FeaturesSection() {
       {/* Section Header */}
       <div className="text-center mb-8">
         <h5 className="text-blue-600 font-medium mb-2">Our Features</h5>
-        <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
-          Reliable Digital Marketing Service For Unstoppable Growth
+        <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-10">
+          Professional Digital Marketing Services For Unstoppable Growth
         </h2>
       </div>
 
@@ -107,7 +110,7 @@ export default function FeaturesSection() {
         return ( 
           <div
             key={index}
-            className={`max-w-[300px] md:max-w-[300px] bg-white shadow-md rounded-2xl overflow-hidden flex-shrink-0 transform transition-all duration-500 ease-in-out ${rotation} hover:rotate-0 hover:scale-105 hover:shadow-xl`}
+            className={`max-w-[300px] md:max-w-[300px] bg-white shadow-md rounded-2xl overflow-hidden flex-shrink-0 transform transition-all duration-500 ease-in-out ${rotation} hover:rotate-0 hover:scale-105 hover:shadow-xl mb-5`}
           >
             <img
               src={service.img}

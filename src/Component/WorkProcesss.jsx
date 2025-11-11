@@ -63,7 +63,7 @@ const WorkProcesss = () => {
             Work Process
           </h4>
           <h2 className="text-3xl md:text-4xl font-bold leading-tight text-gray-900">
-            Manage Web Services Tailored Growth Strategies
+            Oversee Web Service's Customized Growth Plan
           </h2>
 
           <div className="space-y-6 mt-8">
@@ -80,8 +80,7 @@ const WorkProcesss = () => {
                     Consultation & Assessment
                   </h3>
                   <p className="text-sm text-gray-600 mt-1">
-                    We begin with a deep understanding of your business needs,
-                    current IT environment.
+                   We start by knowing your business objectives, existing IT landscape, and digital challenges.
                   </p>
                 </div>
                 <span
@@ -107,8 +106,7 @@ const WorkProcesss = () => {
                     Implementation & Integration
                   </h3>
                   <p className="text-sm text-gray-600 mt-1">
-                    Our team ensures seamless integration of new solutions into
-                    your existing infrastructure.
+                    Adivoz successfully launches new technologies into existing infrastructures.
                   </p>
                 </div>
                 <span
@@ -134,8 +132,7 @@ const WorkProcesss = () => {
                     Ongoing Support & Optimization
                   </h3>
                   <p className="text-sm text-gray-600 mt-1">
-                    We provide continuous support and regularly assess
-                    performance to enhance system efficiency.
+                    Get dedicated support, progress tracking, and tips for performance enhancement.
                   </p>
                 </div>
                 <span

@@ -7,21 +7,21 @@ const articles = [
   {
     id: 1,
     image: img1,
-    title: "End-to-end marketing operations handled for the client",
+    title: "End-to-end marketing operations handled For the client",
     date: "June 10, 2025",
     readTime: "5 min read",
   },
   {
     id: 2,
     image: img2,
-    title: "The impact of AI and Machine Learning in Digital Marketing",
+    title: "How AI and Machine Learning are Impacting Digital Marketing Strategies?",
     date: "Nov 12, 2025",
     readTime: "7 min read",
   },
   {
     id: 3,
     image: img3,
-    title: "Top 7 Digital Marketing Solutions Every Business Needs",
+    title: "Top 7 Digital Marketing Tools That Every Company Must Have",
     date: "July 05, 2025",
     readTime: "6 min read",
   },
@@ -38,9 +38,9 @@ const NewsArticles = () => {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
           <div>
-            <h5 className="text-blue-500 font-medium mb-1">Blog and Article</h5>
+            <h5 className="text-blue-500 font-medium mb-3">Blog and Article</h5>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              News & Articles
+              Latest Blogs
             </h2>
           </div>
 

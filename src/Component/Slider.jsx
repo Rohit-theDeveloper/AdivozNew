@@ -65,11 +65,11 @@ export default function Slider() {
     },
   ];
   return (
-    <div className="md:mx-35 mx-5 mt-5 mb-15">
+    <div className="md:mx-35 mx-5 my-15">
       {/* Outer margin for container */}
       <div
         className="
-      case-study-header flex flex-col sm:flex-row sm:justify-between items-center mb-5 gap-4"
+      case-study-header flex flex-col sm:flex-row sm:justify-between items-center mb-15 gap-4"
       >
         {/* left section */}
         <div>
@@ -84,7 +84,7 @@ export default function Slider() {
           {Buttons.map((btn, id) => (
             <button
               key={id}
-              className="relative overflow-hidden rounded-2xl text-sm text-white px-4 py-2
+              className="relative overflow-hidden rounded-2xl text-xs text-white px-3 py-2
         bg-blue-500
         cursor-pointer transition-all duration-500 ease-in-out
         before:absolute before:inset-0 before:bg-blue-700 before:-translate-x-full
@@ -119,7 +119,7 @@ export default function Slider() {
         pagination={{ clickable: true }} // Pagination bullets
         navigation={true} // Arrows
         modules={[EffectCoverflow, Pagination, Autoplay]}
-        className="relative  h-[180px] sm:h-[280px]  lg:h-[500px]   rounded-xl transition-transform duration-300 ease-in-out
+        className="relative  h-[180px] sm:h-[280px]  lg:h-[500px]   rounded-xl transition-transform duration-300 ease-in-out mt-10
             " // Container height & background
         //  Slider container height is controlled here (change h-[...] values)
         // Individual slide width is controlled by slidesPerView prop and SwiperSlide width classes

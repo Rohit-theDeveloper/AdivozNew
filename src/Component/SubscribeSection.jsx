@@ -14,9 +14,7 @@ const SubscribeSection = () => {
             Subscribe To Our latest Newsletter
           </h2>
           <p className="text-sm md:text-base text-blue-100 mb-6 leading-relaxed max-w-md">
-            Digital Marketing Solutions encompasses a wide range of Services,
-            Technologies, and strategies designed to address the technological
-            challenges of today.
+            Get the newest digital marketing tips, trends, and insights straight to your inbox. Join the Adivoz community and level up the marketing game!
           </p>
 
           {/* Input Field + Button */}

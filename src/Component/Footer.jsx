@@ -7,7 +7,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
-import logo from "../assets/adivoz.jpg";
+import logo from "../assets/logo-footer.png";
 
 const Footer = () => {
   const [open, setOpen] = useState(false);
@@ -105,16 +105,15 @@ const Footer = () => {
           </h3>
           <ul className="space-y-3 text-sm text-gray-400">
             <li className="flex items-center gap-2">
-              <FiPhone className="text-blue-500" /> +91 XXXXX XXXXX
+              <FiPhone className="text-blue-500" /> ‪+1 368-997-1808‬
             </li>
             <li className="flex items-center gap-2">
-              <FiMail className="text-blue-500" /> info@adivoz.com
+              <FiMail className="text-blue-500" /> nishit@adivoz.com
             </li>
+
             <li className="flex items-center gap-2">
-              <FiMail className="text-blue-500" /> contact@adivoz.com
-            </li>
-            <li className="flex items-center gap-2">
-              <FiMapPin className="text-blue-500" /> New Delhi, India
+              <FiMapPin className="text-blue-500" size={"25px"} /> 33 Nolan Hill Blvd, NW
+              Calgary, Alberta, T3R 0S5 Canada
             </li>
           </ul>
         </div>

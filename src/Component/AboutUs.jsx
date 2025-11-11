@@ -12,7 +12,7 @@ export default function AboutUs() {
       <div></div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 md:gap-3 sm:gap-3 gap-2 md:mx-15 mx-2 my-20">
         {/* Column 1 */}
-        <div className="flex justify-center ">
+        <div className="flex justify-center w-full">
           <img
             src={img3}
             alt="Team working together"
@@ -24,7 +24,7 @@ export default function AboutUs() {
         </div>
 
         {/* Column 2 */}
-        <div className="flex-1 flex flex-col gap-4">
+        <div className="flex-1 flex flex-col w-full gap-4">
           <img
             src={img1}
             alt="Office collaboration"
@@ -43,23 +43,26 @@ export default function AboutUs() {
           />
         </div>
 
-        {/* Column 3:  */} 
-        <div className="flex-1 flex flex-col rounded-lg p-6 ">
+        {/* Column 3:  */}
+        <div className="flex-1 flex flex-col rounded-lg p-6  ">
           <h5 className="text-blue-900 text-sm font-medium">
             About Us Our Company
           </h5>
           <h1 className="text-2xl md:text-2xl font-medium leading-tight mt-2">
-            Solutions that Evolve With Your Business
+            Solutions That Adapt as Your Business Evolves
           </h1>
-          <p className="text-sm text-gray-600 mt-2">
-            IT Solutions refer toa board of services and technologies designed
-            to address specific business needs , streamlinr operations , and
-            drive growth. These solutions encompass hardware.
-             IT Solutions refer toa board of services and technologies designed
-            to address specific business needs , streamlinr operations , and
-            drive growth. These solutions encompass hardware. IT Solutions refer toa board of services and technologies designed
-            to address specific business needs , streamlinr operations , and
-            drive growth. These solutions encompass hardware.
+          <p className="text-sm text-gray-600 mt-2 text-left md:text-start hyphens-auto ">
+            Ever wondered why some brands stick with you while others fade? They
+            probably have undertaken strong digital strategies. At Adivoz, we
+            create complete solutions that encourage engagement, build loyalty,
+            and spur real growth. Our creative thinkers, data-driven
+            strategists, and tech addicts are strongly tied to one goal:<span className="font-bold "> “Making
+            Your Brand Impossible to Ignore”.</span> 
+            <p className="mt-4">Every business is unique! Knowing
+            that, we dig right into your goals, your audience, and your market,
+            then come up with strategies that evolve as you grow. With Adivoz
+            ride-or-die digital partners, ensure your brand is always on point
+            and never left behind.</p>
           </p>
           <div className="flex flex-col gap-5 mt-8">
             {/* Section 1 */}
@@ -70,8 +73,7 @@ export default function AboutUs() {
               <div>
                 <h1 className="font-bold text-lg">Manage Web Services</h1>
                 <p className="text-sm text-gray-600">
-                  There are many variations of passages available but the
-                  majority
+                  We don’t just launch websites and call it a day. We monitor, optimize, and fix stuff behind the scenes.
                 </p>
               </div>
             </div>
@@ -86,8 +88,7 @@ export default function AboutUs() {
                   Tailored Growth Strategies
                 </h1>
                 <p className="text-sm text-gray-600">
-                  There are many variations of passages available but the
-                  majority
+                  We build custom-made success plans for SEO, social media campaigns, and more. We test, tweak, and scale until a brand hits the desired numbers. 
                 </p>
               </div>
             </div>
