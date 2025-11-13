@@ -8,13 +8,16 @@ import {
 } from "react-icons/fa";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import logo from "../assets/logo-footer.png";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [open, setOpen] = useState(false);
+  const Navigate = useNavigate;
 
   return (
     <footer className="bg-[#0B1320] text-gray-300 pt-16 pb-8 px-6 md:px-40 relative overflow-hidden">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-gray-700 pb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 border-b border-gray-700 pb-10">
         {/* Logo & About */}
         <div>
           <h2 className="text-2xl font-bold text-white mb-3 flex items-center gap-2">
@@ -25,7 +28,7 @@ const Footer = () => {
               decoding="async"
               width={100}
               height={40}
-              className="w-auto h-10 rounded-xl"
+              className="w-auto h-15 rounded-xl"
             />
           </h2>
           <p className="text-sm text-gray-400 mb-4 leading-relaxed">
@@ -71,19 +74,19 @@ const Footer = () => {
             } overflow-hidden md:overflow-visible`}
           >
             <li>
-              <a href="#" className="hover:text-blue-500 transition">
+              <a href="/" className="hover:text-blue-500 transition">
                 Home
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-500 transition">
+              <Link to="/about-us" className="hover:text-blue-500 transition">
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-500 transition">
-                Our Services
-              </a>
+              <Link to="/services" className="hover:text-blue-500 transition">
+               Our Srvices
+              </Link>
             </li>
             <li>
               <a href="#" className="hover:text-blue-500 transition">
@@ -112,14 +115,14 @@ const Footer = () => {
             </li>
 
             <li className="flex items-center gap-2">
-              <FiMapPin className="text-blue-500" size={"25px"} /> 33 Nolan Hill Blvd, NW
-              Calgary, Alberta, T3R 0S5 Canada
+              <FiMapPin className="text-blue-500" size={"25px"} /> 33 Nolan Hill
+              Blvd, NW Calgary, Alberta, T3R 0S5 Canada
             </li>
           </ul>
         </div>
 
         {/* Newsletter */}
-        <div>
+        {/* <div>
           <h3 className="text-white font-semibold text-lg mb-3">
             Get updated the latest newsletter
           </h3>
@@ -143,7 +146,7 @@ const Footer = () => {
               </svg>
             </button>
           </form>
-        </div>
+        </div> */}
       </div>
 
       {/* Bottom Bar */}

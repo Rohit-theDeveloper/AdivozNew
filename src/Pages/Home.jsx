@@ -38,8 +38,8 @@ export default function Home() {
         <Slider />
         <OurProcess />
         <Testimonial />
-        <NewsArticles />
-        <SubscribeSection />
+        {/* <NewsArticles />
+        <SubscribeSection /> */}
       </Suspense>
     </>
   );

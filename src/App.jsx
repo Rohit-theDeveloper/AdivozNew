@@ -8,6 +8,8 @@ import { CirclesWithBar } from "react-loader-spinner";
 
 const Home = lazy(() => import("./Pages/Home"));
 const About = lazy(() => import("./Pages/About"));
+const Services = lazy(() => import("./Pages/Services"));
+const Contact = lazy(()=>import("./Pages/Contact"))
 
 import "./App.css";
 
@@ -35,6 +37,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<About />} />
+            <Route path = "/services" element = {<Services/>} />
+            <Route path="/contact-us" element = {<Contact />} />
           </Routes>
         </Suspense>
 

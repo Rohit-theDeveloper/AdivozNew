@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { MdOutlineFeedback } from "react-icons/md";
 
 const testimonials = [
   {
@@ -76,7 +77,7 @@ const Testimonial = () => {
         >
           {testimonials.map((item) => (
             <SwiperSlide key={item.id} >
-              <div className="bg-gray-100 shadow-md border border-gray-100 rounded-2xl overflow-visible p-6 mx-2 flex flex-col items-start text-left relative hover:shadow-lg transition  h-auto ">
+              <div className="bg-gray-100 shadow-md border border-gray-100 rounded-2xl overflow-visible p-6 mx-2 flex flex-col items-start text-left relative hover:shadow-lg transition  h-auto cursor-pointer">
                 {/* Profile */}
                 <div className="flex items-center mb-10 ">
                   <img
@@ -102,7 +103,7 @@ const Testimonial = () => {
 
                 {/* Bottom Circular Icon */}
                 <div className="absolute bottom-2 z-10 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-semibold shadow-md">
-               99
+             <MdOutlineFeedback />
                 </div>
               </div>
             </SwiperSlide>

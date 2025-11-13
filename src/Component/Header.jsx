@@ -22,54 +22,54 @@ export default function Header() {
       title: "About Us",
       path: "/about-us",
       submenu: [
-        { name: "Our Story", path: "/about-us/story" },
-        { name: "Team", path: "/about-us/team" },
-        { name: "Careers", path: "/about-us/careers" },
+        // { name: "Our Story", path: "/about-us/story" },
+        // { name: "Team", path: "/about-us/team" },
+        // { name: "Careers", path: "/about-us/careers" },
       ],
     },
-    {
-      title: "Pages",
-      path: "/pages",
-      submenu: [
-        { name: "FAQ", path: "/pages/faq" },
-        { name: "Pricing", path: "/pages/pricing" },
-        { name: "Testimonials", path: "/pages/testimonials" },
-      ],
-    },
+    // {
+    //   title: "Pages",
+    //   path: "/pages",
+    //   submenu: [
+    //     // { name: "FAQ", path: "/pages/faq" },
+    //     // { name: "Pricing", path: "/pages/pricing" },
+    //     // { name: "Testimonials", path: "/pages/testimonials" },
+    //   ],
+    // },
     {
       title: "Our Services",
       path: "/services",
       submenu: [
-        { name: "SEO Optimization", path: "/services/seo" },
-        { name: "Web Development", path: "/services/web-dev" },
-        { name: "Graphic Design", path: "/services/design" },
+        // { name: "SEO Optimization", path: "/services/seo" },
+        // { name: "Web Development", path: "/services/web-dev" },
+        // { name: "Graphic Design", path: "/services/design" },
       ],
     },
-    {
-      title: "Projects",
-      path: "/projects",
-      submenu: [
-        { name: "Case Studies", path: "/projects/case-studies" },
-        { name: "Portfolio Grid", path: "/projects/portfolio" },
-        { name: "Client Results", path: "/projects/results" },
-      ],
-    },
-    {
-      title: "Blog",
-      path: "/blog",
-      submenu: [
-        { name: "Latest Posts", path: "/blog/latest" },
-        { name: "Categories", path: "/blog/categories" },
-        { name: "Tags", path: "/blog/tags" },
-      ],
-    },
+    // {
+    //   title: "Projects",
+    //   path: "/projects",
+    //   submenu: [
+    //     { name: "Case Studies", path: "/projects/case-studies" },
+    //     { name: "Portfolio Grid", path: "/projects/portfolio" },
+    //     { name: "Client Results", path: "/projects/results" },
+    //   ],
+    // },
+    // {
+    //   title: "Blog",
+    //   path: "/blog",
+    //   submenu: [
+    //     { name: "Latest Posts", path: "/blog/latest" },
+    //     { name: "Categories", path: "/blog/categories" },
+    //     { name: "Tags", path: "/blog/tags" },
+    //   ],
+    // },
     {
       title: "Contact Us",
       path: "/contact-us",
       submenu: [
-        { name: "Contact Info", path: "/contact/info" },
-        { name: "Support", path: "/contact/support" },
-        { name: "Location Map", path: "/contact/location" },
+        // { name: "Contact Info", path: "/contact/info" },
+        // { name: "Support", path: "/contact/support" },
+        // { name: "Location Map", path: "/contact/location" },
       ],
     },
   ];
@@ -105,7 +105,7 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:block">
-          <ul className="flex items-center gap-6 md:gap-1 lg:gap-6 font-medium text-gray-700 relative">
+          <ul className="flex items-center gap-6 md:gap-1 lg:gap-15 font-medium text-gray-700 relative">
             {navItems.map((item, index) => (
               <li
                 key={index}
