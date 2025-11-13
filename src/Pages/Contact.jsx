@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import FAQSection from '../Component/FAQSection'
+import FAQSection from "../Component/FAQSection";
 import {
   FiPhoneCall,
   FiMail,
@@ -12,6 +12,9 @@ import {
 import { MdOutlineSubject } from "react-icons/md";
 import { FaPaperPlane } from "react-icons/fa";
 import MapSection from "../Component/MapSection";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -22,7 +25,6 @@ export default function Contact() {
   });
 
   const [errors, setErrors] = useState({});
-
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -50,7 +52,16 @@ export default function Contact() {
     }
 
     // If validation passes
-    alert("Form submitted successfully!");
+    toast.success("Form submitted successfully!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "colored",
+    });
+
     setFormData({
       name: "",
       email: "",
@@ -144,8 +155,8 @@ export default function Contact() {
                 <div>
                   <p className="text-gray-600 text-sm">Visit Our Office</p>
                   <h4 className="text-gray-900 font-semibold text-lg">
-                    33 Nolan Hill Blvd,<br></br> NW
-                   Calgary, Alberta, T3R 0S5 Canada
+                    33 Nolan Hill Blvd,<br></br> NW Calgary, Alberta, T3R 0S5
+                    Canada
                   </h4>
                 </div>
               </div>
@@ -268,6 +279,7 @@ export default function Contact() {
       </section>
       <MapSection />
       <FAQSection />
+      <ToastContainer />
     </>
   );
 }

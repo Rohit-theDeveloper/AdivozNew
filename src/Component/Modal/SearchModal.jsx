@@ -1,8 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { CiSearch } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
 
 export default function SearchModal({ isOpen, onClose }) {
   const [animate, setAnimate] = useState(false);
+  const navigate = useNavigate();
+
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = () => {
+    if (searchTerm.trim() !== "") {
+      navigate(`/services?search=${encodeURIComponent(searchTerm)}`);
+      onClose(); // close the modal after navigation
+    }
+  };
 
   useEffect(() => {
     if (isOpen) setTimeout(() => setAnimate(true), 10);
@@ -24,20 +35,25 @@ export default function SearchModal({ isOpen, onClose }) {
           {/* Close Button */}
           <button
             className="absolute top-[-320px] right-[20px] sm:right-5 sm:top-[-400px] lg:top-[-250px] lg:right-[-200px] w-15 h-15 flex items-center justify-center rounded-full bg-black/7 transition-all sm:hover:rotate-360 sm:hover:border-white hover:bg-white hover:text-gray-700 text-blue-500 text-2xl font-bold border border-blue-500 cursor-pointer"
-            onClick={onClose} 
+            onClick={onClose}
           >
             &times;
           </button>
 
           {/* Search Box */}
           <div className="flex items-center  rounded-full px-4 py-3 w-full cursor-pointer border border-blue-800 bg-black">
-            
             <input
               type="text"
               placeholder="What Are You Looking For ?"
-              className="flex-1 outline-none text-white text-lg "
+              className="flex-1 outline-none text-white text-lg"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleSearch()} // press Enter to search
             />
-            <CiSearch className="text-gray-100 text-2xl mr-3 font-bold hover:scale-110"  />
+            <CiSearch
+              className="text-gray-100 text-2xl mr-3 font-bold hover:scale-110 cursor-pointer"
+              onClick={handleSearch}
+            />
           </div>
         </div>
       </div>
