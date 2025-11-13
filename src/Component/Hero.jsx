@@ -6,12 +6,14 @@ import { RiTeamFill } from "react-icons/ri";
 import { FaHeadset } from "react-icons/fa6";
 import { RiPriceTag2Line } from "react-icons/ri";
 import { Typewriter } from "react-simple-typewriter";
+import useAOS from "../hooks/useAOS";
 
 export default function Hero() {
+  useAOS();
   return (
     <>
       <section
-        className="relative w-full h-[90vh] flex items-center   text-white"
+        className="relative w-full h-[90vh] flex items-center text-white"
         style={{
           backgroundImage: `url(${herobg})`,
           backgroundPosition: "center",
@@ -25,7 +27,9 @@ export default function Hero() {
         {/* Content */}
         <div className="relative z-20 max-w-[600px]  px-6 mx-4  md:mx-40 md:my-5">
           <h4 className="text-sm md:text-base font-medium text-white mb-5">
-            <span className="flex gap-1 items-center">
+            <span 
+            data-aos ="fade-up"
+            className="flex gap-1 items-center">
               <GrLocationPin
                 className="rotate-92  align-middle"
                 size={"30px"}
@@ -48,10 +52,14 @@ export default function Hero() {
               delaySpeed={1000}
             />
           </h2>
-          <p className="text-white text-sm md:text-base mb-10 leading-relaxed ">
+          <p 
+           data-aos ="fade-up"
+          className="text-white text-sm md:text-base mb-10 leading-relaxed ">
             Adivoz is a next-gen digital marketing agency where we blend creativity with analytics to help your brand stand out. With evident digital strategies, we define brands, engage their audience, and achieve lasting results.
           </p>
-          <div className="flex flex-col md:flex-row gap-3 md:gap-2 ">
+          <div
+           data-aos ="fade-up"
+          className="flex flex-col md:flex-row gap-3 md:gap-2 ">
             {/* Button 1 */}
             <a
               href="#"
@@ -86,9 +94,14 @@ export default function Hero() {
           </div>
         </div>
       </section>
-      <div className=" bg-gray-200">
+
+      <div 
+       
+      className=" bg-gray-200">
         <div className="lg:mx-20  flex flex-col  sm:flex-row gap-3 sm:justify-between mx-10 py-4  ">
-          <div className=" flex-1 flex gap-3 items-center justify-center px-3 hover:scale-110 cursor-pointer py-4 transition-all duration-500">
+          <div
+          data-aos ="flip-left"
+          className=" flex-1 flex gap-3 items-center justify-center px-3 hover:scale-110 cursor-pointer py-4 transition-all duration-500">
             <RiTeamFill
               size={"40px"}
               className="text-blue-500 p-1 rounded-full shadow-lg bg-white "
@@ -100,7 +113,9 @@ export default function Hero() {
               </p>
             </span>
           </div>
-          <div className=" flex-1 flex gap-3 items-center justify-center px-3 cursor-pointer hover:scale-110 cursor-pointer py-4 transition-all duration-500">
+          <div 
+          data-aos ="flip-left"
+          className=" flex-1 flex gap-3 items-center justify-center px-3 cursor-pointer hover:scale-110 cursor-pointer py-4 transition-all duration-500">
             <RiPriceTag2Line 
               size={"40px"}
               className="text-blue-500 border  p-1 rounded-full shadow-lg bg-white"
@@ -112,7 +127,9 @@ export default function Hero() {
               </p>
             </span>
           </div>
-          <div className=" flex-1 flex gap-3 items-center justify-center px-3 hover:scale-110 cursor-pointer py-4 transition-all duration-500">
+          <div 
+          data-aos ="flip-left"
+          className=" flex-1 flex gap-3 items-center justify-center px-3 hover:scale-110 cursor-pointer py-4 transition-all duration-500">
             <FaHeadset
               size={"45px"}
               className="text-blue-500  p-1 rounded-full shadow-lg bg-white"

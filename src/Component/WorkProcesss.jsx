@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import img1 from '../assets/workprocess1.jpeg';
 import img2 from '../assets/workprocess2.jpeg';
 import img3 from '../assets/workprocess3.jpeg';
+import useAOS from "../hooks/useAOS";
 
 
 const WorkProcesss = () => {
   const [activeStep, setActiveStep] = useState(0);
+  useAOS();
 
   return (
     <section className="relative bg-gray-100 py-20 overflow-hidden">
@@ -14,7 +16,9 @@ const WorkProcesss = () => {
 
       <div className="container mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-12 px-6 md:px-16">
         {/* ---------- LEFT IMAGES ---------- */}
-        <div className="relative w-full md:w-1/2 flex justify-center">
+        <div 
+        data-aos ="fade-down"
+        className="relative w-full md:w-1/2 flex justify-center">
           {/* Small Labels */}
           <div className="absolute -top-8 -left-8 text-sm text-gray-600 space-y-2">
             <div className="flex items-center space-x-2">
@@ -59,14 +63,20 @@ const WorkProcesss = () => {
 
         {/* ---------- RIGHT CONTENT ---------- */}
         <div className="w-full md:w-1/2 space-y-6">
-          <h4 className="text-blue-500 font-semibold tracking-wide">
+          <h4 
+          data-aos ="fade-down"
+          className="text-blue-500 font-semibold tracking-wide">
             Work Process
           </h4>
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight text-gray-900">
+          <h2 
+          data-aos ="fade-down"
+          className="text-3xl md:text-4xl font-bold leading-tight text-gray-900">
             Oversee Web Service's Customized Growth Plan
           </h2>
 
-          <div className="space-y-6 mt-8">
+          <div
+          data-aos ="fade-left"
+          className="space-y-6 mt-8">
             {/* Step 1 */}
             <div
               onMouseEnter={() => setActiveStep(0)}

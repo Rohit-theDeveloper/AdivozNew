@@ -4,6 +4,8 @@ import Header from "./Component/Header";
 import ScrollTopButton from "./Component/ScrollTopButton";
 import Footer from "./Component/Footer";
 import { CirclesWithBar } from "react-loader-spinner";
+import { useEffect } from "react";
+import AOS from "aos"; 
 // import pages
 
 const Home = lazy(() => import("./Pages/Home"));
@@ -14,6 +16,14 @@ const Contact = lazy(()=>import("./Pages/Contact"))
 import "./App.css";
 
 function App() {
+  useEffect(() => {
+  AOS.init({
+    duration: 800,
+    easing: "ease-in-out",
+    once: true,
+  });
+}, []);
+
   return (
     <>
       <Router>

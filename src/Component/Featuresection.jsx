@@ -7,11 +7,12 @@ import { useEffect, useRef } from "react";
  import img_5 from '../assets/web design.jpg';
  import img_6 from '../assets/reputation.jpg';
  import img_7 from '../assets/socialmedia-marketing.jpg';
-
+import useAOS from "../hooks/useAOS";
 
 
 
 export default function FeaturesSection() {
+  useAOS();
 
   const scrollRef = useRef(null);
   const services = [
@@ -94,7 +95,10 @@ export default function FeaturesSection() {
   return (
     <section className="py-12 px-6">
       {/* Section Header */}
-      <div className="text-center mb-8">
+      <div 
+     data-aos="fade-up"   
+        data-aos-duration="1000"
+      className="text-center mb-8">
         <h5 className="text-blue-600 font-medium mb-2">Our Features</h5>
         <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-15">
           Professional Digital Marketing Services For Unstoppable Growth
@@ -110,6 +114,8 @@ export default function FeaturesSection() {
         return ( 
           <div
             key={index}
+             data-aos="zoom-in"         
+           
             className={`max-w-[300px] md:max-w-[300px] bg-white shadow-md rounded-2xl overflow-hidden flex-shrink-0 transform transition-all duration-500 ease-in-out ${rotation} hover:rotate-0 hover:scale-105 hover:shadow-xl mb-5`}
           >
             <img
