@@ -4,9 +4,11 @@ import office from "../assets/office.jpg"
 import TestimonialSection from '../Component/TestimonialSection'
 import { FaEye, FaBullseye } from "react-icons/fa";
 import useAOS from '../hooks/useAOS';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function About() {
+  const navigate = useNavigate()
   useAOS();
   return (
     <>
@@ -83,8 +85,10 @@ export default function About() {
             growth journey.
           </p>
 
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-md">
-            Learn More About Us
+          <button
+          onClick={()=>navigate('/services')}
+          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-md cursor-pointer">
+           Discover our Services
           </button>
         </div>
       </div>

@@ -82,7 +82,7 @@ export default function Header() {
       setOpenSubMenu(index);
     }
   };
-console.log(Location);
+
 
 
 
@@ -225,7 +225,12 @@ console.log(Location);
               </button>
 
               <button
-               onClick={()=>Navigate('/contact-us')}
+              onClick={() => {
+                            setIsMenuOpen(false);
+                            setOpenSubMenu(null);
+                            Navigate('/contact-us')
+                          }}
+              
               className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 flex items-center gap-1 font-medium">
                 Get In Touch{" "}
                 <span>

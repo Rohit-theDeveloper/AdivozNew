@@ -104,9 +104,9 @@ const CircularText = ({
         const transform = `rotateZ(${rotationDeg}deg) translate3d(${x}px, ${y}px, 0)`;
 
         return (
-          <div className="bg-blue-400 h-40px z-100">
+          <div key={i} className="bg-blue-400 h-40px z-100">
             <span
-              key={i}
+              
               className="absolute inline-block inset-0 text-sm transition-all duration-500 ease-[cubic-bezier(0,0,0,1)] text-black gap-1"
               style={{ transform, WebkitTransform: transform }}
             >

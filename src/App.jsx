@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Component/Header";
 import ScrollTopButton from "./Component/ScrollTopButton";
+import ScrollToTop  from "./Component/ScrollToTop";
 import Footer from "./Component/Footer";
 import { CirclesWithBar } from "react-loader-spinner";
 import { useEffect } from "react";
@@ -44,6 +45,7 @@ function App() {
             </div>
           }
         >
+           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<About />} />
