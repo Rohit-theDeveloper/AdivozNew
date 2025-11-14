@@ -12,8 +12,10 @@ import SEO from "../assets/Seo1.jpg";
 import Emailmarketing from "../assets/Email-marketing.jpg";
 import SEO1 from "../assets/Seo1.jpg";
 import { MdArrowOutward } from "react-icons/md";
+import useAOS from "../hooks/useAOS";
 
 export default function Services() {
+  useAOS();
   const Navigate = useNavigate();
   const services = [
     {
@@ -46,12 +48,12 @@ export default function Services() {
       desc: "Engage customers with culturally relevant storytelling, bilingual newsletters, and video content tailored to Canadian business seasons and local market trends.",
       button: "Contact Us",
     },
-    {
-      img: LocalGeoTargetedMarketing,
-      title: "Local & Geo-Targeted Marketing",
-      desc: "Drive foot traffic and leads for your local business through Google Maps optimization, province-specific ads, and hyperlocal SEO tailored to your Canadian audience.",
-      button: "Contact Us",
-    },
+    // {
+    //   img: LocalGeoTargetedMarketing,
+    //   title: "Local & Geo-Targeted Marketing",
+    //   desc: "Drive foot traffic and leads for your local business through Google Maps optimization, province-specific ads, and hyperlocal SEO tailored to your Canadian audience.",
+    //   button: "Contact Us",
+    // },
     {
       img: AnalyticsdataDrivenStrategy,
       title: "Analytics & Data-Driven Strategy",
@@ -70,12 +72,12 @@ export default function Services() {
       desc: "Protect and enhance your online reputation with proactive review management on Google, Yelp, and industry platforms — handled with bilingual response strategies.",
       button: "Contact Us",
     },
-    {
-      img: CRO,
-      title: "Conversion Rate Optimization (CRO) & Growth Marketing",
-      desc: "Boost lead conversions through optimized funnels, smart retargeting, and growth-driven digital strategies aligned with Canadian startup and enterprise goals.",
-      button: "Contact Us",
-    },
+    // {
+    //   img: CRO,
+    //   title: "Conversion Rate Optimization (CRO) & Growth Marketing",
+    //   desc: "Boost lead conversions through optimized funnels, smart retargeting, and growth-driven digital strategies aligned with Canadian startup and enterprise goals.",
+    //   button: "Contact Us",
+    // },
   ];
 
   return (
@@ -83,6 +85,7 @@ export default function Services() {
       <section className="relative  overflow-hidden rounded-2xl mx-10 my-10 ">
         {/* Background Image */}
         <div
+        data-aos ="zoom-in"
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
@@ -95,11 +98,15 @@ export default function Services() {
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center text-white py-24 px-4 sm:py-40">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">
+          <h1 
+           data-aos ="fade-down"
+          className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">
             Our Services
           </h1>
 
-          <nav className="text-sm sm:text-base flex gap-2">
+          <nav 
+          data-aos ="fade-up"
+          className="text-sm sm:text-base flex gap-2">
             <a
               href="/"
               className="text-gray-300 hover:text-white transition-colors font-medium text-xl"
@@ -118,17 +125,23 @@ export default function Services() {
       <section className="w-full  my-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
           {/* First line */}
-          <h3 className="text-blue-600 font-semibold text-sm md:text-2xl mb-2">
+          <h3
+          data-aos ="zoom-in"
+          className="text-blue-600 font-semibold text-sm md:text-2xl mb-2">
             What we are offering
           </h3>
 
           {/* Second line */}
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2
+           data-aos ="zoom-in"
+          className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
             Dealing in all professional IT services
           </h2>
 
           {/* Third line */}
-          <p className="text-gray-700 text-base md:text-xl leading-relaxed">
+          <p 
+           data-aos ="zoom-in"
+          className="text-gray-700 text-base md:text-xl leading-relaxed">
             IT solutions refer to a broad range of services and technologies
             designed to address specific business needs, streamline operations,
             and drive growth.
@@ -141,6 +154,7 @@ export default function Services() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service, index) => (
               <div
+               data-aos ="fade-up"
                 key={index}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transition-all duration-300 hover:shadow-2xl "
               >

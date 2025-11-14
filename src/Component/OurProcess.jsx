@@ -57,12 +57,14 @@ const OurProcess = () => {
 
           {steps.map((step) => (
             <div
+             data-aos ="fade-down"
               key={step.id}
               className="bg-white w-60 sm:w-60 h-115 rounded-tr-full rounded-tl-full rounded-br-full rounded-bl-2xl shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-2 p-5 flex flex-col items-center text-center border border-gray-100"
             >
               {/* Image */}
               <div className="w-45 h-45 rounded-full overflow-hidden mb-6">
                 <img
+               
                   src={step.image}
                   alt={step.title}
                   loading="lazy"

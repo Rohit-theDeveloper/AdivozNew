@@ -4,6 +4,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { MdOutlineFeedback } from "react-icons/md";
+import useAOS from "../hooks/useAOS";
 
 const testimonials = [
   {
@@ -51,12 +52,19 @@ const testimonials = [
 ];
 
 const Testimonial = () => {
+  useAOS()
   return (
     <section className="bg-white py-10 relative ">
-      <div className="container mx-auto px-6 md:px-16 text-center">
+      <div
+       
+      className="container mx-auto px-6 md:px-16 text-center">
         {/* Heading */}
-        <h4 className="text-blue-500 font-medium mb-2">Testimonial</h4>
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+        <h4
+        data-aos ="zoom-in" 
+        className="text-blue-500 font-medium mb-2">Testimonial</h4>
+        <h2 
+        data-aos ="zoom-in"
+        className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
         What Clients Say About Us?
         </h2>
 
@@ -72,12 +80,14 @@ const Testimonial = () => {
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-         className="pb-20  !h-auto"
+         className="pb-20  !h-auto  testimonial-swiper"
 
         >
           {testimonials.map((item) => (
             <SwiperSlide key={item.id} >
-              <div className="bg-gray-100 shadow-md border border-gray-100 rounded-2xl overflow-visible p-6 mx-2 flex flex-col items-start text-left relative hover:shadow-lg transition  h-auto cursor-pointer">
+              <div
+              data-aos ="fade-left"
+              className=" testimonial-card bg-gray-100 shadow-md border border-gray-100 rounded-2xl overflow-visible p-6 mx-2 flex flex-col items-start text-left relative hover:shadow-lg transition  h-auto cursor-pointer">
                 {/* Profile */}
                 <div className="flex items-center mb-10 ">
                   <img

@@ -1,36 +1,61 @@
 import { useEffect, useState } from "react";
-import { FaQuoteRight } from "react-icons/fa";
+
 import { motion, AnimatePresence } from "framer-motion"; // For smooth animation
 import CircularText from "./CircularTextComponent";
+import useAOS from "../hooks/useAOS";
 
 const testimonials = [
   {
     id: 1,
-    name: "Michel Andric",
-    position: "CEO & Founder, Company ABC",
-    rating: 5,
-    text: "With years of experience in the IT industry, our certified professionals bring deep knowledge and proven solutions to every project—whether it’s cloud computing, cybersecurity, or software development.",
+    name: "Patricia",
+    role: "Front-End Developer",
+    rating :5,
     image: "https://randomuser.me/api/portraits/men/32.jpg",
+    text: "The support and professionalism they offer during our projects were commendable. They were ready to listen to the objectives of the project and delivered the projects on time. ",
   },
   {
     id: 2,
-    name: "Sophia Turner",
-    position: "CTO, NextGen Systems",
-    rating: 5,
-    text: "Outstanding service and exceptional technical expertise. The team’s knowledge in cloud computing helped streamline our entire process.",
-    image:  "https://randomuser.me/api/portraits/women/45.jpg",
+    name: "James ",
+    role: "Tech Startup Founder",
+    rating :5,
+    image: "https://randomuser.me/api/portraits/women/45.jpg",
+    text: "Our website traffic has nearly doubled since we started working with Adivoz. Their SEO strategies are quite impressive, and they always explain things clearly. Highly recommend for anyone looking to boost their online visibility.",
   },
   {
     id: 3,
-    name: "David Lee",
-    position: "Founder, InnovateX",
-    rating: 5,
-    text: "Professional and reliable! Their software solutions exceeded our expectations and delivered results beyond what we imagined.",
-    image:"https://randomuser.me/api/portraits/men/41.jpg",
+    name: "Sophia ",
+    role: "E-commerce Manager",
+    rating :5,
+    image: "https://randomuser.me/api/portraits/men/41.jpg",
+    text: "It’s been 2 years since we joined hands with Adivoz. Their team marketed our products in the most creative way. They come up with ideas and make plans for success while they are serving. Some of their creative ideas helped us with campaigns that actually worked wonders. Overall, we couldn’t ask for a better digital partner!",
   },
+  {
+    id: 4,
+    name: "Annie",
+    role: "Unknown",
+    rating :5,
+    image: "https://randomuser.me/api/portraits/women/45.jpg",
+    text: "I started a small business of jewellery. Adivoz completely changed my social media presence. Their campaigns are creative, engaging, and focused on achievements. I have seen a noticeable spike in followers and customer engagement in just a few months!",
+  },
+  {
+    id: 5,
+    name: "Rohan M. ",
+    role: "Online Retail Business Owner",
+    rating :5,
+    image: "https://randomuser.me/api/portraits/men/41.jpg",
+    text: "The results speak for themselves. Our paid campaigns and email marketing efforts are finally bringing measurable ROI. Thanks to Adivoz, they know how to turn strategies into real revenue.",
+  },
+  {
+    id: 6,
+    name: "Mathew",
+    role: "Fashion Brand Owner",
+    image: "https://randomuser.me/api/portraits/men/41.jpg",
+    text: "We recently worked with Adivoz, and they completely transformed our social media page. Their campaigns and strategic posts turn out amazing, all because of their team of creative thinkers. In just a few months, our business will start to boom with increased visibility of our brand on social media platforms. ",
+  }
 ];
 
 export default function TestimonialSection() {
+  useAOS();
   const [index, setIndex] = useState(0);
 
   // Auto-slide every 7 seconds (slower)
@@ -46,7 +71,9 @@ export default function TestimonialSection() {
   return (
     <section className="w-full bg-gradient-to-br from-[#f3f8ff] to-[#f7fbff] py-20 px-6">
       {/* Heading */}
-      <div className="max-w-5xl mx-auto text-center mb-10">
+      <div 
+      data-aos ="zoom-in"
+      className="max-w-5xl mx-auto text-center mb-10">
         <div className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 mb-3">
           <span className="w-2 h-2 bg-blue-600 rounded-sm inline-block" />
           <span>Testimonials</span>
@@ -60,7 +87,9 @@ export default function TestimonialSection() {
       {/* Content row */}
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 relative">
         {/* Left Circle */}
-        <div className="relative flex-shrink-0 z-10">
+        <div 
+        data-aos ="fade-right"
+        className="relative flex-shrink-0 z-10">
           <CircularText
             text="100% Trusted Our Clients • 100% Trusted Our Clients • "
             spinDuration={20}
@@ -69,7 +98,9 @@ export default function TestimonialSection() {
         </div>
 
         {/* Right Testimonial Card */}
-        <div className="relative z-10 w-full md:w-[640px]">
+        <div
+         data-aos ="fade-left"
+        className="relative z-10 w-full md:w-[640px]">
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-10">
             {/* Rating */}
             <div className="flex items-center mb-4">

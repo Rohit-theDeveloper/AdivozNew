@@ -84,6 +84,7 @@ const CircularText = ({
   };
 
   return (
+    
     <motion.div
       className={`m-0 mx-auto rounded-full w-[200px] h-[200px] relative text-white font-black text-center cursor-pointer origin-center ${className}`}
       style={{ rotate: rotation }}
@@ -92,6 +93,9 @@ const CircularText = ({
       onMouseEnter={handleHoverStart}
       onMouseLeave={handleHoverEnd}
     >
+      <div className="absolute inset-[40px] bg-white rounded-full shadow-md flex items-center justify-center">
+        <span className="text-blue-600 text-5xl font-bold">99</span>
+      </div>
       {letters.map((letter, i) => {
         const rotationDeg = (360 / letters.length) * i;
         const factor = Math.PI / letters.length;

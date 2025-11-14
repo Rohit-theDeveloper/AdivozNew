@@ -3,14 +3,17 @@ import OurTeam from '../Component/OurTeam'
 import office from "../assets/office.jpg"
 import TestimonialSection from '../Component/TestimonialSection'
 import { FaEye, FaBullseye } from "react-icons/fa";
+import useAOS from '../hooks/useAOS';
 
 
 export default function About() {
+  useAOS();
   return (
     <>
      <section className="relative  overflow-hidden rounded-2xl mx-10 my-10 ">
       {/* Background Image */}
       <div
+      data-aos= "zoom-in"
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
@@ -23,11 +26,15 @@ export default function About() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center text-white py-24 px-4 sm:py-40">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">
+        <h1 
+        data-aos= "fade-down"
+        className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">
           About Us
         </h1>
 
-        <nav className="text-sm sm:text-base flex gap-2">
+        <nav 
+        data-aos="fade-up"
+        className="text-sm sm:text-base flex gap-2">
           <a
             href="/"
             className="text-gray-300 hover:text-white transition-colors font-medium text-xl"
@@ -40,11 +47,13 @@ export default function About() {
       </div>
     </section>
  
-  <section className="py-20 bg-gray-50 px-6 lg:px-16">
+  <section className="py-20 bg-gray-50 px-6 lg:px-16 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Side - Image */}
         <div className="relative group">
           <img
+          data-aos = "fade-right"
+           loading='lazy'
             src={office}
             alt="Digital Solutions Team in Canada"
             className="w-full h-[420px] object-cover rounded-2xl shadow-lg transition-transform duration-500 group-hover:scale-105"
@@ -53,7 +62,8 @@ export default function About() {
         </div>
 
         {/* Right Side - Text */}
-        <div>
+        <div 
+          data-aos = "fade-left">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 leading-snug">
             Empowering Businesses with Cutting-Edge Digital Solutions in Canada
           </h2>
@@ -87,11 +97,15 @@ export default function About() {
       <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-600/20 blur-3xl rounded-full"></div> */}
 
       <div className="relative max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">
+        <h2 
+        data-aos ="zoom-in"
+        className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">
           Our <span className="text-blue-600">Vision</span> &{" "}
           <span className="text-blue-600">Mission</span>
         </h2>
-        <p className="text-gray-800 text-lg max-w-2xl mx-auto mb-16">
+        <p 
+        data-aos ="zoom-in"
+        className="text-gray-800 text-lg max-w-2xl mx-auto mb-16">
           We are driven by innovation and passion — crafting digital solutions
           that empower businesses to grow, connect, and thrive in the evolving
           digital world.
@@ -100,7 +114,9 @@ export default function About() {
         {/* Cards Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Vision Card */}
-          <div className="group perspective">
+          <div
+          data-aos ="fade-right"
+          className="group perspective">
             <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-10 shadow-2xl border border-gray-700 transform transition-transform duration-700 group-hover:rotate-y-6 group-hover:-translate-y-2">
               <div className="flex flex-col items-center text-center space-y-6">
                 <div className="bg-blue-600/20 p-6 rounded-full shadow-inner group-hover:scale-110 transition-transform duration-300">
@@ -108,7 +124,7 @@ export default function About() {
                 </div>
                 <h3 className="text-2xl font-bold text-black">Our Vision</h3>
                 <p className="text-gray-800 leading-relaxed">
-                  To be Canada’s most trusted digital solutions partner — helping
+                  To be Canada’s most trusted digital solutions partner - helping
                   brands unlock their true potential through creativity, data, and
                   technology.
                 </p>
@@ -117,7 +133,9 @@ export default function About() {
           </div>
 
           {/* Mission Card */}
-          <div className="group perspective">
+          <div 
+           data-aos ="fade-left"
+          className="group perspective">
             <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-10 shadow-2xl border border-gray-700 transform transition-transform duration-700 group-hover:-rotate-y-6 group-hover:-translate-y-2">
               <div className="flex flex-col items-center text-center space-y-6">
                 <div className="bg-blue-600/20 p-6 rounded-full shadow-inner group-hover:scale-110 transition-transform duration-300">

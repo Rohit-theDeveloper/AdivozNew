@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FiSearch, FiMenu, FiX, FiChevronDown } from "react-icons/fi";
 import { MdArrowOutward } from "react-icons/md";
 import logo from "../assets/adivoz.jpg";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import SearchModal from "./Modal/SearchModal";
 
 export default function Header() {
@@ -11,6 +11,7 @@ export default function Header() {
   const [openSubMenu, setOpenSubMenu] = useState(null);
 
   const Navigate = useNavigate();
+  const Location = useLocation();
 
   const navItems = [
     {
@@ -81,6 +82,9 @@ export default function Header() {
       setOpenSubMenu(index);
     }
   };
+console.log(Location);
+
+
 
   return (
     <header className="w-full bg-white shadow-sm relative sticky top-0 z-50 sm:py-4 py-1">
@@ -106,10 +110,12 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden lg:block">
           <ul className="flex items-center gap-6 md:gap-1 lg:gap-15 font-medium text-gray-700 relative">
-            {navItems.map((item, index) => (
+            {navItems.map((item, index) =>{
+               const isActive = Location.pathname === item.path;
+              return (
               <li
                 key={index}
-                className="relative group cursor-pointer flex items-center gap-1 md:text-[10px] lg:text-[18px]"
+                className={`relative group cursor-pointer flex items-center gap-1 md:text-[10px] lg:text-[18px] ${isActive ? "text-blue-600": ""}`}
               >
                 <Link to={item.path}>{item.title}</Link>
                 {item.submenu.length > 0 && (
@@ -133,7 +139,8 @@ export default function Header() {
                   </ul>
                 )}
               </li>
-            ))}
+            )
+            } )}
           </ul>
         </nav>
 
@@ -147,6 +154,7 @@ export default function Header() {
           </button>
 
           <button
+          onClick={()=>Navigate('/contact-us')}
             className="relative overflow-hidden bg-blue-500 text-white px-4 py-2 rounded-xl flex justify-center gap-1 font-medium cursor-pointer transition-all duration-500
           before:absolute before:inset-0 before:bg-blue-700 before:-translate-x-full before:transition-transform before:duration-500 
           hover:before:translate-x-0 z-20 group"
@@ -216,7 +224,9 @@ export default function Header() {
                 <FiSearch size={18} />
               </button>
 
-              <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 flex items-center gap-1 font-medium">
+              <button
+               onClick={()=>Navigate('/contact-us')}
+              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 flex items-center gap-1 font-medium">
                 Get In Touch{" "}
                 <span>
                   <MdArrowOutward className="rotate-45" />

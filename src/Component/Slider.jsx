@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
+import useAOS from "../hooks/useAOS";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -14,6 +15,7 @@ import slide_image_4 from "../assets/slider4.jpg";
 import slide_image_5 from "../assets/slider5.jpg";
 
 export default function Slider() {
+  useAOS();
   const slides = [
     {
       img: slide_image_1,
@@ -73,8 +75,12 @@ export default function Slider() {
       >
         {/* left section */}
         <div>
-          <span className="font-bold text-blue-600">Case Studies</span>
-          <h2 className="text-3xl font-bold">
+          <span 
+          data-aos = "fade-down"
+          className="font-bold text-blue-600">Case Studies</span>
+          <h2 
+           data-aos = "fade-down"
+          className="text-3xl font-bold">
             Transforming Ideas into Innovations
           </h2>
         </div>
@@ -83,6 +89,7 @@ export default function Slider() {
         <div className="flex flex-wrap justify-center gap-2">
           {Buttons.map((btn, id) => (
             <button
+             data-aos = "fade-down"
               key={id}
               className="relative overflow-hidden rounded-2xl text-xs text-white px-3 py-2
         bg-blue-500
@@ -119,6 +126,7 @@ export default function Slider() {
         pagination={{ clickable: true }} // Pagination bullets
         navigation={true} // Arrows
         modules={[EffectCoverflow, Pagination, Autoplay]}
+        data-aos="zoom-in"
         className="relative  h-[180px] sm:h-[280px]  lg:h-[500px]   rounded-xl transition-transform duration-300 ease-in-out mt-10
             " // Container height & background
         //  Slider container height is controlled here (change h-[...] values)

@@ -7,6 +7,8 @@ import { FaHeadset } from "react-icons/fa6";
 import { RiPriceTag2Line } from "react-icons/ri";
 import { Typewriter } from "react-simple-typewriter";
 import useAOS from "../hooks/useAOS";
+import { Link } from "react-router-dom";
+
 
 export default function Hero() {
   useAOS();
@@ -61,8 +63,8 @@ export default function Hero() {
            data-aos ="fade-up"
           className="flex flex-col md:flex-row gap-3 md:gap-2 ">
             {/* Button 1 */}
-            <a
-              href="#"
+            <Link
+             to="/about-us"
               className="relative overflow-hidden border border-gray-300 text-white px-5 py-2 rounded-lg flex justify-center gap-2 transition-all duration-500 
                before:absolute before:inset-0 before:bg-blue-700 before:-translate-x-full before:transition-transform before:duration-500 hover:before:translate-x-0
                hover:text-white hover:border-gray-600 z-10 group"
@@ -74,11 +76,11 @@ export default function Hero() {
                   className="transition-transform duration-300 group-hover:rotate-45 rotate-0 group-hover:translate-x-1"
                 />
               </span>
-            </a>
+            </Link>
 
             {/* Button 2 */}
-            <a
-              href="#"
+            <Link
+              to ="/services"
               className="relative overflow-hidden border border-gray-300 text-white px-5 py-2 rounded-lg flex justify-center gap-2 transition-all duration-500 
                before:absolute before:inset-0 before:bg-blue-700 before:-translate-x-full before:transition-transform before:duration-500 hover:before:translate-x-0
                hover:text-white hover:border-gray-600 z-10 group"
@@ -90,7 +92,7 @@ export default function Hero() {
                   className="transition-transform duration-300 group-hover:rotate-45 rotate-0 group-hover:translate-x-1"
                 />
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -100,7 +102,7 @@ export default function Hero() {
       className=" bg-gray-200">
         <div className="lg:mx-20  flex flex-col  sm:flex-row gap-3 sm:justify-between mx-10 py-4  ">
           <div
-          data-aos ="flip-left"
+          data-aos ="flip-up"
           className=" flex-1 flex gap-3 items-center justify-center px-3 hover:scale-110 cursor-pointer py-4 transition-all duration-500">
             <RiTeamFill
               size={"40px"}
@@ -114,7 +116,7 @@ export default function Hero() {
             </span>
           </div>
           <div 
-          data-aos ="flip-left"
+          data-aos ="flip-up"
           className=" flex-1 flex gap-3 items-center justify-center px-3 cursor-pointer hover:scale-110 cursor-pointer py-4 transition-all duration-500">
             <RiPriceTag2Line 
               size={"40px"}
@@ -128,7 +130,7 @@ export default function Hero() {
             </span>
           </div>
           <div 
-          data-aos ="flip-left"
+          data-aos ="flip-up"
           className=" flex-1 flex gap-3 items-center justify-center px-3 hover:scale-110 cursor-pointer py-4 transition-all duration-500">
             <FaHeadset
               size={"45px"}

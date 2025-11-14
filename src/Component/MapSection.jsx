@@ -1,9 +1,12 @@
 import { FaMapMarkerAlt } from "react-icons/fa";
-
+import useAOS from "../hooks/useAOS";
 export default function MapSection() {
+  useAOS();
   return (
     <section className="relative w-full mt-15 mb-15 px-10 overflow-hidden">
-      <div className="max-w-7xl mx-35 rounded-2xl overflow-hidden shadow-lg">
+      <div 
+      data-aos = "zoom-in"
+      className="max-w-7xl mx-35 rounded-2xl overflow-hidden shadow-lg">
         {/* Google Map Embed */}
         <div className="w-full h-[450px] relative overflow-hidden">
           <iframe

@@ -7,8 +7,8 @@ const WorkProcesss = lazy(() => import("../Component/WorkProcesss"));
 const Slider = lazy(() => import("../Component/Slider"));
 const OurProcess = lazy(() => import("../Component/OurProcess"));
 const Testimonial = lazy(() => import("../Component/Testimonial"));
-const NewsArticles = lazy(() => import("../Component/NewsArticles"));
-const SubscribeSection = lazy(() => import("../Component/SubscribeSection"));
+// const NewsArticles = lazy(() => import("../Component/NewsArticles"));
+// const SubscribeSection = lazy(() => import("../Component/SubscribeSection"));
 import { CirclesWithBar } from "react-loader-spinner";
 
 export default function Home() {

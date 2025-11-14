@@ -6,7 +6,6 @@ import {
   FiMail,
   FiMapPin,
   FiUser,
-  FiSend,
   FiMessageSquare,
 } from "react-icons/fi";
 import { MdOutlineSubject } from "react-icons/md";
@@ -14,8 +13,10 @@ import { FaPaperPlane } from "react-icons/fa";
 import MapSection from "../Component/MapSection";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import useAOS from "../hooks/useAOS";
 
 export default function Contact() {
+  useAOS();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -76,6 +77,7 @@ export default function Contact() {
       <section className="relative  overflow-hidden rounded-2xl mx-10 my-10 ">
         {/* Background Image */}
         <div
+        data-aos ="zoom-in"
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
@@ -88,11 +90,15 @@ export default function Contact() {
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center text-white py-24 px-4 sm:py-40">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">
+          <h1 
+          data-aos ="fade-down"
+          className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">
             Contact Us
           </h1>
 
-          <nav className="text-sm sm:text-base flex gap-2">
+          <nav 
+           data-aos ="fade-up"
+          className="text-sm sm:text-base flex gap-2">
             <a
               href="/"
               className="text-gray-300 hover:text-white transition-colors font-medium text-xl"
@@ -110,7 +116,9 @@ export default function Contact() {
       <section className="w-full bg-gray-50 py-20 px-6">
         <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Left Section - Contact Info */}
-          <div className="bg-gray-200 rounded-2xl shadow-md p-10 ">
+          <div
+          data-aos ="fade-right"
+          className="bg-gray-200 rounded-2xl shadow-md p-10 ">
             <h4 className="text-blue-600 font-semibold mb-2">Work With Us</h4>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Contact Information
@@ -164,7 +172,9 @@ export default function Contact() {
           </div>
 
           {/* Right Section - Contact Form */}
-          <div className="bg-gray-100 rounded-2xl shadow-md p-10">
+          <div 
+           data-aos ="fade-left"
+          className="bg-gray-100 rounded-2xl shadow-md p-10">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Name */}
