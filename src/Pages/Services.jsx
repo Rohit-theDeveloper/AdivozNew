@@ -13,6 +13,8 @@ import Emailmarketing from "../assets/Email-marketing.jpg";
 import SEO1 from "../assets/Seo1.jpg";
 import { MdArrowOutward } from "react-icons/md";
 import useAOS from "../hooks/useAOS";
+import banner from "../assets/banner.jpg";
+import { Link } from "react-router-dom";
 
 export default function Services() {
   useAOS();
@@ -85,11 +87,10 @@ export default function Services() {
       <section className="relative  overflow-hidden rounded-2xl mx-10 my-10 ">
         {/* Background Image */}
         <div
-        data-aos ="zoom-in"
+          data-aos="zoom-in"
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80')",
+            backgroundImage: `url(${banner})`,
           }}
         ></div>
 
@@ -98,21 +99,20 @@ export default function Services() {
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center text-white py-24 px-4 sm:py-40">
-          <h1 
-           data-aos ="fade-down"
-          className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">
+          <h1
+            data-aos="fade-down"
+            className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4"
+          >
             Our Services
           </h1>
 
-          <nav 
-          data-aos ="fade-up"
-          className="text-sm sm:text-base flex gap-2">
-            <a
-              href="/"
+          <nav data-aos="fade-up" className="text-sm sm:text-base flex gap-2">
+            <Link
+              to="/"
               className="text-gray-300 hover:text-white transition-colors font-medium text-xl"
             >
               Home
-            </a>
+            </Link>
             <span className="text-gray-400">»</span>
             <span className="text-white font-medium text-xl cursor-pointer">
               Our Services
@@ -126,22 +126,25 @@ export default function Services() {
         <div className="max-w-3xl mx-auto text-center">
           {/* First line */}
           <h3
-          data-aos ="zoom-in"
-          className="text-blue-600 font-semibold text-sm md:text-2xl mb-2">
+            data-aos="zoom-in"
+            className="text-blue-600 font-semibold text-sm md:text-2xl mb-2"
+          >
             What we are offering
           </h3>
 
           {/* Second line */}
           <h2
-           data-aos ="zoom-in"
-          className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+            data-aos="zoom-in"
+            className="text-3xl md:text-5xl font-bold text-gray-900 mb-4"
+          >
             Dealing in all professional IT services
           </h2>
 
           {/* Third line */}
-          <p 
-           data-aos ="zoom-in"
-          className="text-gray-700 text-base md:text-xl leading-relaxed">
+          <p
+            data-aos="zoom-in"
+            className="text-gray-700 text-base md:text-xl leading-relaxed"
+          >
             IT solutions refer to a broad range of services and technologies
             designed to address specific business needs, streamline operations,
             and drive growth.
@@ -154,7 +157,7 @@ export default function Services() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service, index) => (
               <div
-               data-aos ="fade-up"
+                data-aos="fade-up"
                 key={index}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transition-all duration-300 hover:shadow-2xl "
               >

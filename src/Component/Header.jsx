@@ -9,9 +9,11 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchModalOpen, setSearchModalOpen] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null);
+  
 
   const Navigate = useNavigate();
   const Location = useLocation();
+  const isContactPage = Location.pathname === "/contact-us";
 
   const navItems = [
     {
@@ -83,9 +85,6 @@ export default function Header() {
     }
   };
 
-
-
-
   return (
     <header className="w-full bg-white shadow-sm relative sticky top-0 z-50 sm:py-4 py-1">
       <div className="max-w-8xl mx-auto flex items-center justify-between px-0">
@@ -95,7 +94,7 @@ export default function Header() {
             src={logo}
             alt="Adivoz Logo"
             className="h-8  md:h-full w-auto transition-all duration-300 cursor-pointer"
-            onClick={()=> Navigate("")}
+            onClick={() => Navigate("")}
           />
         </div>
 
@@ -110,37 +109,39 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden lg:block">
           <ul className="flex items-center gap-6 md:gap-1 lg:gap-15 font-medium text-gray-700 relative">
-            {navItems.map((item, index) =>{
-               const isActive = Location.pathname === item.path;
+            {navItems.map((item, index) => {
+              const isActive = Location.pathname === item.path;
               return (
-              <li
-                key={index}
-                className={`relative group cursor-pointer flex items-center gap-1 md:text-[10px] lg:text-[18px] ${isActive ? "text-blue-600": ""}`}
-              >
-                <Link to={item.path}>{item.title}</Link>
-                {item.submenu.length > 0 && (
-                  <FiChevronDown
-                    size={16}
-                    className="transition-transform duration-300 group-hover:rotate-180"
-                  />
-                )}
-                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-black group-hover:w-full transition-all duration-300"></span>
+                <li
+                  key={index}
+                  className={`relative group cursor-pointer flex items-center gap-1 md:text-[10px] lg:text-[18px] ${
+                    isActive ? "text-blue-600" : ""
+                  }`}
+                >
+                  <Link to={item.path}>{item.title}</Link>
+                  {item.submenu.length > 0 && (
+                    <FiChevronDown
+                      size={16}
+                      className="transition-transform duration-300 group-hover:rotate-180"
+                    />
+                  )}
+                  <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-black group-hover:w-full transition-all duration-300"></span>
 
-                {item.submenu.length > 0 && (
-                  <ul className="absolute left-0 top-10 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 min-w-[160px] md:min-w-[180px] py-2 z-50 text-sm">
-                    {item.submenu.map((subItem, subIndex) => (
-                      <li
-                        key={subIndex}
-                        className="px-4 py-2 hover:bg-blue-50 hover:text-blue-600 transition"
-                      >
-                        <Link to={subItem.path}>{subItem.name}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            )
-            } )}
+                  {item.submenu.length > 0 && (
+                    <ul className="absolute left-0 top-10 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 min-w-[160px] md:min-w-[180px] py-2 z-50 text-sm">
+                      {item.submenu.map((subItem, subIndex) => (
+                        <li
+                          key={subIndex}
+                          className="px-4 py-2 hover:bg-blue-50 hover:text-blue-600 transition"
+                        >
+                          <Link to={subItem.path}>{subItem.name}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
@@ -154,10 +155,18 @@ export default function Header() {
           </button>
 
           <button
-          onClick={()=>Navigate('/contact-us')}
-            className="relative overflow-hidden bg-blue-500 text-white px-4 py-2 rounded-xl flex justify-center gap-1 font-medium cursor-pointer transition-all duration-500
-          before:absolute before:inset-0 before:bg-blue-700 before:-translate-x-full before:transition-transform before:duration-500 
-          hover:before:translate-x-0 z-20 group"
+            onClick={() => !isContactPage && Navigate("/contact-us")}
+            disabled={isContactPage} 
+            className={`
+    relative overflow-hidden bg-blue-500 text-white px-4 py-2 rounded-xl flex justify-center gap-1 font-medium 
+    transition-all duration-500 z-20 group
+    ${
+      !isContactPage
+        ? "cursor-pointer hover:before:translate-x-0"
+        : "opacity-50 cursor-not-allowed"
+    }
+    before:absolute before:inset-0 before:bg-blue-700 before:-translate-x-full before:transition-transform before:duration-500
+  `}
           >
             <span className="relative z-10 flex items-center gap-1">
               Get In Touch
@@ -225,13 +234,13 @@ export default function Header() {
               </button>
 
               <button
-              onClick={() => {
-                            setIsMenuOpen(false);
-                            setOpenSubMenu(null);
-                            Navigate('/contact-us')
-                          }}
-              
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 flex items-center gap-1 font-medium">
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  setOpenSubMenu(null);
+                  Navigate("/contact-us");
+                }}
+                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 flex items-center gap-1 font-medium"
+              >
                 Get In Touch{" "}
                 <span>
                   <MdArrowOutward className="rotate-45" />

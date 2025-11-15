@@ -5,6 +5,8 @@ import TestimonialSection from '../Component/TestimonialSection'
 import { FaEye, FaBullseye } from "react-icons/fa";
 import useAOS from '../hooks/useAOS';
 import { useNavigate } from 'react-router-dom';
+import banner from "../assets/banner.jpg"
+import { Link } from "react-router-dom";
 
 
 export default function About() {
@@ -18,8 +20,7 @@ export default function About() {
       data-aos= "zoom-in"
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80')",
+          backgroundImage: `url(${banner})`,
         }}
       ></div>
 
@@ -37,12 +38,12 @@ export default function About() {
         <nav 
         data-aos="fade-up"
         className="text-sm sm:text-base flex gap-2">
-          <a
-            href="/"
+          <Link
+            to="/"
             className="text-gray-300 hover:text-white transition-colors font-medium text-xl"
           >
             Home
-          </a>
+          </Link>
           <span className="text-gray-400">»</span>
           <span className="text-white font-medium text-xl">About Us</span>
         </nav>

@@ -28,3 +28,45 @@
 }
 
 
+
+/*  CHANGE: Pagination moved below slider */
+.main-slider .swiper-pagination {
+  position: relative !important;  /* moves bullets out of overlay */
+  bottom: 0 !important;           /* reset bottom */
+  margin-top: 1.5rem;             /* space below slides */
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;                    /* space between bullets */
+}
+
+.main-slider .swiper-pagination-bullet {
+  background-color: gray !important; /* Tailwind blue-600 */
+  width: 0.75rem;
+  height: 0.75rem;
+  opacity: 1 !important;
+}
+
+.main-slider .swiper-pagination-bullet-active {
+  background-color: #1d4ed8 !important; /* darker blue */
+}
+
+
+
+.testimonial-swiper .swiper-pagination {
+  position: relative !important; /* remove absolute positioning */
+  margin-top: 3rem;            /* space below slides */
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.testimonial-swiper .swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: gray;
+  opacity: 1;
+}
+
+.testimonial-swiper .swiper-pagination-bullet-active {
+  background-color: #1d4ed8; /* Tailwind blue-600 */
+}

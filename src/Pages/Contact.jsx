@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState , useRef} from "react";
 import FAQSection from "../Component/FAQSection";
 import {
   FiPhoneCall,
@@ -14,6 +14,8 @@ import MapSection from "../Component/MapSection";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useAOS from "../hooks/useAOS";
+import banner from "../assets/banner.jpg";
+import { Link } from "react-router-dom";
 
 export default function Contact() {
   useAOS();
@@ -72,16 +74,23 @@ export default function Contact() {
     });
   };
 
+   const formRef = useRef(null);
+
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+
   return (
     <>
-      <section className="relative  overflow-hidden rounded-2xl mx-10 my-10 ">
+      <section className="relative overflow-hidden rounded-2xl mx-10 my-10 ">
         {/* Background Image */}
         <div
-        data-aos ="zoom-in"
+         ref={formRef}
+          data-aos="zoom-in"
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80')",
+            backgroundImage: `url(${banner})`,
           }}
         ></div>
 
@@ -90,21 +99,20 @@ export default function Contact() {
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center text-white py-24 px-4 sm:py-40">
-          <h1 
-          data-aos ="fade-down"
-          className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">
+          <h1
+            data-aos="fade-down"
+            className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4"
+          >
             Contact Us
           </h1>
 
-          <nav 
-           data-aos ="fade-up"
-          className="text-sm sm:text-base flex gap-2">
-            <a
-              href="/"
+          <nav data-aos="fade-up" className="text-sm sm:text-base flex gap-2">
+            <Link
+              to="/"
               className="text-gray-300 hover:text-white transition-colors font-medium text-xl"
             >
               Home
-            </a>
+            </Link>
             <span className="text-gray-400">»</span>
             <span className="text-white font-medium text-xl cursor-pointer">
               Contact Us
@@ -114,11 +122,12 @@ export default function Contact() {
       </section>
 
       <section className="w-full bg-gray-50 py-20 px-6">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.6fr]  gap-10 items-start">
           {/* Left Section - Contact Info */}
           <div
-          data-aos ="fade-right"
-          className="bg-gray-200 rounded-2xl shadow-md p-10 ">
+            data-aos="fade-right"
+            className="bg-gray-200 rounded-2xl shadow-md p-10 flex flex-col flex-basis-100px "
+          >
             <h4 className="text-blue-600 font-semibold mb-2">Work With Us</h4>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Contact Information
@@ -172,9 +181,10 @@ export default function Contact() {
           </div>
 
           {/* Right Section - Contact Form */}
-          <div 
-           data-aos ="fade-left"
-          className="bg-gray-100 rounded-2xl shadow-md p-10">
+          <div
+            data-aos="fade-left"
+            className="bg-gray-100 rounded-2xl shadow-md p-10"
+          >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Name */}
@@ -288,7 +298,7 @@ export default function Contact() {
         </div>
       </section>
       <MapSection />
-      <FAQSection />
+      <FAQSection  onAskClick={scrollToForm} />
       <ToastContainer />
     </>
   );

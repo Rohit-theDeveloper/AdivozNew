@@ -127,7 +127,7 @@ export default function Slider() {
         navigation={true} // Arrows
         modules={[EffectCoverflow, Pagination, Autoplay]}
         data-aos="zoom-in"
-        className="relative  h-[180px] sm:h-[280px]  lg:h-[500px]   rounded-xl transition-transform duration-300 ease-in-out mt-10
+        className="relative  h-[180px] sm:h-[280px]  lg:h-[500px]   rounded-xl transition-transform duration-300 ease-in-out mt-10  pb-10 main-slider
             " // Container height & background
         //  Slider container height is controlled here (change h-[...] values)
         // Individual slide width is controlled by slidesPerView prop and SwiperSlide width classes
@@ -159,7 +159,7 @@ export default function Slider() {
         ))}
 
         {/* Pagination styling */}
-        <div className="swiper-pagination !w-[15rem] bottom-1 relative"></div>
+      
 
         {/* Navigation arrows */}
         {/* <div className="slider-controler flex justify-center items-center relative bottom-8">

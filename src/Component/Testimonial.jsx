@@ -3,8 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { MdOutlineFeedback } from "react-icons/md";
 import useAOS from "../hooks/useAOS";
+import FeedbackIcon from "../assets/feedback-icon.svg";
 
 const testimonials = [
   {
@@ -48,27 +48,27 @@ const testimonials = [
     role: "Fashion Brand Owner",
     image: "https://randomuser.me/api/portraits/men/41.jpg",
     text: "We recently worked with Adivoz, and they completely transformed our social media page. Their campaigns and strategic posts turn out amazing, all because of their team of creative thinkers. In just a few months, our business will start to boom with increased visibility of our brand on social media platforms. ",
-  }
+  },
 ];
 
 const Testimonial = () => {
-  useAOS()
+  useAOS();
   return (
     <section className="bg-white py-10 relative ">
-      <div
-       
-      className="container mx-auto px-6 md:px-16 text-center">
+      <div className="container mx-auto px-6 md:px-16 text-center">
         {/* Heading */}
-        <h4
-        data-aos ="zoom-in" 
-        className="text-blue-500 font-medium mb-2">Testimonial</h4>
-        <h2 
-        data-aos ="zoom-in"
-        className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-        What Clients Say About Us?
+        <h4 data-aos="zoom-in" className="text-blue-500 font-medium mb-2">
+          Testimonial
+        </h4>
+        <h2
+          data-aos="zoom-in"
+          className="text-3xl md:text-4xl font-bold text-gray-900 mb-12"
+        >
+          What Clients Say About Us?
         </h2>
 
         {/* Swiper Slider */}
+        <div className="relative"></div>
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={30}
@@ -80,14 +80,14 @@ const Testimonial = () => {
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-         className="pb-20  !h-auto  testimonial-swiper"
-
+          className="pb-20  !h-auto  testimonial-swiper"
         >
           {testimonials.map((item) => (
-            <SwiperSlide key={item.id} >
+            <SwiperSlide key={item.id}>
               <div
-              data-aos ="fade-left"
-              className=" testimonial-card bg-gray-100 shadow-md border border-gray-100 rounded-2xl overflow-visible p-6 mx-2 flex flex-col items-start text-left relative hover:shadow-lg transition  h-auto cursor-pointer">
+                data-aos="fade-left"
+                className=" testimonial-card bg-gray-100 group border border-gray-100 rounded-2xl overflow-y-visible p-6 mx-2 flex flex-col items-start text-left relative hover:shadow-lg transition  h-auto cursor-pointer"
+              >
                 {/* Profile */}
                 <div className="flex items-center mb-10 ">
                   <img
@@ -109,11 +109,17 @@ const Testimonial = () => {
                 </div>
 
                 {/* Text */}
-                <p className="text-sm text-gray-600 mb-10 text-left line-clamp-4">{item.text}</p>
+                <p className="text-sm text-gray-600 mb-10 text-left line-clamp-4">
+                  {item.text}
+                </p>
 
                 {/* Bottom Circular Icon */}
-                <div className="absolute bottom-2 z-10 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-semibold shadow-md">
-             <MdOutlineFeedback />
+                <div className="absolute bottom-[-15px] z-100 left-1/2 transform -translate-x-1/2 bg-blue-600  w-10 h-10 rounded-full flex items-center justify-center font-semibold">
+                  <img
+                    src={FeedbackIcon}
+                    alt="Feedback Icon"
+                    className="w-6 h-6 filter invert" 
+                  />
                 </div>
               </div>
             </SwiperSlide>

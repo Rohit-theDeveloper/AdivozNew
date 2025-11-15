@@ -51,7 +51,7 @@ const faqs = [
   },
 ];
 
-export default function FAQSection() {
+export default function FAQSection({ onAskClick }) {
   useAOS();
   const navigate = useNavigate()
   const [openIndex, setOpenIndex] = useState(null);
@@ -83,7 +83,7 @@ export default function FAQSection() {
             project.
           </p>
           <button
-          onClick={()=> navigate('/contact-us')}
+         onClick={onAskClick}
             data-aos="fade-right"
             className="relative overflow-hidden border-gray-300 rounded-full px-5 py-2 border border-2 border-gray-300 flex justify-center gap-1 font-md cursor-pointer transition-all duration-500
             before:absolute before:inset-0 before:bg-blue-700 before:-translate-x-full before:transition-transform before:duration-500

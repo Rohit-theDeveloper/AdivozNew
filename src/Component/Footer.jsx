@@ -74,9 +74,9 @@ const Footer = () => {
             } overflow-hidden md:overflow-visible`}
           >
             <li>
-              <a href="/" className="hover:text-blue-500 transition">
+              <Link to="/" className="hover:text-blue-500 transition">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
               <Link to="/about-us" className="hover:text-blue-500 transition">
@@ -85,7 +85,7 @@ const Footer = () => {
             </li>
             <li>
               <Link to="/services" className="hover:text-blue-500 transition">
-               Our Srvices
+               Our Services
               </Link>
             </li>
             <li>
