@@ -239,9 +239,10 @@ export default function Header() {
                   setOpenSubMenu(null);
                   Navigate("/contact-us");
                 }}
+                disabled={isContactPage} 
                 className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 flex items-center gap-1 font-medium"
               >
-                Get In Touch{" "}
+                Get In Touch
                 <span>
                   <MdArrowOutward className="rotate-45" />
                 </span>

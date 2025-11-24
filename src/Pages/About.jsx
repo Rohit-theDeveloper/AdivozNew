@@ -55,7 +55,7 @@ export default function About() {
         {/* Left Side - Image */}
         <div className="relative group">
           <img
-          data-aos = "fade-right"
+          data-aos = "fade-down"
            loading='lazy'
             src={office}
             alt="Digital Solutions Team in Canada"
@@ -111,7 +111,7 @@ export default function About() {
         <p 
         data-aos ="zoom-in"
         className="text-gray-800 text-lg max-w-2xl mx-auto mb-16">
-          We are driven by innovation and passion — crafting digital solutions
+          We are driven by innovation and passion - crafting digital solutions
           that empower businesses to grow, connect, and thrive in the evolving
           digital world.
         </p>

@@ -69,7 +69,7 @@ export default function TestimonialSection() {
   const testimonial = testimonials[index];
 
   return (
-    <section className="w-full bg-gradient-to-br from-[#f3f8ff] to-[#f7fbff] py-20 px-6">
+    <section className="w-full bg-gradient-to-br from-[#f3f8ff] to-[#f7fbff] py-20 px-6 overflow-hidden">
       {/* Heading */}
       <div 
       data-aos ="zoom-in"

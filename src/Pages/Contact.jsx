@@ -121,7 +121,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="w-full bg-gray-50 py-20 px-6">
+      <section className="w-full bg-gray-50 py-20 px-6 overflow-hidden">
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.6fr]  gap-10 items-start">
           {/* Left Section - Contact Info */}
           <div
