@@ -124,8 +124,8 @@ export default function About() {
           className="group perspective">
             <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-10 shadow-2xl border border-gray-700 transform transition-transform duration-700 group-hover:rotate-y-6 group-hover:-translate-y-2">
               <div className="flex flex-col items-center text-center space-y-6">
-                <div className="bg-blue-600/20 p-6 rounded-full shadow-inner group-hover:scale-110 transition-transform duration-300">
-                  <FaEye className="text-blue-400 text-5xl" />
+                <div className="bg-blue-600 p-6 rounded-full shadow-inner group-hover:scale-110 transition-transform duration-300">
+                  <FaEye className="text-black text-5xl" />
                 </div>
                 <h3 className="text-2xl font-bold text-black">Our Vision</h3>
                 <p className="text-gray-800 leading-relaxed">
@@ -143,8 +143,8 @@ export default function About() {
           className="group perspective">
             <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-10 shadow-2xl border border-gray-700 transform transition-transform duration-700 group-hover:-rotate-y-6 group-hover:-translate-y-2">
               <div className="flex flex-col items-center text-center space-y-6">
-                <div className="bg-blue-600/20 p-6 rounded-full shadow-inner group-hover:scale-110 transition-transform duration-300">
-                  <FaBullseye className="text-blue-400 text-5xl" />
+                <div className="bg-blue-600 p-6 rounded-full shadow-inner group-hover:scale-110 transition-transform duration-300">
+                  <FaBullseye className="text-black text-5xl" />
                 </div>
                 <h3 className="text-2xl font-bold text-black">Our Mission</h3>
                 <p className="text-gray-800 leading-relaxed">

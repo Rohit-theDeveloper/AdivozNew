@@ -1,5 +1,5 @@
 import React from "react";
-import { useState , useRef} from "react";
+import { useState, useRef } from "react";
 import FAQSection from "../Component/FAQSection";
 import {
   FiPhoneCall,
@@ -74,19 +74,18 @@ export default function Contact() {
     });
   };
 
-   const formRef = useRef(null);
+  const formRef = useRef(null);
 
   const scrollToForm = () => {
     formRef.current?.scrollIntoView({ behavior: "smooth" });
   };
-
 
   return (
     <>
       <section className="relative overflow-hidden rounded-2xl mx-10 my-10 ">
         {/* Background Image */}
         <div
-         ref={formRef}
+          ref={formRef}
           data-aos="zoom-in"
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -133,8 +132,8 @@ export default function Contact() {
               Contact Information
             </h2>
             <p className="text-gray-600 mb-8">
-              Thank you for your interest in Attach Web Agency. We're excited to
-              hear from you and discuss...
+              Thank you for choosing our digital service agency. We're excited
+              to hear from you and discuss…
             </p>
 
             <div className="space-y-10 cursor-pointer flex flex-col items-left justify-center">
@@ -254,10 +253,14 @@ export default function Contact() {
                     <option value="" disabled>
                       Select Subject
                     </option>
-                    <option>Web Design</option>
-                    <option>Development</option>
-                    <option>SEO</option>
-                    <option>Support</option>
+                    <option>Search Engine Optimization (SEO)</option>
+                    <option>Pay-Per-Click Advertising (PPC) & SEM</option>
+                    <option>Social Media & Influencer Marketing</option>
+                    <option>Web Design & Development</option>
+                    <option>Content & Email Marketing</option>
+                    <option>Analytics & Data-Driven Strategy</option>
+                    <option>Video Marketing & Interactive Content</option>
+                    <option>Reputation & Online Review Management</option>
                   </select>
                   <MdOutlineSubject className="absolute right-4 top-3.5 text-gray-400" />
                   {errors.subject && (
@@ -291,14 +294,14 @@ export default function Contact() {
                 type="submit"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg flex items-center gap-2 transition-all duration-300 cursor-pointer"
               >
-                Subscribe Now <FaPaperPlane />
+                Contact Us <FaPaperPlane />
               </button>
             </form>
           </div>
         </div>
       </section>
       <MapSection />
-      <FAQSection  onAskClick={scrollToForm} />
+      <FAQSection onAskClick={scrollToForm} />
       <ToastContainer />
     </>
   );

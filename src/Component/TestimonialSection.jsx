@@ -91,7 +91,7 @@ export default function TestimonialSection() {
         data-aos ="fade-right"
         className="relative flex-shrink-0 z-10">
           <CircularText
-            text="100% Trusted Our Clients • 100% Trusted Our Clients • "
+            text="A Trusted Choice for Our Clients • A Trusted Choice for Our Clients • "
             spinDuration={20}
             onHover="speedUp"
           />
