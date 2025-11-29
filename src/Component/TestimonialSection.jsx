@@ -75,9 +75,9 @@ export default function TestimonialSection() {
       data-aos ="zoom-in"
       className="max-w-5xl mx-auto text-center mb-10">
         <div className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 mb-3">
-          <span className="w-2 h-2 bg-blue-600 rounded-sm inline-block" />
+          <span className="w-2 h-2 bg-[#004aac] rounded-sm inline-block" />
           <span>Testimonials</span>
-          <span className="w-2 h-2 bg-blue-600 rounded-sm inline-block" />
+          <span className="w-2 h-2 bg-[#004aac] rounded-sm inline-block" />
         </div>
         <h2 className="text-3xl md:text-4xl font-semibold text-slate-900">
           Real Feedback from Real Clients

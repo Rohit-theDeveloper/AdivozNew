@@ -88,7 +88,7 @@ export default function About() {
 
           <button
           onClick={()=>navigate('/services')}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-md cursor-pointer">
+          className="bg-[#004aac] hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-md cursor-pointer">
            Discover our Services
           </button>
         </div>
@@ -96,12 +96,12 @@ export default function About() {
     </section>
 
     {/* vision mission */}
-      <section className="relative bg-gray-200 py-20 px-6 overflow-hidden">
+      <section className="relative bg-gray-200 py-20 px-6 overflow-hidden bg-blue-400">
       {/* Decorative blurred circles (3D light effect) */}
       {/* <div className="absolute top-20 left-10 w-60 h-60 bg-blue-600/20 blur-3xl rounded-full"></div>
       <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-600/20 blur-3xl rounded-full"></div> */}
 
-      <div className="relative max-w-6xl mx-auto text-center">
+      <div className="relative max-w-6xl mx-auto text-center ">
         <h2 
         data-aos ="zoom-in"
         className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">
@@ -124,8 +124,8 @@ export default function About() {
           className="group perspective">
             <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-10 shadow-2xl border border-gray-700 transform transition-transform duration-700 group-hover:rotate-y-6 group-hover:-translate-y-2">
               <div className="flex flex-col items-center text-center space-y-6">
-                <div className="bg-blue-600 p-6 rounded-full shadow-inner group-hover:scale-110 transition-transform duration-300">
-                  <FaEye className="text-black text-5xl" />
+                <div className="bg-[#004aac] p-6 rounded-full shadow-inner group-hover:scale-110 transition-transform duration-300">
+                  <FaEye className="text-white text-5xl" />
                 </div>
                 <h3 className="text-2xl font-bold text-black">Our Vision</h3>
                 <p className="text-gray-800 leading-relaxed">
@@ -143,8 +143,8 @@ export default function About() {
           className="group perspective">
             <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-10 shadow-2xl border border-gray-700 transform transition-transform duration-700 group-hover:-rotate-y-6 group-hover:-translate-y-2">
               <div className="flex flex-col items-center text-center space-y-6">
-                <div className="bg-blue-600 p-6 rounded-full shadow-inner group-hover:scale-110 transition-transform duration-300">
-                  <FaBullseye className="text-black text-5xl" />
+                <div className="bg-[#004aac] p-6 rounded-full shadow-inner group-hover:scale-110 transition-transform duration-300">
+                  <FaBullseye className="text-white text-5xl" />
                 </div>
                 <h3 className="text-2xl font-bold text-black">Our Mission</h3>
                 <p className="text-gray-800 leading-relaxed">

@@ -70,3 +70,10 @@
 .testimonial-swiper .swiper-pagination-bullet-active {
   background-color: #1d4ed8; /* Tailwind blue-600 */
 }
+.text-blue-600 {
+  color: #004aac !important;
+}
+
+/* .bg-blue-600{
+  color: #004aac !important;
+} */

@@ -1,5 +1,4 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import AnalyticsdataDrivenStrategy from "../assets/Analytics-data-Driven Strategy.jpg";
 import CRO from "../assets/CRO.jpg";
 import LocalGeoTargetedMarketing from "../assets/Local-Geo-Targeted Marketing.jpg";
@@ -15,10 +14,14 @@ import { MdArrowOutward } from "react-icons/md";
 import useAOS from "../hooks/useAOS";
 import banner from "../assets/banner.jpg";
 import { Link } from "react-router-dom";
+import ContactForm from "../Component/ContactForm"; // reusable form
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Services() {
   useAOS();
-  const Navigate = useNavigate();
+  const [isQueryOpen, setIsQueryOpen] = useState(false);
+
   const services = [
     {
       img: SEO1,
@@ -50,12 +53,6 @@ export default function Services() {
       desc: "Engage customers with culturally relevant storytelling, bilingual newsletters, and video content tailored to Canadian business seasons and local market trends.",
       button: "Contact Us",
     },
-    // {
-    //   img: LocalGeoTargetedMarketing,
-    //   title: "Local & Geo-Targeted Marketing",
-    //   desc: "Drive foot traffic and leads for your local business through Google Maps optimization, province-specific ads, and hyperlocal SEO tailored to your Canadian audience.",
-    //   button: "Contact Us",
-    // },
     {
       img: AnalyticsdataDrivenStrategy,
       title: "Analytics & Data-Driven Strategy",
@@ -74,12 +71,6 @@ export default function Services() {
       desc: "Protect and enhance your online reputation with proactive review management on Google, Yelp, and industry platforms — handled with bilingual response strategies.",
       button: "Contact Us",
     },
-    // {
-    //   img: CRO,
-    //   title: "Conversion Rate Optimization (CRO) & Growth Marketing",
-    //   desc: "Boost lead conversions through optimized funnels, smart retargeting, and growth-driven digital strategies aligned with Canadian startup and enterprise goals.",
-    //   button: "Contact Us",
-    // },
   ];
 
   return (
@@ -152,7 +143,6 @@ export default function Services() {
         </div>
 
         {/* Services Card Section */}
-
         <div className="max-w-7xl mx-auto mt-20 cursor-pointer bg-gray-50 p-5">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service, index) => (
@@ -173,10 +163,12 @@ export default function Services() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-700 mb-6 flex-grow">{service.desc}</p>
+                  <p className="text-gray-700 mb-6 flex-grow">
+                    {service.desc}
+                  </p>
                   <button
-                    onClick={() => Navigate("/contact-us")}
-                    className="relative overflow-hidden bg-blue-600 text-white py-3 px-4 rounded-lg  mt-auto 
+                    onClick={() => setIsQueryOpen(true)}
+                    className="relative overflow-hidden bg-[#004aac] text-white py-3 px-4 rounded-lg  mt-auto 
                             flex justify-center items-center gap-2 font-medium cursor-pointer transition-all duration-500
                             before:absolute before:inset-0 before:bg-blue-800 before:-translate-x-full before:transition-transform before:duration-500
                             hover:before:translate-x-0 z-20 group"
@@ -192,6 +184,26 @@ export default function Services() {
           </div>
         </div>
       </section>
+
+      {/*  Query Form Modal */}
+      {isQueryOpen && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-4">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-6 md:p-8 relative">
+            <button
+              onClick={() => setIsQueryOpen(false)}
+              className="absolute right-4 top-3 text-gray-500 text-2xl leading-none cursor-pointer hover:text-blue-600"
+            >
+              &times;
+            </button>
+            <h3 className="text-2xl font-semibold mb-4 text-gray-900">
+              Send us a Query
+            </h3>
+            <ContactForm onSuccess={() => setIsQueryOpen(false)} />
+          </div>
+        </div>
+      )}
+
+      <ToastContainer />
     </>
   );
 }

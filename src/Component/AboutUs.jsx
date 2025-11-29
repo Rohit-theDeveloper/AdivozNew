@@ -1,5 +1,6 @@
 import React from "react";
 import { RiTeamFill } from "react-icons/ri";
+import { GiGrowth } from "react-icons/gi";
 import { MdArrowOutward } from "react-icons/md";
 import img1 from "../assets/img1.jpg";
 import img2 from "../assets/img2.jpg";
@@ -96,7 +97,7 @@ export default function AboutUs() {
             <div className="flex flex-col gap-5 mt-8 ">
               {/* Section 1 */}
               <div className="flex items-center gap-4">
-                <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white">
+                <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-[#004aac] text-white">
                   <RiTeamFill size={20} />
                 </div>
                 <div>
@@ -110,8 +111,8 @@ export default function AboutUs() {
 
               {/* Section 2 */}
               <div className="flex items-center gap-4">
-                <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white">
-                  <RiTeamFill size={20} />
+                <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-[#004aac] text-white">
+                  <GiGrowth size={20} />
                 </div>
                 <div className="text-start">
                   <h1 className="font-bold text-lg">
@@ -127,7 +128,7 @@ export default function AboutUs() {
             </div>
             <button
              onClick={()=>Navigate('/about-us')}
-              className="relative overflow-hidden bg-blue-500 text-white px-5 py-2 rounded-xl flex items-center justify-center gap-2 font-medium cursor-pointer transition-all duration-500
+              className="relative overflow-hidden bg-[#004aac] text-white px-5 py-2 rounded-xl flex items-center justify-center gap-2 font-medium cursor-pointer transition-all duration-500
                before:absolute before:inset-0 before:bg-blue-700 before:-translate-x-full before:transition-transform before:duration-500 hover:before:translate-x-0 z-10 group mt-10"
             >
               <span className="relative z-20 flex items-center justify-center gap-2  text-center">

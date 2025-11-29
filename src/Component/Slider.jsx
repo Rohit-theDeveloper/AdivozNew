@@ -77,7 +77,7 @@ export default function Slider() {
         <div>
           <span 
           data-aos = "fade-down"
-          className="font-bold text-blue-600">Case Studies</span>
+          className="font-semibold text-blue-600">Case Studies</span>
           <h2 
            data-aos = "fade-down"
           className="text-3xl font-bold">
@@ -92,14 +92,14 @@ export default function Slider() {
              data-aos = "fade-down"
               key={id}
               className="relative overflow-hidden rounded-2xl text-xs text-white px-3 py-2
-        bg-blue-500
+        bg-[#004aac]
         cursor-pointer transition-all duration-500 ease-in-out
         before:absolute before:inset-0 before:bg-blue-700 before:-translate-x-full
         before:transition-transform before:duration-500 hover:before:translate-x-0
         hover:text-white hover:scale-105 z-10"
             >
               {/* Text stays above pseudo-element */}
-              <span className="relative z-20 transition-colors duration-500">
+              <span className="relative z-20 transition-colors duration-500 font-medium">
                 {btn.name}
               </span>
             </button>

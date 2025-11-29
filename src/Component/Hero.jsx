@@ -8,6 +8,9 @@ import { RiPriceTag2Line } from "react-icons/ri";
 import { Typewriter } from "react-simple-typewriter";
 import useAOS from "../hooks/useAOS";
 import { Link } from "react-router-dom";
+import { MdOutlinePriceChange } from "react-icons/md";
+import { GiReceiveMoney } from "react-icons/gi";
+import { FaMoneyBillWheat } from "react-icons/fa6";
 
 
 export default function Hero() {
@@ -66,7 +69,7 @@ export default function Hero() {
             <Link
              to="/about-us"
               className="relative overflow-hidden border border-gray-300 text-white px-5 py-2 rounded-lg flex justify-center gap-2 transition-all duration-500 
-               before:absolute before:inset-0 before:bg-blue-700 before:-translate-x-full before:transition-transform before:duration-500 hover:before:translate-x-0
+               before:absolute before:inset-0 before:bg-[#004aac] before:-translate-x-full before:transition-transform before:duration-500 hover:before:translate-x-0
                hover:text-white hover:border-gray-600 z-10 group"
             >
               <span className="flex items-center text-white gap-2 relative z-10 transition-transform duration-300 group-hover:scale-105 font-bold">
@@ -82,7 +85,7 @@ export default function Hero() {
             <Link
               to ="/services"
               className="relative overflow-hidden border border-gray-300 text-white px-5 py-2 rounded-lg flex justify-center gap-2 transition-all duration-500 
-               before:absolute before:inset-0 before:bg-blue-700 before:-translate-x-full before:transition-transform before:duration-500 hover:before:translate-x-0
+               before:absolute before:inset-0 before:bg-[#004aac] before:-translate-x-full before:transition-transform before:duration-500 hover:before:translate-x-0
                hover:text-white hover:border-gray-600 z-10 group"
             >
               <span className="flex items-center text-white gap-2 relative z-10 transition-transform duration-300 group-hover:scale-105 font-bold">
@@ -106,7 +109,7 @@ export default function Hero() {
           className=" flex-1 flex gap-3 items-center justify-center px-3 hover:scale-110 cursor-pointer py-4 transition-all duration-500">
             <RiTeamFill
               size={"40px"}
-              className="text-blue-500 p-1 rounded-full shadow-lg bg-white "
+              className="text-blue-600 p-1 rounded-full shadow-lg bg-white "
             />
             <span className="">
               <h1 className="font-bold text-xl">Highly Expert Team</h1>
@@ -119,8 +122,8 @@ export default function Hero() {
           data-aos ="flip-up"
           className=" flex-1 flex gap-3 items-center justify-center px-3 cursor-pointer hover:scale-110 cursor-pointer py-4 transition-all duration-500">
             <RiPriceTag2Line 
-              size={"40px"}
-              className="text-blue-500 border  p-1 rounded-full shadow-lg bg-white"
+              size={"45px"}
+              className="text-blue-600  p-1 rounded-full shadow-lg bg-white "
             />
             <span>
               <h1 className="font-bold text-xl">Competitive Pricing</h1>
@@ -134,7 +137,7 @@ export default function Hero() {
           className=" flex-1 flex gap-3 items-center justify-center px-3 hover:scale-110 cursor-pointer py-4 transition-all duration-500">
             <FaHeadset
               size={"45px"}
-              className="text-blue-500  p-1 rounded-full shadow-lg bg-white"
+              className="text-blue-600  p-1 rounded-full shadow-lg bg-white"
             />
             <span>
               <h1 className="font-bold text-xl">24 / 7 Customer Services</h1>

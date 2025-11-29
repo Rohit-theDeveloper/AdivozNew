@@ -65,7 +65,7 @@ const WorkProcesss = () => {
         <div className="w-full md:w-1/2 space-y-6">
           <h4 
           data-aos ="fade-down"
-          className="text-blue-500 font-semibold tracking-wide">
+          className="text-blue-600 font-semibold tracking-wide">
             Work Process
           </h4>
           <h2 

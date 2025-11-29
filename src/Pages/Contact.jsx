@@ -16,7 +16,7 @@ import "react-toastify/dist/ReactToastify.css";
 import useAOS from "../hooks/useAOS";
 import banner from "../assets/banner.jpg";
 import { Link } from "react-router-dom";
-
+import ContactForm from "../Component/ContactForm";
 export default function Contact() {
   useAOS();
   const [formData, setFormData] = useState({
@@ -82,7 +82,7 @@ export default function Contact() {
 
   return (
     <>
-      <section className="relative overflow-hidden rounded-2xl mx-10 my-10 ">
+      <section className="relative overflow-hidden rounded-2xl mx-10 my-8 ">
         {/* Background Image */}
         <div
           ref={formRef}
@@ -120,7 +120,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="w-full bg-gray-50 py-20 px-6 overflow-hidden">
+      <section className="w-full bg-gray-50 py-10 px-6 overflow-hidden">
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.6fr]  gap-10 items-start">
           {/* Left Section - Contact Info */}
           <div
@@ -132,8 +132,8 @@ export default function Contact() {
               Contact Information
             </h2>
             <p className="text-gray-600 mb-8">
-              Thank you for choosing our digital service agency. We're excited
-              to hear from you and discuss…
+              Thank you for your interest in Adivoz. We're excited
+              to hear from you and discuss.
             </p>
 
             <div className="space-y-10 cursor-pointer flex flex-col items-left justify-center">
@@ -184,119 +184,7 @@ export default function Contact() {
             data-aos="fade-left"
             className="bg-gray-100 rounded-2xl shadow-md p-10"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Name */}
-                <div className="relative">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className={`w-full border ${
-                      errors.name ? "border-red-500" : "border-gray-300"
-                    } rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500`}
-                  />
-                  <FiUser className="absolute right-4 top-3.5 text-gray-400" />
-                  {errors.name && (
-                    <p className="text-red-500 text-sm mt-1">{errors.name}</p>
-                  )}
-                </div>
-
-                {/* Email */}
-                <div className="relative">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email Address"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className={`w-full border ${
-                      errors.email ? "border-red-500" : "border-gray-300"
-                    } rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500`}
-                  />
-                  <FiMail className="absolute right-4 top-3.5 text-gray-400" />
-                  {errors.email && (
-                    <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-                  )}
-                </div>
-
-                {/* Phone */}
-                <div className="relative">
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Phone Number"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className={`w-full border ${
-                      errors.phone ? "border-red-500" : "border-gray-300"
-                    } rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500`}
-                  />
-                  <FiPhoneCall className="absolute right-4 top-3.5 text-gray-400" />
-                  {errors.phone && (
-                    <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
-                  )}
-                </div>
-
-                {/* Subject */}
-                <div className="relative">
-                  <select
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className={`w-full border ${
-                      errors.subject ? "border-red-500" : "border-gray-300"
-                    } rounded-lg px-4 py-3 text-gray-600 focus:outline-none focus:border-blue-500`}
-                  >
-                    <option value="" disabled>
-                      Select Subject
-                    </option>
-                    <option>Search Engine Optimization (SEO)</option>
-                    <option>Pay-Per-Click Advertising (PPC) & SEM</option>
-                    <option>Social Media & Influencer Marketing</option>
-                    <option>Web Design & Development</option>
-                    <option>Content & Email Marketing</option>
-                    <option>Analytics & Data-Driven Strategy</option>
-                    <option>Video Marketing & Interactive Content</option>
-                    <option>Reputation & Online Review Management</option>
-                  </select>
-                  <MdOutlineSubject className="absolute right-4 top-3.5 text-gray-400" />
-                  {errors.subject && (
-                    <p className="text-red-500 text-sm mt-1">
-                      {errors.subject}
-                    </p>
-                  )}
-                </div>
-              </div>
-
-              {/* Message */}
-              <div className="relative">
-                <textarea
-                  rows="5"
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className={`w-full border ${
-                    errors.message ? "border-red-500" : "border-gray-300"
-                  } rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500`}
-                ></textarea>
-                <FiMessageSquare className="absolute right-4 top-4 text-gray-400" />
-                {errors.message && (
-                  <p className="text-red-500 text-sm mt-1">{errors.message}</p>
-                )}
-              </div>
-
-              {/* Button */}
-              <button
-                type="submit"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg flex items-center gap-2 transition-all duration-300 cursor-pointer"
-              >
-                Contact Us <FaPaperPlane />
-              </button>
-            </form>
+              <ContactForm />
           </div>
         </div>
       </section>

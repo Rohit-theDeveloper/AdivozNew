@@ -16,7 +16,7 @@ export default function ScrollTopButton() {
     showButton && (
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 hover:scale-110 z-100 cursor-pointer"
+        className="fixed bottom-6 right-6 bg-[#004aac] text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 hover:scale-110 z-100 cursor-pointer"
       >
         <MdArrowUpward size={24} />
       </button>

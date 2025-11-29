@@ -57,7 +57,7 @@ const Testimonial = () => {
     <section className="bg-white py-10 relative ">
       <div className="container mx-auto px-6 md:px-16 text-center">
         {/* Heading */}
-        <h4 data-aos="zoom-in" className="text-blue-500 font-medium mb-2">
+        <h4 data-aos="zoom-in" className="text-blue-600 font-semibold mb-2">
           Testimonial
         </h4>
         <h2
@@ -114,7 +114,7 @@ const Testimonial = () => {
                 </p>
 
                 {/* Bottom Circular Icon */}
-                <div className="absolute bottom-[-15px] z-100 left-1/2 transform -translate-x-1/2 bg-blue-600  w-10 h-10 rounded-full flex items-center justify-center font-semibold">
+                <div className="absolute bottom-[-15px] z-100 left-1/2 transform -translate-x-1/2 bg-[#004aac]  w-10 h-10 rounded-full flex items-center justify-center font-semibold">
                   <img
                     src={FeedbackIcon}
                     alt="Feedback Icon"

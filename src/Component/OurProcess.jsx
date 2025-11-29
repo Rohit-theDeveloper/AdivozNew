@@ -47,7 +47,7 @@ const OurProcess = () => {
 
       <div className=" mx-auto px-6 md:px-5 relative z-10 text-center">
         {/* Heading */}
-        <h4 className="text-blue-500 font-medium mb-2">Our Process</h4>
+        <h4 className="text-blue-600 font-semibold mb-2">Our Process</h4>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
          How It Works!
         </h2>

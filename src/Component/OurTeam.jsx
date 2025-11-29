@@ -67,7 +67,7 @@ export default function OurTeam() {
              </p>
    
              <p className="text-gray-800 mb-8 text-lg">
-               Under Nishit’s guidance, Adivoz has become known for delivering high-performance digital solutions across SEO, social media marketing, branding, and paid advertising. He is passionate about empowering businesses - startups to enterprises - to build strong digital identities and achieve sustainable online growth. His commitment to excellence and customer - first approach continues to drive Adivoz’s rapid expansion and industry reputation.
+               Under Nishit’s guidance, Adivoz has become known for delivering high-performance digital solutions across SEO, social media marketing, branding, and paid advertising. He is passionate about empowering businesses - startups to enterprises - to build strong digital identities and achieve sustainable online growth. His commitment to excellence and customer-first approach continues to drive Adivoz’s rapid expansion and industry reputation.
              </p>
    
              

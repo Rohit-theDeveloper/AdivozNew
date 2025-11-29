@@ -158,7 +158,7 @@ export default function Header() {
             onClick={() => !isContactPage && Navigate("/contact-us")}
             disabled={isContactPage} 
             className={`
-    relative overflow-hidden bg-blue-500 text-white px-4 py-2 rounded-xl flex justify-center gap-1 font-medium 
+    relative overflow-hidden bg-[#004aac] text-white px-4 py-2 rounded-xl flex justify-center gap-1 font-medium 
     transition-all duration-500 z-20 group
     ${
       !isContactPage
