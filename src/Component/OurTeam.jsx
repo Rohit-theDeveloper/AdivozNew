@@ -1,81 +1,117 @@
-import React from "react";
-import { FaLinkedinIn, FaTwitter, FaFacebookF } from "react-icons/fa";
-import team1 from "../assets/team1.jpg";
-import team2 from "../assets/team2.jpg";
-import team3 from "../assets/team3.jpg";
-import team5 from "../assets/team5.jpg";
 import useAOS from "../hooks/useAOS";
-import office from "../assets/co-founder-image.jpg"
+import rohitkumar from "../assets/rohit kumar.png";
+import deepakkumar from "../assets/deepakkumar.jpg";
+import mandeepyadav from "../assets/mandeep.jpg";
+import chinusaini from "../assets/chinusaini.jpg";
 
 
+const team = [
+  {
+    id: 1,
+    name: "Rohit Kumar",
+    role: "Full Stack Developer",
+    image: rohitkumar,
+    desc: "Develops end-to-end web solutions, handling both front-end interfaces and back-end systems to ensure seamless performance.",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+      instagram: "#",
+    },
+  },
+  {
+    id: 2,
+    name: "Deepak Bisht",
+    role: "Web Designer",
+    image: deepakkumar,
+    desc: "Designs visually appealing, user-focused layouts and enhances overall website aesthetics and usability.",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+      instagram: "#",
+    },
+  },
+  {
+    id: 3,
+    name: "Mandeep Yadav",
+    role: "Backend Developer",
+    image: mandeepyadav,
+    desc: "Builds secure, scalable server-side systems and manages API integrations to ensure smooth application performance.",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+      instagram: "#",
+    },
+  },
+  {
+    id: 4,
+    name: "Chinu Saini",
+    role: "SEO Expert",
+    image: chinusaini,
+    desc: "Improves website visibility, boosts organic rankings, and drives targeted traffic through effective SEO strategies.",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+      instagram: "#",
+    },
+  },
+];
 
 export default function OurTeam() {
   useAOS();
-  // const team = [
-  //   {
-  //     name: "Nishit Verma",
-  //     role: "CEO & Founder",
-  //     img: team2,
-  //   },
-  //   {
-  //     name: "Michael Lee",
-  //     role: "Chief Marketing Officer",
-  //     img: team1,
-  //   },
-  //   {
-  //     name: "Ava Martinez",
-  //     role: "Creative Director",
-  //     img: team3,
-  //   },
-  //   {
-  //     name: "Daniel Thompson",
-  //     role: "Technical Lead",
-  //     img: team5,
-  //   },
-  // ];
 
   return (
+    <section className="w-full bg-white py-20 px-6">
+      {/* Heading + Description */}
+      <div data-aos="zoom-in" className="max-w-5xl mx-auto text-center mb-14">
+        <div className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 mb-3">
+          <span className="w-2 h-2 bg-[#004aac] rounded-sm inline-block" />
+          <span>Our Team</span>
+          <span className="w-2 h-2 bg-[#004aac] rounded-sm inline-block" />
+        </div>
 
-    <>
-     
+        <h2 className="text-3xl md:text-4xl font-semibold text-slate-900">
+          The People Powering Adivoz
+        </h2>
+        <p className="max-w-3xl mx-auto text-gray-600 mt-4">
+          Adivoz is driven by a close-knit team of marketers, creators and
+          developers who love building meaningful digital growth for brands.
+        </p>
+      </div>
 
-        <section className="py-20  bg-gray-200  px-6 lg:px-16 overflow-hidden">
-         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-           {/* Left Side - Image */}
-           <div className="relative group overflow-hidden">
-             <img
-             data-aos = "fade-right"
-              loading='lazy'
-               src={office}
-               alt="Digital Solutions Team in Canada"
-               className="w-full h-[420px] object-cover rounded-2xl shadow-lg transition-transform duration-500 group-hover:scale-105"
-             />
-             <div className="absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-           </div>
-   
-           {/* Right Side - Text */}
-           <div 
-             data-aos = "fade-left">
-             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900  leading-snug">
-              Nishit Verma 
-             </h2>
-             <h3 className="text-blue-600 font-bold">CEO & CO-Founder of Adivoz</h3>
-             {/* <p className="text-blue-500">CEO & CO-Founder</p> */}
-   
-             <p className="text-gray-800 mb-6 text-lg">
-               A fast-growing digital marketing agency dedicated to helping brands scale in today’s competitive digital landscape. With a strong vision for data-driven growth, he leads the company’s strategy, innovation, and client success operations. His leadership blends creativity with analytics, ensuring every campaign delivers measurable impact.
-             </p>
-   
-             <p className="text-gray-800 mb-8 text-lg">
-               Under Nishit’s guidance, Adivoz has become known for delivering high-performance digital solutions across SEO, social media marketing, branding, and paid advertising. He is passionate about empowering businesses - startups to enterprises - to build strong digital identities and achieve sustainable online growth. His commitment to excellence and customer-first approach continues to drive Adivoz’s rapid expansion and industry reputation.
-             </p>
-   
-             
-           </div>
-         </div>
-       </section>
-    </>
-   
-       
+      {/* Team Grid */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {team.map((member) => (
+          <div
+            key={member.id}
+            data-aos="fade-up"
+            className="group bg-[#f7fbff] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+          >
+            {/* Image wrapper */}
+            <div className="relative w-full h-72 overflow-hidden">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+
+              {/* Hover overlay + social icons */}
+            </div>
+
+            {/* Text content */}
+            <div className="p-5">
+              <h3 className="text-lg font-semibold text-gray-900">
+                {member.name}
+              </h3>
+              <p className="text-sm text-blue-700 font-medium mt-1">
+                {member.role}
+              </p>
+              <p className="text-sm text-gray-600 mt-3 leading-relaxed">
+                {member.desc}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }

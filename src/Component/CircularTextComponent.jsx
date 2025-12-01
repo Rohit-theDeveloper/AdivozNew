@@ -94,7 +94,7 @@ const CircularText = ({
       onMouseLeave={handleHoverEnd}
     >
       <div className="absolute inset-[40px] bg-white rounded-full shadow-md flex items-center justify-center">
-        <span className="text-blue-600 text-2xl font-bold">Adivoz</span>
+        <span className="text-blue-600 italic text-2xl font-bold ">Adivoz</span>
       </div>
       {letters.map((letter, i) => {
         const rotationDeg = (360 / letters.length) * i;

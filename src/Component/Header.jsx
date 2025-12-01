@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FiSearch, FiMenu, FiX, FiChevronDown } from "react-icons/fi";
 import { MdArrowOutward } from "react-icons/md";
-import logo from "../assets/adivoz.jpg";
+import logo from "../assets/adivozlogo.jpg";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import SearchModal from "./Modal/SearchModal";
 

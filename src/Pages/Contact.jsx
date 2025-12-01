@@ -29,50 +29,50 @@ export default function Contact() {
 
   const [errors, setErrors] = useState({});
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-    setErrors({ ...errors, [name]: "" }); // clear error on typing
-  };
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData({ ...formData, [name]: value });
+  //   setErrors({ ...errors, [name]: "" }); // clear error on typing
+  // };
 
-  // handle submit
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // // handle submit
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
 
-    const newErrors = {};
-    if (!formData.name.trim()) newErrors.name = "Please enter your name.";
-    if (!formData.email.trim()) newErrors.email = "Please enter your email.";
-    if (!formData.phone.trim())
-      newErrors.phone = "Please enter your phone number.";
-    if (!formData.subject.trim())
-      newErrors.subject = "Please select a subject.";
-    if (!formData.message.trim())
-      newErrors.message = "Please write your message.";
+  //   const newErrors = {};
+  //   if (!formData.name.trim()) newErrors.name = "Please enter your name.";
+  //   if (!formData.email.trim()) newErrors.email = "Please enter your email.";
+  //   if (!formData.phone.trim())
+  //     newErrors.phone = "Please enter your phone number.";
+  //   if (!formData.subject.trim())
+  //     newErrors.subject = "Please select a subject.";
+  //   if (!formData.message.trim())
+  //     newErrors.message = "Please write your message.";
 
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      return;
-    }
+  //   if (Object.keys(newErrors).length > 0) {
+  //     setErrors(newErrors);
+  //     return;
+  //   }
 
-    // If validation passes
-    toast.success("Form submitted successfully!", {
-      position: "top-right",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      theme: "colored",
-    });
+  //   // If validation passes
+  //   toast.success("Form submitted successfully!", {
+  //     position: "top-right",
+  //     autoClose: 3000,
+  //     hideProgressBar: false,
+  //     closeOnClick: true,
+  //     pauseOnHover: true,
+  //     draggable: true,
+  //     theme: "colored",
+  //   });
 
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
-    });
-  };
+  //   setFormData({
+  //     name: "",
+  //     email: "",
+  //     phone: "",
+  //     subject: "",
+  //     message: "",
+  //   });
+  // };
 
   const formRef = useRef(null);
 
@@ -133,7 +133,7 @@ export default function Contact() {
             </h2>
             <p className="text-gray-600 mb-8">
               Thank you for your interest in Adivoz. We're excited
-              to hear from you and discuss.
+              to hear from you and discus.
             </p>
 
             <div className="space-y-10 cursor-pointer flex flex-col items-left justify-center">

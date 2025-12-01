@@ -7,52 +7,77 @@ import useAOS from "../hooks/useAOS";
 const testimonials = [
   {
     id: 1,
-    name: "Patricia",
+    name: "Patricia R.",
     role: "Front-End Developer",
-    rating :5,
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-    text: "The support and professionalism they offer during our projects were commendable. They were ready to listen to the objectives of the project and delivered the projects on time. ",
+    image: "https://randomuser.me/api/portraits/women/32.jpg",
+    text: "The professionalism and support Adivoz provided throughout our project were exceptional. They listened carefully to our objectives and delivered everything on time. Truly reliable and easy to collaborate with."
   },
   {
     id: 2,
-    name: "James ",
+    name: "James K.",
     role: "Tech Startup Founder",
-    rating :5,
-    image: "https://randomuser.me/api/portraits/women/45.jpg",
-    text: "Our website traffic has nearly doubled since we started working with Adivoz. Their SEO strategies are quite impressive, and they always explain things clearly. Highly recommend for anyone looking to boost their online visibility.",
+    image: "https://randomuser.me/api/portraits/men/45.jpg",
+    text: "Our website traffic has nearly doubled since partnering with Adivoz. Their SEO approach is clear, strategic, and effective. They always explain things in a simple way, which makes decision-making easier. Highly recommended!"
   },
   {
     id: 3,
-    name: "Sophia ",
+    name: "Sophia L.",
     role: "E-commerce Manager",
-    rating :5,
-    image: "https://randomuser.me/api/portraits/men/41.jpg",
-    text: "It’s been 2 years since we joined hands with Adivoz. Their team marketed our products in the most creative way. They come up with ideas and make plans for success while they are serving. Some of their creative ideas helped us with campaigns that actually worked wonders. Overall, we couldn’t ask for a better digital partner!",
+    image: "https://randomuser.me/api/portraits/women/41.jpg",
+    text: "We’ve been working with Adivoz for over two years now, and the experience has been outstanding. Their team brings creative ideas and strategic planning that have helped several of our campaigns perform beyond expectations."
   },
   {
     id: 4,
-    name: "Annie",
-    role: "Unknown",
-    rating :5,
+    name: "Annie M.",
+    role: "Jewellery Business Owner",
     image: "https://randomuser.me/api/portraits/women/45.jpg",
-    text: "I started a small business of jewellery. Adivoz completely changed my social media presence. Their campaigns are creative, engaging, and focused on achievements. I have seen a noticeable spike in followers and customer engagement in just a few months!",
+    text: "I run a small jewellery business, and Adivoz transformed our social media presence completely. Their content ideas are fresh and engaging, and within a few months, we saw major growth in followers and customer engagement."
   },
   {
     id: 5,
-    name: "Rohan M. ",
+    name: "Rohan M.",
     role: "Online Retail Business Owner",
-    rating :5,
     image: "https://randomuser.me/api/portraits/men/41.jpg",
-    text: "The results speak for themselves. Our paid campaigns and email marketing efforts are finally bringing measurable ROI. Thanks to Adivoz, they know how to turn strategies into real revenue.",
+    text: "The results speak for themselves. Our paid ads and email campaigns are finally generating consistent ROI. Adivoz really understands how to convert strategy into real revenue. Super impressed with their expertise."
   },
   {
     id: 6,
-    name: "Mathew",
+    name: "Mathew D.",
     role: "Fashion Brand Owner",
-    image: "https://randomuser.me/api/portraits/men/41.jpg",
-    text: "We recently worked with Adivoz, and they completely transformed our social media page. Their campaigns and strategic posts turn out amazing, all because of their team of creative thinkers. In just a few months, our business will start to boom with increased visibility of our brand on social media platforms. ",
-  }
+    image: "https://randomuser.me/api/portraits/men/52.jpg",
+    text: "Working with Adivoz has been a game changer. They helped reshape our fashion brand’s social media identity with stunning creatives and smart posting strategies. Our brand visibility has grown rapidly in just a few months."
+  },
+  {
+  id: 7,
+  name: "Mehul S.",
+  role: "Restaurant Owner",
+  image: "https://randomuser.me/api/portraits/men/23.jpg",
+  text: "Adivoz helped us redesign our website and manage our social media promotions. We saw a clear jump in reservations and online orders within weeks. Their team understands the food industry really well and creates content that connects with customers."
+},
+{
+  id: 8,
+  name: "Alicia Gomez",
+  role: "Real Estate Consultant",
+  image: "https://randomuser.me/api/portraits/women/67.jpg",
+  text: "Their lead generation campaigns have been a huge asset for my real estate business. The quality of leads improved and my closing rate increased. Adivoz gives detailed insights that help me plan my marketing every month."
+},
+{
+  id: 9,
+  name: "Arjun Verma",
+  role: "Fitness Trainer & Coach",
+  image: "https://randomuser.me/api/portraits/men/56.jpg",
+  text: "Before Adivoz, my Instagram barely reached anyone. Their content planning and ad strategy helped me gain real, engaging followers and more clients for my fitness programs. They truly understand branding for personal coaches."
+},
+{
+  id: 10,
+  name: "Natasha P.",
+  role: "Event Planner",
+  image: "https://randomuser.me/api/portraits/women/29.jpg",
+  text: "Adivoz revamped our social media aesthetics and helped us run targeted ads. We noticed an immediate increase in inquiries for weddings and corporate events. Their creativity and responsiveness make them amazing to work with."
+}
 ];
+
+
 
 export default function TestimonialSection() {
   useAOS();
@@ -139,8 +164,8 @@ export default function TestimonialSection() {
                 <div className="font-semibold text-gray-900">
                   {testimonial.name}
                 </div>
-                <div className="text-sm text-gray-500">
-                  {testimonial.position}
+                <div className="text-sm text-black">
+                  {testimonial.role}
                 </div>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import OurFounder from '../Component/OurFounder'
 import OurTeam from '../Component/OurTeam'
 import office from "../assets/office.jpg"
 import TestimonialSection from '../Component/TestimonialSection'
@@ -10,6 +11,9 @@ import { Link } from "react-router-dom";
 
 
 export default function About() {
+
+
+
   const navigate = useNavigate()
   useAOS();
   return (
@@ -128,7 +132,7 @@ export default function About() {
                   <FaEye className="text-white text-5xl" />
                 </div>
                 <h3 className="text-2xl font-bold text-black">Our Vision</h3>
-                <p className="text-gray-800 leading-relaxed">
+                <p className="text-gray-800 leading-relaxed text-lg">
                   To be Canada’s most trusted digital solutions partner - helping
                   brands unlock their true potential through creativity, data, and
                   technology.
@@ -147,7 +151,7 @@ export default function About() {
                   <FaBullseye className="text-white text-5xl" />
                 </div>
                 <h3 className="text-2xl font-bold text-black">Our Mission</h3>
-                <p className="text-gray-800 leading-relaxed">
+                <p className="text-gray-800 leading-relaxed text-lg">
                   To deliver innovative, result-driven, and sustainable digital
                   strategies that help our clients achieve measurable growth and
                   long-term success.
@@ -158,6 +162,7 @@ export default function About() {
         </div>
       </div>
     </section>
+  <OurFounder />
   <OurTeam />
   <TestimonialSection />
     

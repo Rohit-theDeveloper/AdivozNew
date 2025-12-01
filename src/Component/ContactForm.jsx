@@ -19,6 +19,7 @@ export default function ContactForm({ onSuccess }) {
   });
 
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false); // 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,8 +27,9 @@ export default function ContactForm({ onSuccess }) {
     setErrors({ ...errors, [name]: "" });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); //  start loading
 
     const newErrors = {};
     if (!formData.name.trim()) newErrors.name = "Please enter your name.";
@@ -41,29 +43,57 @@ export default function ContactForm({ onSuccess }) {
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
+      setLoading(false); //  stop loading if validation fail
       return;
     }
 
-    // If validation passes
-    toast.success("Form submitted successfully!", {
-      position: "top-right",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      theme: "colored",
-    });
+    console.log(formData);
 
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
-    });
+    try {
+      const response = await fetch("https://api.adivoz.com/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    if (onSuccess) onSuccess(); // for closing modal in About page
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success("Form submitted successfully!", {
+          position: "top-right",
+          autoClose: 3000,
+          theme: "colored",
+        });
+
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+
+        if (onSuccess) onSuccess(); // for modal close if needed
+      } else {
+        toast.error(data.message || "Failed to submit. Try again.", {
+          position: "top-right",
+          autoClose: 3000,
+          theme: "colored",
+        });
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("Something went wrong. Try again later.", {
+        position: "top-right",
+        autoClose: 3000,
+        theme: "colored",
+      });
+    } finally {
+      setLoading(false); //  always stop loading
+    }
   };
 
   return (
@@ -174,9 +204,18 @@ export default function ContactForm({ onSuccess }) {
       {/* Button */}
       <button
         type="submit"
-        className="bg-[#004aac] hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg flex items-center gap-2 transition-all duration-300 cursor-pointer"
+        disabled={loading}
+        className={`bg-[#004aac] hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg flex items-center gap-2 transition-all duration-300
+          ${loading ? "opacity-70 cursor-not-allowed" : "cursor-pointer"}
+        `}
       >
-        Contact Us <FaPaperPlane />
+        {loading ? (
+          <>Sending...</>
+        ) : (
+          <>
+            Contact Us <FaPaperPlane />
+          </>
+        )}
       </button>
     </form>
   );
