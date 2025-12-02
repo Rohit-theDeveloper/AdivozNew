@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FiSearch, FiMenu, FiX, FiChevronDown } from "react-icons/fi";
 import { MdArrowOutward } from "react-icons/md";
-import logo from "../assets/adivozlogo.jpg";
+import logo from "../assets/ADIVOZ-logo 1.png";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import SearchModal from "./Modal/SearchModal";
 
@@ -88,14 +88,14 @@ export default function Header() {
     <header className="w-full bg-white shadow-sm relative sticky top-0 z-50 sm:py-4 py-1">
       <div className="max-w-8xl mx-auto flex items-center justify-between px-0">
         {/* Left Logo Section */}
-        <div className="flex items-center gap-2 bg-blue-600 text-white w-auto sm:w-auto md:w-40 lg:w-40 sm:mx-4 mx-10">
-          <img
-            src={logo}
-            alt="Adivoz Logo"
-            className="h-8  md:h-full w-auto transition-all duration-300 cursor-pointer"
-            onClick={() => Navigate("")}
-          />
-        </div>
+         <div className="flex items-center gap-2 sm:mx-4 mx-10">
+    <img
+      src={logo}
+      alt="Adivoz Logo"
+      className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300 cursor-pointer"
+      onClick={() => Navigate("")}
+    />
+  </div>
 
         {/* icon for mobile */}
         <button

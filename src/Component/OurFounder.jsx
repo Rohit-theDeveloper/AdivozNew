@@ -1,6 +1,6 @@
 import React from "react";
 import useAOS from "../hooks/useAOS";
-import office from "../assets/co-founder-image.jpg";
+import founder from "../assets/co-founder-image.jpg";
 
 export default function OurFounder() {
   useAOS();
@@ -13,8 +13,8 @@ export default function OurFounder() {
             <img
               data-aos="fade-right"
               loading="lazy"
-              src={office}
-              alt="Digital Solutions Team in Canada"
+              src={founder}
+              alt="Digital Solutions founder"
               className="w-full h-[420px] object-cover rounded-2xl shadow-lg transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

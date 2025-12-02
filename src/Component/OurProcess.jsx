@@ -76,7 +76,7 @@ const OurProcess = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-lg font-semibold text-blue-600 mb-2">
                 {step.title}
               </h3>
 
@@ -84,7 +84,7 @@ const OurProcess = () => {
               <p className="text-sm text-gray-600 mb-4 text-left">{step.description}</p>
 
               {/* Step Number */}
-              <span className="text-sm font-semibold text-black">
+              <span className="text-sm font-semibold text-blue-600">
                 STEP {step.id}
               </span>
             </div>

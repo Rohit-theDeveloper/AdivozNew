@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion, useAnimation, useMotionValue } from "framer-motion";
-import logo from "../assets/adivozlogo.jpg";
+import logo from "../assets/logo-circle 1.png";
 
 const getRotationTransition = (duration, from, loop = true) => ({
   from,
@@ -84,22 +84,27 @@ const CircularText = ({
     });
   };
 
-  return (
+ return (
+  <div
+    className={`m-0 mx-auto rounded-full w-[210px] h-[210px] relative text-white font-black text-center cursor-pointer origin-center ${className}`}
+    onMouseEnter={handleHoverStart}
+    onMouseLeave={handleHoverEnd}
+  >
+    <div className="absolute inset-[40px] bg-white rounded-full shadow-md flex items-center justify-center">
+      <img
+        src={logo}
+        alt="Adivoz logo"
+        className="w-30 h-30 object-contain rounded-full"
+      />
+    </div>
+
+    {/* yaha se letters rotate honge */}
     <motion.div
-      className={`m-0 mx-auto rounded-full w-[200px] h-[200px] relative text-white font-black text-center cursor-pointer origin-center ${className}`}
+      className="w-full h-full"
       style={{ rotate: rotation }}
       initial={{ rotate: 0 }}
       animate={controls}
-      onMouseEnter={handleHoverStart}
-      onMouseLeave={handleHoverEnd}
     >
-      <div className="absolute inset-[40px] bg-white rounded-full shadow-md flex items-center justify-center">
-        <img
-          src={logo}
-          alt="Adivoz logo"
-          className="w-40 h-30 object-contain"
-        />
-      </div>
       {letters.map((letter, i) => {
         const rotationDeg = (360 / letters.length) * i;
         const factor = Math.PI / letters.length;
@@ -108,18 +113,19 @@ const CircularText = ({
         const transform = `rotateZ(${rotationDeg}deg) translate3d(${x}px, ${y}px, 0)`;
 
         return (
-          <div key={i} className="bg-blue-400 h-40px z-100">
-            <span
-              className="absolute inline-block inset-0 text-sm transition-all duration-500 ease-[cubic-bezier(0,0,0,1)] text-black gap-1"
-              style={{ transform, WebkitTransform: transform }}
-            >
-              {letter}
-            </span>
-          </div>
+          <span
+            key={i}
+            className="absolute inset-0 inline-block text-sm transition-all duration-500 ease-[cubic-bezier(0,0,0,1)] text-black"
+            style={{ transform, WebkitTransform: transform }}
+          >
+            {letter}
+          </span>
         );
       })}
     </motion.div>
-  );
+  </div>
+);
+
 };
 
 export default CircularText;
