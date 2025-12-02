@@ -1,5 +1,5 @@
 import useAOS from "../hooks/useAOS";
-import rohitkumar from "../assets/rohit kumar.png";
+import rohitkumar from "../assets/rohitkumar.jpg";
 import deepakkumar from "../assets/deepakkumar.jpg";
 import mandeepyadav from "../assets/mandeep.jpg";
 import chinusaini from "../assets/chinusaini.jpg";
@@ -8,7 +8,7 @@ import chinusaini from "../assets/chinusaini.jpg";
 const team = [
   {
     id: 1,
-    name: "Rohit Kumar",
+    name: "Rohit Singh",
     role: "Full Stack Developer",
     image: rohitkumar,
     desc: "Develops end-to-end web solutions, handling both front-end interfaces and back-end systems to ensure seamless performance.",
@@ -20,7 +20,7 @@ const team = [
   },
   {
     id: 2,
-    name: "Deepak Bisht",
+    name: "Deepak Singh",
     role: "Web Designer",
     image: deepakkumar,
     desc: "Designs visually appealing, user-focused layouts and enhances overall website aesthetics and usability.",
@@ -102,7 +102,7 @@ export default function OurTeam() {
               <h3 className="text-lg font-semibold text-gray-900">
                 {member.name}
               </h3>
-              <p className="text-sm text-blue-700 font-medium mt-1">
+              <p className="text-sm text-blue-600 font-medium mt-1">
                 {member.role}
               </p>
               <p className="text-sm text-gray-600 mt-3 leading-relaxed">

@@ -50,7 +50,7 @@ export default function Slider() {
       id: 1,
     },
     {
-      name: "Woo Commerece",
+      name: "WooCommerce",
       id: 2,
     },
     {
@@ -62,50 +62,69 @@ export default function Slider() {
       id: 4,
     },
     {
-      name: "It Supports",
+      name: "IT Support",
       id: 5,
     },
   ];
   return (
-    <div className="md:mx-35 mx-5 my-15">
-      {/* Outer margin for container */}
-      <div
-        className="
-      case-study-header flex flex-col sm:flex-row sm:justify-between items-center mb-15 gap-4"
-      >
-        {/* left section */}
-        <div>
-          <span 
-          data-aos = "fade-down"
-          className="font-semibold text-blue-600">Case Studies</span>
-          <h2 
-           data-aos = "fade-down"
-          className="text-3xl font-bold">
-            Transforming Ideas into Innovations
-          </h2>
-        </div>
+   <div className="md:mx-35 mx-5 my-15">
+  <div
+    className="
+      case-study-header 
+      flex flex-col lg:flex-row 
+      items-start lg:items-center 
+      justify-between 
+      gap-6 
+      mb-10"
+  >
+    {/* left section */}
+   <div>
+  <span
+    data-aos="fade-down"
+    className="font-semibold text-blue-600 uppercase tracking-wide text-xs sm:text-sm"
+  >
+    Case Studies
+  </span>
 
-        {/* right section */}
-        <div className="flex flex-wrap justify-center gap-2">
-          {Buttons.map((btn, id) => (
-            <button
-             data-aos = "fade-down"
-              key={id}
-              className="relative overflow-hidden rounded-2xl text-xs text-white px-3 py-2
-        bg-[#004aac]
-        cursor-pointer transition-all duration-500 ease-in-out
-        before:absolute before:inset-0 before:bg-blue-700 before:-translate-x-full
-        before:transition-transform before:duration-500 hover:before:translate-x-0
-        hover:text-white hover:scale-105 z-10"
-            >
-              {/* Text stays above pseudo-element */}
-              <span className="relative z-20 transition-colors duration-500 font-medium">
-                {btn.name}
-              </span>
-            </button>
-          ))}
-        </div>
-      </div>
+  <h2
+    data-aos="fade-down"
+    className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mt-1"
+  >
+    Transforming Ideas into <br />
+    <span className="text-blue-600">Digital Impact</span>
+  </h2>
+
+  <p
+    data-aos="fade-down"
+    data-aos-delay="100"
+    className="mt-2 text-sm sm:text-base text-gray-500 max-w-xl"
+  >
+    Explore how Adivoz delivers websites, e-commerce platforms, CRM systems and
+    IT solutions that are built to scale and perform.
+  </p>
+</div>
+
+{/* right section */}
+<div className="flex flex-nowrap overflow-x-auto sm:overflow-visible justify-end gap-2 mt-5 sm:mt-0">
+  {Buttons.map((btn, index) => (
+    <button
+      data-aos="fade-down"
+      data-aos-delay={50 * (index + 1)}
+      key={btn.id}
+      className={`
+        text-xs sm:text-sm px-4 py-2 rounded-full border transition-all duration-300 
+        ${
+          index === 0
+            ? "bg-[#004aac] text-white border-[#004aac] shadow-sm hover:bg-blue-700 hover:border-blue-700"
+            : "bg-white text-[#004aac] border-[#cbd5f5] hover:bg-[#004aac] hover:text-white hover:border-[#004aac]"
+        }
+      `}
+    >
+      <span className="font-medium whitespace-nowrap">{btn.name}</span>
+    </button>
+  ))}
+</div>
+  </div>
       <Swiper
         effect={"coverflow"} // Coverflow effect
         grabCursor={true} // Cursor changes to grab

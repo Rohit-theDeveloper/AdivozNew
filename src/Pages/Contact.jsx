@@ -132,8 +132,8 @@ export default function Contact() {
               Contact Information
             </h2>
             <p className="text-gray-600 mb-8">
-              Thank you for your interest in Adivoz. We're excited
-              to hear from you and discus.
+              Thank you for your interest in Adivoz. We're excited to hear from
+              you and discuss further.
             </p>
 
             <div className="space-y-10 cursor-pointer flex flex-col items-left justify-center">
@@ -152,14 +152,19 @@ export default function Contact() {
 
               {/* Email */}
               <div className="flex items-center gap-4 group">
-                <div className="w-12 h-12 bg-white flex items-center justify-center rounded-full text-blue-600 text-xl group-hover:bg-blue-600">
+                <div className="w-12 h-12 bg-white flex items-center justify-center rounded-full text-blue-600 text-xl group-hover:bg-blue-600 transition">
                   <FiMail className="group-hover:text-white" />
                 </div>
+
                 <div>
                   <p className="text-gray-600 text-sm">Email Us Anytime</p>
-                  <h4 className="text-gray-900 font-semibold text-lg">
+
+                  <a
+                    href="mailto:nishit@adivoz.com?subject=Inquiry&body=Hi%20Team%20Adivoz,"
+                    className="text-gray-900 font-semibold text-lg hover:text-blue-600 active:text-blue-700"
+                  >
                     nishit@adivoz.com
-                  </h4>
+                  </a>
                 </div>
               </div>
 
@@ -184,7 +189,7 @@ export default function Contact() {
             data-aos="fade-left"
             className="bg-gray-100 rounded-2xl shadow-md p-10"
           >
-              <ContactForm />
+            <ContactForm />
           </div>
         </div>
       </section>

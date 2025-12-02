@@ -85,7 +85,7 @@ const Footer = () => {
             </li>
             <li>
               <Link to="/services" className="hover:text-blue-500 transition">
-               Our Services
+                Our Services
               </Link>
             </li>
             <li>
@@ -111,7 +111,13 @@ const Footer = () => {
               <FiPhone className="text-blue-500" /> ‪+1 368-997-1808‬
             </li>
             <li className="flex items-center gap-2">
-              <FiMail className="text-blue-500" /> nishit@adivoz.com
+              <FiMail className="text-blue-500" />
+              <a
+                href="mailto:nishit@adivoz.com?subject=Inquiry&body=Hi%20Team%20Adivoz,"
+                className="hover:text-blue-400 transition-colors"
+              >
+                nishit@adivoz.com
+              </a>
             </li>
 
             <li className="flex items-center gap-2">

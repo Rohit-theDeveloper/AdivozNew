@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { motion, useAnimation, useMotionValue } from "framer-motion";
+import logo from "../assets/adivozlogo.jpg";
 
 const getRotationTransition = (duration, from, loop = true) => ({
   from,
@@ -84,7 +85,6 @@ const CircularText = ({
   };
 
   return (
-    
     <motion.div
       className={`m-0 mx-auto rounded-full w-[200px] h-[200px] relative text-white font-black text-center cursor-pointer origin-center ${className}`}
       style={{ rotate: rotation }}
@@ -94,7 +94,11 @@ const CircularText = ({
       onMouseLeave={handleHoverEnd}
     >
       <div className="absolute inset-[40px] bg-white rounded-full shadow-md flex items-center justify-center">
-        <span className="text-blue-600 italic text-2xl font-bold ">Adivoz</span>
+        <img
+          src={logo}
+          alt="Adivoz logo"
+          className="w-40 h-30 object-contain"
+        />
       </div>
       {letters.map((letter, i) => {
         const rotationDeg = (360 / letters.length) * i;
@@ -106,7 +110,6 @@ const CircularText = ({
         return (
           <div key={i} className="bg-blue-400 h-40px z-100">
             <span
-              
               className="absolute inline-block inset-0 text-sm transition-all duration-500 ease-[cubic-bezier(0,0,0,1)] text-black gap-1"
               style={{ transform, WebkitTransform: transform }}
             >

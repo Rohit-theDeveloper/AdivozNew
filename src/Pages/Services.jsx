@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import AnalyticsdataDrivenStrategy from "../assets/Analytics-data-Driven Strategy.jpg";
-import CRO from "../assets/CRO.jpg";
-import LocalGeoTargetedMarketing from "../assets/Local-Geo-Targeted Marketing.jpg";
 import payperclick from "../assets/pay-per-click.jpg";
 import reputation from "../assets/reputation.jpg";
 import VideoMarketingInteractiveContent from "../assets/Video-MarketingInter-active Content.jpg";
 import socialmediamarketing from "../assets/socialmedia-marketing.jpg";
 import webdesign from "../assets/web design.jpg";
-import SEO from "../assets/Seo1.jpg";
 import Emailmarketing from "../assets/Email-marketing.jpg";
 import SEO1 from "../assets/Seo1.jpg";
 import { MdArrowOutward } from "react-icons/md";
@@ -22,56 +19,57 @@ export default function Services() {
   useAOS();
   const [isQueryOpen, setIsQueryOpen] = useState(false);
 
-  const services = [
-    {
-      img: SEO1,
-      title: "Search Engine Optimization (SEO)",
-      desc: "Boost your visibility across Canadian search engines with bilingual SEO strategies, optimized Google My Business profiles, and province-specific targeting to reach both English and French audiences effectively.",
-      button: "Contact Us",
-    },
-    {
-      img: payperclick,
-      title: "Pay-Per-Click Advertising (PPC) & SEM",
-      desc: "Maximize ROI with data-driven PPC campaigns across Google Ads, Bing, and social media platforms. Our experts craft conversion-focused landing pages and A/B tests to engage your Canadian audience.",
-      button: "Contact Us",
-    },
-    {
-      img: socialmediamarketing,
-      title: "Social Media & Influencer Marketing",
-      desc: "Build a strong brand voice and community across Instagram, LinkedIn, and TikTok. Collaborate with top Canadian influencers and engage local audiences with creative bilingual campaigns.",
-      button: "Contact Us",
-    },
-    {
-      img: webdesign,
-      title: "Web Design & Development",
-      desc: "We create fast, responsive, and accessible websites that meet Canadian web standards. From e-commerce to corporate sites, our UX-focused design ensures performance and user satisfaction.",
-      button: "Contact Us",
-    },
-    {
-      img: Emailmarketing,
-      title: "Content & Email Marketing",
-      desc: "Engage customers with culturally relevant storytelling, bilingual newsletters, and video content tailored to Canadian business seasons and local market trends.",
-      button: "Contact Us",
-    },
-    {
-      img: AnalyticsdataDrivenStrategy,
-      title: "Analytics & Data-Driven Strategy",
-      desc: "Turn insights into action with advanced analytics dashboards, attribution tracking, and predictive modelling built for the Canadian market’s unique consumer behaviour.",
-      button: "Contact Us",
-    },
-    {
-      img: VideoMarketingInteractiveContent,
-      title: "Video Marketing & Interactive Content",
-      desc: "Tell your brand story through professional video campaigns, live webinars, and interactive social content crafted to capture Canadian engagement trends.",
-      button: "Contact Us",
-    },
-    {
-      img: reputation,
-      title: "Reputation & Online Review Management",
-      desc: "Protect and enhance your online reputation with proactive review management on Google, Yelp, and industry platforms — handled with bilingual response strategies.",
-      button: "Contact Us",
-    },
-  ];
+const services = [
+  {
+    img: SEO1,
+    title: "Search Engine Optimization (SEO)",
+    desc: "Boost your search visibility with strategic SEO and optimized Google Business profiles that attract high-intent customers.",
+    button: "Contact Us",
+  },
+  {
+    img: payperclick,
+    title: "Pay-Per-Click Advertising (PPC) & SEM",
+    desc: "Drive conversions through data-backed PPC campaigns, precision targeting, and high-performance landing pages.",
+    button: "Contact Us",
+  },
+  {
+    img: socialmediamarketing,
+    title: "Social Media & Influencer Marketing",
+    desc: "Grow your brand with engaging social content, influencer partnerships, and platform-specific storytelling.",
+    button: "Contact Us",
+  },
+  {
+    img: webdesign,
+    title: "Web Design & Development",
+    desc: "Designing fast, modern, and responsive websites built for exceptional user experience and long-term performance.",
+    button: "Contact Us",
+  },
+  {
+    img: Emailmarketing,
+    title: "Content & Email Marketing",
+    desc: "Deliver impactful content and targeted email campaigns that nurture leads and strengthen customer relationships.",
+    button: "Contact Us",
+  },
+  {
+    img: AnalyticsdataDrivenStrategy,
+    title: "Analytics & Data-Driven Strategy",
+    desc: "Turn data into decisions with analytics dashboards, conversion tracking, and insights that unlock business growth.",
+    button: "Contact Us",
+  },
+  {
+    img: VideoMarketingInteractiveContent,
+    title: "Video Marketing & Interactive Content",
+    desc: "Tell your story through professional video campaigns, webinars, and interactive assets that elevate engagement.",
+    button: "Contact Us",
+  },
+  {
+    img: reputation,
+    title: "Reputation & Online Review Management",
+    desc: "Build trust with proactive review management and consistent brand reputation across all major platforms.",
+    button: "Contact Us",
+  },
+];
+
 
   return (
     <>

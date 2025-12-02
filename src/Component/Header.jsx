@@ -9,7 +9,6 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchModalOpen, setSearchModalOpen] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null);
-  
 
   const Navigate = useNavigate();
   const Location = useLocation();
@@ -156,17 +155,17 @@ export default function Header() {
 
           <button
             onClick={() => !isContactPage && Navigate("/contact-us")}
-            disabled={isContactPage} 
-            className={`
-    relative overflow-hidden bg-[#004aac] text-white px-4 py-2 rounded-xl flex justify-center gap-1 font-medium 
-    transition-all duration-500 z-20 group
-    ${
-      !isContactPage
-        ? "cursor-pointer hover:before:translate-x-0"
-        : "opacity-50 cursor-not-allowed"
-    }
-    before:absolute before:inset-0 before:bg-blue-700 before:-translate-x-full before:transition-transform before:duration-500
-  `}
+            disabled={isContactPage}
+                          className={`
+                  relative overflow-hidden bg-[#004aac] text-white px-4 py-2 rounded-xl flex justify-center gap-1 font-medium 
+                  transition-all duration-500 z-20 group
+                  ${
+                    !isContactPage
+                      ? "cursor-pointer hover:before:translate-x-0"
+                      : "opacity-50 cursor-not-allowed"
+                  }
+                  before:absolute before:inset-0 before:bg-blue-700 before:-translate-x-full before:transition-transform before:duration-500
+               `}
           >
             <span className="relative z-10 flex items-center gap-1">
               Get In Touch
@@ -239,7 +238,7 @@ export default function Header() {
                   setOpenSubMenu(null);
                   Navigate("/contact-us");
                 }}
-                disabled={isContactPage} 
+                disabled={isContactPage}
                 className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 flex items-center gap-1 font-medium"
               >
                 Get In Touch

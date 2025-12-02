@@ -26,7 +26,7 @@ export default function OurFounder() {
               Nishit Verma
             </h2>
             <h3 className="text-blue-600 font-bold">
-              Founder of Adivoz
+              Founder | Adivoz
             </h3>
             {/* <p className="text-blue-500">CEO & CO-Founder</p> */}
 

@@ -47,7 +47,7 @@ const faqs = [
   {
     question: "What If We Already Have an In-House Marketing Team?",
     answer:
-      "We work as an extension of your existing team—handling specialized services such as SEO, paid campaigns, automation, analytics, or content while your internal team manages daily marketing tasks.",
+      "We work as an extension of your existing team - handling specialized services such as SEO, paid campaigns, automation, analytics, or content while your internal team manages daily marketing tasks.",
   },
 ];
 

@@ -12,72 +12,44 @@ const testimonials = [
     name: "Patricia R.",
     role: "Front-End Developer",
     image: "https://randomuser.me/api/portraits/women/32.jpg",
-    text: "The professionalism and support Adivoz provided throughout our project were exceptional. They listened carefully to our objectives and delivered everything on time. Truly reliable and easy to collaborate with."
+    text: "The professionalism and support Adivoz provided throughout our project were exceptional. They listened carefully to our objectives and delivered everything on time. Truly reliable and easy to collaborate with.",
   },
   {
     id: 2,
     name: "James K.",
     role: "Tech Startup Founder",
     image: "https://randomuser.me/api/portraits/men/45.jpg",
-    text: "Our website traffic has nearly doubled since partnering with Adivoz. Their SEO approach is clear, strategic, and effective. They always explain things in a simple way, which makes decision-making easier. Highly recommended!"
+    text: "Our website traffic has nearly doubled since partnering with Adivoz. Their SEO approach is clear, strategic, and effective. They always explain things in a simple way, which makes decision-making easier. Highly recommended!",
   },
   {
     id: 3,
     name: "Sophia L.",
     role: "E-commerce Manager",
     image: "https://randomuser.me/api/portraits/women/41.jpg",
-    text: "We’ve been working with Adivoz for over two years now, and the experience has been outstanding. Their team brings creative ideas and strategic planning that have helped several of our campaigns perform beyond expectations."
+    text: "We’ve been working with Adivoz for over two years now, and the experience has been outstanding. Their team brings creative ideas and strategic planning that have helped several of our campaigns perform beyond expectations.",
   },
-  {
-    id: 4,
-    name: "Annie M.",
-    role: "Jewellery Business Owner",
-    image: "https://randomuser.me/api/portraits/women/45.jpg",
-    text: "I run a small jewellery business, and Adivoz transformed our social media presence completely. Their content ideas are fresh and engaging, and within a few months, we saw major growth in followers and customer engagement."
-  },
+ 
   {
     id: 5,
     name: "Rohan M.",
     role: "Online Retail Business Owner",
     image: "https://randomuser.me/api/portraits/men/41.jpg",
-    text: "The results speak for themselves. Our paid ads and email campaigns are finally generating consistent ROI. Adivoz really understands how to convert strategy into real revenue. Super impressed with their expertise."
+    text: "The results speak for themselves. Our paid ads and email campaigns are finally generating consistent ROI. Adivoz really understands how to convert strategy into real revenue. Super impressed with their expertise.",
   },
+
+  
+ 
+ 
   {
-    id: 6,
-    name: "Mathew D.",
-    role: "Fashion Brand Owner",
-    image: "https://randomuser.me/api/portraits/men/52.jpg",
-    text: "Working with Adivoz has been a game changer. They helped reshape our fashion brand’s social media identity with stunning creatives and smart posting strategies. Our brand visibility has grown rapidly in just a few months."
+    id: 9,
+    name: "Arjun Verma",
+    role: "Fitness Trainer & Coach",
+    image: "https://randomuser.me/api/portraits/men/56.jpg",
+    text: "Before Adivoz, my Instagram barely reached anyone. Their content planning and ad strategy helped me gain real, engaging followers and more clients for my fitness programs. They truly understand branding for personal coaches.",
   },
-  {
-  id: 7,
-  name: "Mehul S.",
-  role: "Restaurant Owner",
-  image: "https://randomuser.me/api/portraits/men/23.jpg",
-  text: "Adivoz helped us redesign our website and manage our social media promotions. We saw a clear jump in reservations and online orders within weeks. Their team understands the food industry really well and creates content that connects with customers."
-},
-{
-  id: 8,
-  name: "Alicia Gomez",
-  role: "Real Estate Consultant",
-  image: "https://randomuser.me/api/portraits/women/67.jpg",
-  text: "Their lead generation campaigns have been a huge asset for my real estate business. The quality of leads improved and my closing rate increased. Adivoz gives detailed insights that help me plan my marketing every month."
-},
-{
-  id: 9,
-  name: "Arjun Verma",
-  role: "Fitness Trainer & Coach",
-  image: "https://randomuser.me/api/portraits/men/56.jpg",
-  text: "Before Adivoz, my Instagram barely reached anyone. Their content planning and ad strategy helped me gain real, engaging followers and more clients for my fitness programs. They truly understand branding for personal coaches."
-},
-{
-  id: 10,
-  name: "Natasha P.",
-  role: "Event Planner",
-  image: "https://randomuser.me/api/portraits/women/29.jpg",
-  text: "Adivoz revamped our social media aesthetics and helped us run targeted ads. We noticed an immediate increase in inquiries for weddings and corporate events. Their creativity and responsiveness make them amazing to work with."
-}
+
 ];
+
 
 const Testimonial = () => {
   useAOS();
@@ -117,17 +89,18 @@ const Testimonial = () => {
                 className=" testimonial-card bg-gray-100 group border border-gray-100 rounded-2xl overflow-y-visible p-6 mx-2 flex flex-col items-start text-left relative hover:shadow-lg transition  h-auto cursor-pointer"
               >
                 {/* Profile */}
-                <div className="flex items-center mb-10 ">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-12 h-12 rounded-full object-cover mr-3"
-                  />
-                  <div>
-                    <h3 className="font-semibold text-gray-900">{item.name}</h3>
-                    <p className="text-sm text-gray-500">{item.role}</p>
-                  </div>
+               <div className="flex items-center gap-4 mt-4">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#004aac] text-white flex items-center justify-center text-lg md:text-xl font-semibold">
+                {item.name.charAt(0)}
+              </div>
+
+              <div>
+                <div className="font-semibold text-gray-900">
+                  {item.name}
                 </div>
+                <div className="text-sm text-black">{item.role}</div>
+              </div>
+            </div>
 
                 {/* Stars */}
                 <div className="flex text-yellow-400 mb-2">
